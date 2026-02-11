@@ -1,0 +1,38 @@
+{
+    "author": "Create3dCharacters",
+    "authorEmail": "info@create3dcharacters.com",
+    "description": "Assorted UV tools for CgRig Tools Pro",
+    "displayName": "CgRig Uv Tools",
+    "environment": {
+        "PYTHONPATH": [
+            "{self}"
+        ],
+        "CGRIG_BASE_PATHS": [
+            "{self}"
+        ],
+        "CGRIG_ICON_PATHS": [
+            "{self}/icons"
+        ],
+        "CGRIG_MENU_LAYOUTS": [
+            "{self}/cgrig/apps/integration/maya/cgrig_uv_tools_menu.layout"
+        ],
+        "CGRIG_SHELF_LAYOUTS": [
+            "{self}/cgrig/apps/integration/maya/cgrig_uv_tools_shelf.layout"
+        ],
+        "CGRIG_TOOLSET_LAYOUTS": [
+            "{self}/cgrig/apps/integration/maya/cgrig_uv_tools_toolsets.layout"
+        ],
+        "CGRIG_TOOLSET_UI_PATHS": [
+            "{self}/cgrig/apps/uitoolsets"
+        ]
+    },
+    "name": "cgrig_uv_tools",
+    "requirements": [
+        "cgrig_core",
+        "cgrig_pyside",
+        "cgrig_maya",
+        "cgrig_toolsets",
+        "cgrig_artist_palette"
+    ],
+    "version": "1.1.24"
+}

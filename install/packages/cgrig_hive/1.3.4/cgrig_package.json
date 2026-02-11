@@ -1,0 +1,50 @@
+{
+    "author": "Create3dCharacters",
+    "authorEmail": "info@create3dcharacters.com",
+    "commands": [
+        "{self}/scripts/cgrig_hive_startup.py"
+    ],
+    "description": "Hive core rigging code for CgRig Tools Pro",
+    "displayName": "CgRig Hive",
+    "documentation": {
+        "masterDoc": "index.rst",
+        "sourceCodeFolder": "{self}/cgrig",
+        "sourceFolder": "{self}/docs/source"
+    },
+    "environment": {
+        "HIVE_BUILD_SCRIPTS_PATH": "{self}/cgrig/libs/hive/library/buildscripts",
+        "HIVE_COMPONENT_PATH": "{self}/cgrig/libs/hive/library/components",
+        "HIVE_DEFINITIONS_PATH": "{self}/cgrig/libs/hive/library/definitions",
+        "HIVE_EXPORT_PLUGIN_PATH": "{self}/cgrig/libs/hive/library/exporters",
+        "HIVE_GRAPHS_PATH": "{self}/cgrig/libs/hive/library/graphs",
+        "HIVE_GRAPHS_SAVE_PATH": "{self}/cgrig/libs/hive/library/graphs",
+        "HIVE_NAME_PRESET_PATH": "{self}/cgrig/libs/hive/library/naming",
+        "PYTHONPATH": [
+            "{self}"
+        ],
+        "CGRIG_BASE_PATHS": [
+            "{self}"
+        ],
+        "CGRIG_COMMAND_LIB": [
+            "{self}/cgrig/libs/hive/library/tools/commands"
+        ],
+        "CGRIG_ICON_PATHS": [
+            "{self}/icons"
+        ],
+        "CGRIG_META_PATHS": [
+            "{self}/cgrig/libs/hive/base/hivenodes/layers.py"
+        ],
+        "CGRIG_MM_COMMAND_PATH": "{self}/cgrig/libs/hive/library/tools/markingmenus/commands",
+        "CGRIG_MM_LAYOUT_PATH": "{self}/cgrig/libs/hive/library/tools/markingmenus/layouts",
+        "CGRIG_MM_MENU_PATH": "{self}/cgrig/libs/hive/library/tools/markingmenus/menus"
+    },
+    "name": "cgrig_hive",
+    "requirements": [
+        "cgrig_core",
+        "cgrig_maya"
+    ],
+    "tests": [
+        "{self}/tests/libs"
+    ],
+    "version": "1.3.4"
+}

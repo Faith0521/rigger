@@ -1,0 +1,23 @@
+{
+  "sortOrder": -1,
+  "shelves": [
+    {
+      "name": "CgRigToolsPro",
+      "children": [
+        {
+          "type": "separator"
+        },
+
+        {
+          "id": "cgrig.shelf.rigging",
+          "type": "button",
+          "icon": "riggingMenu_shlf",
+          "displayLabel": false,
+          "children": [
+
+          ]
+        }
+      ]
+    }
+  ]
+}

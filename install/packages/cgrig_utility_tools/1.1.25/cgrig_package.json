@@ -1,0 +1,43 @@
+{
+    "author": "Create3dCharacters",
+    "authorEmail": "info@create3dcharacters.com",
+    "description": "Utility general multi-purpose tools for CgRig Tools Pro",
+    "displayName": "CgRig Utility Tools",
+    "documentation": {
+        "masterDoc": "index.rst",
+        "sourceCodeFolder": "{self}/cgrig",
+        "sourceFolder": "{self}/docs/source"
+    },
+    "environment": {
+        "PYTHONPATH": [
+            "{self}"
+        ],
+        "CGRIG_BASE_PATHS": [
+            "{self}"
+        ],
+        "CGRIG_ICON_PATHS": [
+            "{self}/icons"
+        ],
+        "CGRIG_MENU_LAYOUTS": [
+            "{self}/cgrig/apps/integration/maya/cgrig_utility_tools_menu.layout"
+        ],
+        "CGRIG_SHELF_LAYOUTS": [
+            "{self}/cgrig/apps/integration/maya/cgrig_utility_tools_shelf.layout"
+        ],
+        "CGRIG_TOOLSET_LAYOUTS": [
+            "{self}/cgrig/apps/integration/maya/cgrig_utility_tools_toolsets.layout"
+        ],
+        "CGRIG_TOOLSET_UI_PATHS": [
+            "{self}/cgrig/apps/uitoolsets"
+        ]
+    },
+    "name": "cgrig_utility_tools",
+    "requirements": [
+        "cgrig_core",
+        "cgrig_pyside",
+        "cgrig_maya",
+        "cgrig_toolsets",
+        "cgrig_artist_palette"
+    ],
+    "version": "1.1.25"
+}

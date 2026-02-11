@@ -1,0 +1,45 @@
+{
+  "sortOrder": 10000,
+  "menu": [
+    {
+      "label": "Preferences",
+      "type": "menu",
+      "children": [
+        {
+          "id": "cgrig.preferencesui"
+        },
+        {
+          "id": "cgrig.hotkeyeditorui"
+        },
+        {
+            "id": "cgrig.packages.installZip"
+        },
+        {
+          "id": "cgrig.triggers.state"
+        },
+        {
+          "id": "cgrig.help.tooltips"
+        }
+      ]
+    },
+    {
+      "label": "Developer",
+      "type": "menu",
+      "children": [
+        {
+          "id": "cgrigIcons",
+          "type": "toolset"
+        },
+        {
+          "id": "cgrig.reload"
+        },
+        {
+          "id": "cgrig.shutdown"
+        },
+        {
+          "id": "cgrig.uninstaller"
+        }
+      ]
+    }
+  ]
+}

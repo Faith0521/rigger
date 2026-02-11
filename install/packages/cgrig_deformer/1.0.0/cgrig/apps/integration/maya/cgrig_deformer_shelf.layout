@@ -1,0 +1,32 @@
+{
+  "sortOrder": -990,
+  "shelves": [
+    {
+      "name": "CgRigToolsPro",
+      "children": [
+        {
+          "id": "cgrig.shelf.deformer",
+          "displayLabel": false,
+          "type": "button",
+          "icon": "BsMenu_shlf",
+          "tooltip": "CgRig Deformer Tools",
+          "children": [
+              {
+                "type": "toolset",
+                "id": "splitBsTool"
+              },
+              {
+                "id": "cgrig.deformer.poseediterui",
+                "label": "Pose Editer UI",
+                "type": "action"
+              },
+              {
+                "type": "toolset",
+                "id": "BsTool"
+              }
+          ]
+        }
+      ]
+    }
+  ]
+}

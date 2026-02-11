@@ -1,0 +1,271 @@
+{
+  "id": "lipPSD",
+  "name": "lipPSD",
+  "metaData": {},
+  "nodes": [
+    {
+      "id": "PSDAimLocalOffset",
+      "data": {
+        "name": "PSDAimLocalOffset",
+        "type": "multMatrix",
+        "attributes": [
+          {
+            "name": "isHistoricallyInteresting",
+            "Type": 4,
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "PSD_aim",
+      "data": {
+        "name": "PSD_aim",
+        "type": "aimMatrix",
+        "attributes": [
+          {
+            "name": "isHistoricallyInteresting",
+            "Type": 4,
+            "value": false
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "name": "primaryInputAxisX",
+                    "Type": 6,
+                    "value": 0.0
+                  },
+                  {},
+                  {
+                    "name": "primaryInputAxisZ",
+                    "Type": 6,
+                    "value": 1.0
+                  }
+                ],
+                "keyable": true,
+                "name": "primaryInputAxis",
+                "Type": 30,
+                "value": [
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {},
+              {},
+              {}
+            ],
+            "name": "primary",
+            "Type": 22,
+            "value": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              1,
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          {
+            "children": [
+              {},
+              {
+                "name": "secondaryMode",
+                "Type": 12,
+                "value": 1
+              },
+              {
+                "children": [
+                  {
+                    "name": "secondaryTargetVectorX",
+                    "Type": 6,
+                    "value": 1.0
+                  },
+                  {},
+                  {}
+                ],
+                "name": "secondaryTargetVector",
+                "Type": 30,
+                "value": [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              {}
+            ],
+            "keyable": true,
+            "name": "secondary",
+            "Type": 22,
+            "value": [
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              1,
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "PSDAimLocalInvOffset",
+      "data": {
+        "name": "PSDAimLocalInvOffset",
+        "type": "multMatrix",
+        "attributes": [
+          {
+            "name": "isHistoricallyInteresting",
+            "Type": 4,
+            "value": false
+          },
+          {
+            "keyable": true,
+            "name": "matrixIn[1]",
+            "Type": 14,
+            "value": [
+              5.619448759035994e-14,
+              0.9999999999999725,
+              -2.3513385347643696e-07,
+              0.0,
+              -0.9883983664108459,
+              -3.571295250166192e-08,
+              -0.1518837360495522,
+              0.0,
+              -0.1518837360495564,
+              2.324059252080876e-07,
+              0.9883983664108185,
+              0.0,
+              -1.4874557013471183e-36,
+              -2.6469779601696157e-23,
+              6.2239412784189755e-30,
+              1.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "PSD_output",
+      "data": {
+        "name": "PSD_output",
+        "type": "decomposeMatrix",
+        "attributes": [
+          {
+            "name": "isHistoricallyInteresting",
+            "Type": 4,
+            "value": false
+          },
+          {
+            "keyable": true,
+            "name": "inputMatrix",
+            "Type": 14,
+            "value": [
+              5.619448759035994e-14,
+              0.9999999999999725,
+              -2.3513385347643696e-07,
+              0.0,
+              -0.9883983664108459,
+              -3.571295250166192e-08,
+              -0.1518837360495522,
+              0.0,
+              -0.1518837360495564,
+              2.324059252080876e-07,
+              0.9883983664108185,
+              0.0,
+              -1.4874557013471183e-36,
+              -2.6469779601696157e-23,
+              6.2239412784189755e-30,
+              1.0
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "connections": [
+    {
+      "sourcePlug": "outputMatrix",
+      "source": "PSD_aim",
+      "destinationPlug": "matrixIn[0]",
+      "destination": "PSDAimLocalOffset"
+    },
+    {
+      "sourcePlug": "matrixSum",
+      "source": "PSDAimLocalOffset",
+      "destinationPlug": "matrixIn[0]",
+      "destination": "PSDAimLocalInvOffset"
+    },
+    {
+      "sourcePlug": "matrixSum",
+      "source": "PSDAimLocalInvOffset",
+      "destinationPlug": "inputMatrix",
+      "destination": "PSD_output"
+    }
+  ],
+  "inputs": {
+    "parentInverseWorldMatrix": [
+      "PSDAimLocalOffset:matrixIn[1]"
+    ],
+    "upVectorWorldMatrix": [
+      "PSD_aim:inputMatrix",
+      "PSD_aim:secondary.secondaryTargetMatrix"
+    ],
+    "aimTargetWorldMatrix": [
+      "PSD_aim:primary.primaryTargetMatrix"
+    ],
+    "localOffset": ["PSDAimLocalInvOffset:matrixIn[1]"]
+  },
+  "outputs": {
+    "outRotation": "PSD_output:outputRotate"
+  }
+}

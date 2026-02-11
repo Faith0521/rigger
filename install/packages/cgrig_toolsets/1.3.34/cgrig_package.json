@@ -1,0 +1,41 @@
+{
+    "author": "Create3dCharacters",
+    "authorEmail": "info@create3dcharacters.com",
+    "commands": [
+        "{self}/scripts/cgrig_toolsets_startup.py"
+    ],
+    "description": "Toolsets code repository for CgRig Tools Pro",
+    "displayName": "Toolsets",
+    "documentation": {
+        "masterDoc": "index.rst",
+        "sourceCodeFolder": "{self}/cgrig",
+        "sourceFolder": "{self}/docs/source"
+    },
+    "environment": {
+        "PYTHONPATH": [
+            "{self}"
+        ],
+        "CGRIG_ACTIONPLUGIN_MODULES": [
+            "{self}/cgrig/apps/integration/all/cgrig_toolsets_actionplugins.py"
+        ],
+        "CGRIG_BASE_PATHS": [
+            "{self}"
+        ],
+        "CGRIG_ICON_PATHS": [
+            "{self}/icons"
+        ],
+        "CGRIG_TOOLPALETTE_PLUGINTYPE_PATH": [
+            "{self}/cgrig/apps/integration/all/toolsetpalettetype.py"
+        ],
+        "CGRIG_TOOLSET_UI_PATHS": [
+            "{self}/cgrig/apps/uitoolsets"
+        ]
+    },
+    "name": "cgrig_toolsets",
+    "requirements": [
+        "cgrig_core",
+        "cgrig_pyside",
+        "cgrig_maya"
+    ],
+    "version": "1.3.34"
+}

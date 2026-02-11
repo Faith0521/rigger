@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+from cgrig.apps.toolpalette import palette
+from cgrig.libs.maya.cmds.hotkeys import definedhotkeys
+
+
+class ModelingIconShelf(palette.ActionPlugin):
+    id = "cgrig.shelf.animation"
+    creator = "Andrew Silke"
+    tags = ["shelf", "icon"]
+    uiData = {"icon": "animationMenu_shlf",
+              "label": "Animation Tools: \n"
+                       "Assorted tools for animation, setting & editing keyframes and the graph editor.",
+              "color": "",
+              "multipleTools": False,
+              "backgroundColor": ""
+              }
+
+    def execute(self, *args, **kwargs):
+        name = kwargs["variant"]
+        if name == "studioLibrary":
+            definedhotkeys.open_studioLibrary()

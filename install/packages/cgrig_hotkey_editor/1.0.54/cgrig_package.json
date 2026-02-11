@@ -1,0 +1,39 @@
+{
+    "author": "Create3dCharacters",
+    "authorEmail": "info@create3dcharacters.com",
+    "commands": [
+        "{self}/scripts/hotkey_startup.py"
+    ],
+    "description": "Hotkey Editor for CgRig Tools Pro",
+    "displayName": "CgRig Hotkey Editor",
+    "environment": {
+        "PYTHONPATH": [
+            "{self}"
+        ],
+        "CGRIG_ACTIONPLUGIN_MODULES": [
+            "{self}/cgrig/apps/integration/maya/cgrig_hotkey_editor_actions.py"
+        ],
+        "CGRIG_BASE_PATHS": [
+            "{self}"
+        ],
+        "CGRIG_ICON_PATHS": [
+            "{self}/icons"
+        ],
+        "CGRIG_MM_COMMAND_PATH": [
+            "{self}/cgrig/apps/hotkeyeditor/markingmenus"
+        ],
+        "CGRIG_MM_LAYOUT_PATH": [
+            "{self}/cgrig/apps/hotkeyeditor/markingmenus"
+        ],
+        "CGRIG_MM_MENU_PATH": [
+            "{self}/cgrig/apps/hotkeyeditor/markingmenus"
+        ]
+    },
+    "name": "cgrig_hotkey_editor",
+    "requirements": [
+        "cgrig_core",
+        "cgrig_maya",
+        "cgrig_pyside"
+    ],
+    "version": "1.0.54"
+}

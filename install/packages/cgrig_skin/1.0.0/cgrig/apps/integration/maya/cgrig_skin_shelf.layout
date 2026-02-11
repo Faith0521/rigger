@@ -1,0 +1,27 @@
+{
+  "sortOrder": -990,
+  "shelves": [
+    {
+      "name": "CgRigToolsPro",
+      "children": [
+        {
+          "id": "cgrig.shelf.skin",
+          "displayLabel": false,
+          "type": "button",
+          "icon": "JointMenu_shlf",
+          "tooltip": "CgRig Deformer Tools",
+          "children": [
+              {
+              "type": "toolset",
+              "id": "bezierSkin"
+              },
+              {
+                "type": "toolset",
+                "id": "batchSkinTool"
+              }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+    "author": "Create3dCharacters",
+    "authorEmail": "info@create3dcharacters.com",
+    "commands": [
+        "{self}/scripts/cgrig_pyside_startup.py"
+    ],
+    "description": "PySide framework code for CgRig Tools Pro",
+    "displayName": "CgRig PySide",
+    "documentation": {
+        "masterDoc": "index.rst",
+        "sourceCodeFolder": "{self}/cgrig",
+        "sourceFolder": "{self}/docs/source"
+    },
+    "environment": {
+        "PYTHONPATH": [
+            "{self}"
+        ],
+        "CGRIG_BASE_PATHS": [
+            "{self}"
+        ],
+        "CGRIG_ICON_PATHS": [
+            "{self}/icons"
+        ]
+    },
+    "name": "cgrig_pyside",
+    "requirements": [
+        "cgrig_core"
+    ],
+    "version": "2.1.52"
+}

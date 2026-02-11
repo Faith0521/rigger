@@ -1,0 +1,21 @@
+{
+  "sortOrder": -990,
+  "menu": [
+    {
+      "label": "Deformer",
+      "type": "menu",
+      "children": [
+              {
+                "type": "toolset",
+                "id": "splitBsTool"
+              },
+              {
+                "type": "toolset",
+                "id": "BsTool"
+              }
+      ]
+    }
+  ]
+}
+
+

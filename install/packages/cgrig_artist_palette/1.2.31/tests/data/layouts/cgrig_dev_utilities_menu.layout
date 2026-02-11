@@ -1,0 +1,23 @@
+{
+    "sortOrder": 10000,
+    "menu": [
+        {
+            "label": "Developer",
+            "type": "menu",
+            "children": [
+                {
+                    "id": "cgrig.sourceCodeEditor",
+                    "type": "action"
+                },
+                {
+                    "id": "cgrig.unittest.ui",
+                    "label": "Unit Test UI",
+                    "icon": "menu_reload"
+                },
+                {
+                    "id": "pycharm.debug"
+                }
+            ]
+        }
+    ]
+}

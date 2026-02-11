@@ -1,0 +1,91 @@
+{
+  "sortOrder": -970,
+  "shelves": [
+    {
+      "name": "CgRigToolsPro",
+      "children": [
+        {
+          "id": "cgrig.shelf.utility",
+          "displayLabel": false,
+          "type": "button",
+          "icon": "utilsMenu_shlf",
+          "tooltip": "Utility Tools: \nGeneral Maya utility tools.",
+          "children": [
+            {
+              "type": "toolset",
+              "id": "ikura"
+            },
+            {
+              "type": "toolset",
+              "id": "cgrigRenamer"
+            },
+            {
+              "type": "toolset",
+              "id": "cgrigAddGroup"
+            },
+            {
+              "id": "combineMetaFace",
+              "type": "toolset"
+            },
+            {
+              "type": "toolset",
+              "id": "rivetTool"
+            },
+            {
+              "type": "toolset",
+              "id": "dynamicJoint"
+            },
+            {
+              "type": "toolset",
+              "id": "selectionSets"
+            },
+            {
+              "type": "toolset",
+              "id": "makeConnections"
+            },
+            {
+              "type": "toolset",
+              "id": "setMultipleAttributes"
+            },
+            {
+              "id": "channelBoxManager",
+              "type": "toolset"
+            },
+            {
+              "type": "toolset",
+              "id": "matrixTool"
+            },
+            {
+              "type": "toolset",
+              "id": "manageNodes"
+            },
+            {
+              "type": "toolset",
+              "id": "nodeEditorAlign"
+            },
+            {
+              "type": "toolset",
+              "id": "multiImportReference"
+            },
+            {
+              "type": "toolset",
+              "id": "aimAligner"
+            },
+            {
+              "type": "separator"
+            },
+            {
+              "type": "action",
+              "id": "cgrig.shelf.resetAllWindows"
+            },
+            {
+              "type": "action",
+              "id": "cgrig.shelf.cgrigFloatingShelf"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

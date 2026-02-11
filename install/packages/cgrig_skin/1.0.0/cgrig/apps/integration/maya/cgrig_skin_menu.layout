@@ -1,0 +1,21 @@
+{
+  "sortOrder": -990,
+  "menu": [
+    {
+      "label": "Skin",
+      "type": "menu",
+      "children": [
+        {
+          "type": "toolset",
+          "id": "bezierSkin"
+        },
+        {
+          "type": "toolset",
+          "id": "batchSkinTool"
+        }
+      ]
+    }
+  ]
+}
+
+

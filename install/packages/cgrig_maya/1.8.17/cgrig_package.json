@@ -1,0 +1,63 @@
+{
+    "author": "Create3dCharacters",
+    "authorEmail": "info@create3dcharacters.com",
+    "description": "General Maya and Maya framework related code for CgRig Tools Pro",
+    "displayName": "CgRig Maya",
+    "documentation": {
+        "configScript": "{self}/docs/startupScript.py",
+        "masterDoc": "index.rst",
+        "sourceCodeFolder": "{self}/cgrig",
+        "sourceFolder": "{self}/docs/source"
+    },
+    "environment": {
+        "PYTHONPATH": [
+            "{self}"
+        ],
+        "CGRIG_ACTIONPLUGIN_MODULES": [
+            "{self}/cgrig/apps/maya_integrate/cgrig_artist_palette_actionplugins.py"
+        ],
+        "CGRIG_ARTIST_PALETTE_PATH": [
+            "{self}/cgrig/apps/maya_integrate/palette.py"
+        ],
+        "CGRIG_BASE_PATHS": [
+            "{self}"
+        ],
+        "CGRIG_COMMAND_LIB": [
+            "{self}/cgrig/libs/maya/mayacommand/library",
+            "{self}/cgrig/libs/maya/triggers/cgrigcommands.py"
+        ],
+        "CGRIG_ICON_PATHS": [
+            "{self}/icons"
+        ],
+        "CGRIG_MENU_LAYOUTS": [
+            "{self}/cgrig/apps/maya_integrate/cgrig_artist_palette_menu.layout"
+        ],
+        "CGRIG_META_PATHS": [
+            "{self}/cgrig/libs/maya/meta",
+            "{self}/cgrig/libs/maya/cmds/meta"
+        ],
+        "CGRIG_MM_COMMAND_PATH": [
+            "{self}/cgrig/libs/maya/cmds/markingmenus"
+        ],
+        "CGRIG_MM_LAYOUT_PATH": [
+            "{self}/cgrig/libs/maya/cmds/markingmenus"
+        ],
+        "CGRIG_SHELF_LAYOUTS": [
+            "{self}/cgrig/apps/maya_integrate/cgrig_artist_palette_shelf.layout"
+        ],
+        "CGRIG_TOOLSET_LAYOUTS": [
+            "{self}/cgrig/apps/maya_integrate/cgrig_maya_toolsets.layout"
+        ],
+        "CGRIG_TRIGGER_COMMAND_PATH": [
+            "{self}/cgrig/libs/maya/triggers/triggerlib"
+        ]
+    },
+    "name": "cgrig_maya",
+    "requirements": [
+        "cgrig_core"
+    ],
+    "tests": [
+        "{self}/tests"
+    ],
+    "version": "1.8.17"
+}

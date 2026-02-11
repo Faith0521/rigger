@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+from cgrig.libs.maya.mayacommand import command
+from cgrig.libs.maya.api import plugs
+from maya.api import OpenMaya as om2
+
+
+class RemoveDisconnectElements(command.CgRigCommandMaya):
+    """This command Removes all disconnected elements from the MPlug array
+    """
+    id = "cgrig.maya.removeDisconnectedElements"
+    isUndoable = True
+    _modifier = None
+
+    def resolveArguments(self, arguments):
+        plug = arguments.get("plug")
+
+        if plug is None:
+            self.cancel("No Plug specified")
+        if not isinstance(plug, om2.MPlug):
+            self.cancel("Specified Plug is not MPlyg Type")
+        elif not plug.array:
+            self.cancel("Specified plug is not an array {}".format(plug.name()))
+        return arguments
+
+    def doIt(self, plug=None, disconnect=False):
+        """Create the meta node based on the type parameter, if the type isn't specified then the baseMeta class will
+        be used instead
+
+
+        """
+        try:
+            self._modifier = plugs.removeUnConnectedEmptyElements(plug, disconnect)
+        except RuntimeError:
+            return False
+        return True
+
+    def undoIt(self):
+        if self._modifier is not None:
+            self._modifier.doIt()
+        return False

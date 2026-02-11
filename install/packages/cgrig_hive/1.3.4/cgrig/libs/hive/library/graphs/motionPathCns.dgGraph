@@ -1,0 +1,239 @@
+{
+    "id": "motionPathCns",
+    "name": "motionPathCns",
+    "metaData": {},
+    "nodes": [
+        {
+            "id": "motionScale",
+            "data": {
+                "name": "motionScale",
+                "type": "multiplyDivide",
+                "attributes": [
+                    {
+                        "isDynamic": false,
+                        "name": "operation",
+                        "default": 1,
+                        "Type": 12,
+                        "value": 2,
+                        "enums": [
+                            "No operation",
+                            "Multiply",
+                            "Divide",
+                            "Power"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "motionLength",
+            "data": {
+                "name": "motionLength",
+                "type": "condition",
+                "attributes": [
+                    {
+                        "isDynamic": false,
+                        "name": "operation",
+                        "default": 0,
+                        "Type": 12,
+                        "value": 4,
+                        "enums": [
+                            "Equal",
+                            "Not Equal",
+                            "Greater Than",
+                            "Greater or Equal",
+                            "Less Than",
+                            "Less or Equal"
+                        ]
+                    },
+                    {
+                        "isDynamic": false,
+                        "children": [
+                            {
+                                "isDynamic": false,
+                                "keyable": true,
+                                "isChild": true,
+                                "name": "colorIfFalseR",
+                                "default": 1.0,
+                                "Type": 5,
+                                "value": 0.0
+                            },
+                            {},
+                            {}
+                        ],
+                        "keyable": true,
+                        "name": "colorIfFalse",
+                        "default": [
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "Type": 31,
+                        "value": [
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "isDynamic": false,
+                        "children": [
+                            {
+                                "isDynamic": false,
+                                "keyable": true,
+                                "isChild": true,
+                                "name": "colorIfTrueR",
+                                "default": 1.0,
+                                "Type": 5,
+                                "value": 0.0
+                            },
+                            {},
+                            {}
+                        ],
+                        "keyable": true,
+                        "name": "colorIfTrue",
+                        "default": [
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "Type": 31,
+                        "value": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "divPos",
+            "data": {
+                "name": "divPos",
+                "type": "motionPath",
+                "attributes": [
+                    {
+                        "name": "inverseUp",
+                        "Type": 0,
+                        "value": false
+                    },
+                    {
+                        "name": "frontAxis",
+                        "Type": 12,
+                        "value": 0
+                    },
+                    {
+                        "name": "upAxis",
+                        "Type": 12,
+                        "value": 1
+                    },
+                    {
+                        "name": "worldUpType",
+                        "Type": 12,
+                        "value": 1
+                    },
+                    {
+                        "name": "fractionMode",
+                        "Type": 0,
+                        "value": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": "divUp",
+            "data": {
+                "name": "divUp",
+                "type": "motionPath",
+                "attributes": [
+                    {
+                        "name": "inverseUp",
+                        "Type": 0,
+                        "value": false
+                    },
+                    {
+                        "name": "frontAxis",
+                        "Type": 12,
+                        "value": 1
+                    },
+                    {
+                        "name": "upAxis",
+                        "Type": 12,
+                        "value": 2
+                    },
+                    {
+                        "name": "worldUpType",
+                        "Type": 12,
+                        "value": 3
+                    },
+                    {
+                        "name": "fractionMode",
+                        "Type": 0,
+                        "value": true
+                    }
+                ]
+            }
+        }
+    ],
+    "connections": [
+        {
+            "sourcePlug": "input1X",
+            "source": "motionScale",
+            "destinationPlug": "firstTerm",
+            "destination": "motionLength"
+        },
+        {
+            "sourcePlug": "outputX",
+            "source": "motionScale",
+            "destinationPlug": "secondTerm",
+            "destination": "motionLength"
+        },
+        {
+            "sourcePlug": "input1X",
+            "source": "motionScale",
+            "destinationPlug": "colorIfTrueR",
+            "destination": "motionLength"
+        },
+        {
+            "sourcePlug": "outputX",
+            "source": "motionScale",
+            "destinationPlug": "colorIfFalseR",
+            "destination": "motionLength"
+        },
+        {
+            "sourcePlug": "outColorR",
+            "source": "motionLength",
+            "destinationPlug": "uValue",
+            "destination": "divPos"
+        },
+        {
+            "sourcePlug": "outColorR",
+            "source": "motionLength",
+            "destinationPlug": "uValue",
+            "destination": "divUp"
+        }
+    ],
+    "inputs": {
+        "motionScaleInput2X": [
+            "motionScale:input2X"
+        ],
+        "motionDivWorldUpMatrix": [
+            "divPos:worldUpMatrix"
+        ],
+         "motionDivGeometryPath": [
+            "divPos:geometryPath"
+        ],
+         "motionDivUpGeometryPath": [
+            "divUp:geometryPath"
+        ]
+    },
+    "outputs": {
+      "divAllCoordinates": "divPos:allCoordinates",
+      "divRotate": "divPos:rotate",
+      "divRotateOrder": "divPos:rotateOrder",
+      "divUpAllCoordinates": "divUp:allCoordinates",
+      "divUpRotate": "divUp:rotate",
+      "divUpRotateOrder": "divUp:rotateOrder"
+    }
+}

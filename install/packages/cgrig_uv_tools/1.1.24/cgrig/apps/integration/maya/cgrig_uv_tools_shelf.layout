@@ -1,0 +1,32 @@
+{
+  "sortOrder": -910,
+  "shelves": [
+    {
+      "name": "CgRigToolsPro",
+      "children": [
+        {
+          "id": "cgrig.shelf.uv",
+          "displayLabel": false,
+          "icon": "uvMenu_shlf",
+          "tooltip": "UV Tools: \nTools for UV texture unwrapping.",
+          "type": "button",
+          "children": [
+            {
+              "type": "toolset",
+              "id": "uvUnfold"
+            },
+            {
+              "type": "toolset",
+              "id": "unwrapTube"
+            },
+            {
+              "type": "toolset",
+              "id": "transferUvs"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

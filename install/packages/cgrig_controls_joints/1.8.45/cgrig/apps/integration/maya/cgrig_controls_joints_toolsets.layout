@@ -1,0 +1,67 @@
+{
+  "toolsetGroups":
+  [
+    {
+      "type": "manualrigging",
+      "name": "Rigging Manual",
+      "color":
+      [
+        115,
+        187,
+        211
+      ],
+      "hueShift":0,
+      "toolsets":
+      [
+        "sdkBatch",
+        "branchTool",
+        "controlCreator",
+        "editControls",
+        "colorOverrides",
+        "jointTool",
+        "planeOrient",
+        "jointsOnCurve",
+        "constraintToolbox",
+        "riggingMisc",
+        "reparentGroupToggle"
+      ]
+    },
+    {
+      "type": "deformation",
+      "name": "Rigging Deformation",
+      "color":
+      [
+        115,
+        187,
+        211
+      ],
+      "hueShift":0,
+      "toolsets":
+      [
+        "skinningUtilities",
+        "transferSkinWeights",
+        "smoothSkin",
+        "brSkinTransferExport"
+      ]
+    },
+    {
+      "type": "macrorigging",
+      "name": "Rigging Macros",
+      "color":
+      [
+        115,
+        187,
+        211
+      ],
+      "hueShift":0,
+      "toolsets":
+      [
+        "splineRig",
+        "splineMatrixRig",
+        "controlsOnCurve",
+        "motionPathRig",
+        "twistextractor"
+      ]
+    }
+  ]
+}

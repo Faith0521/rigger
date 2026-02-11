@@ -1,0 +1,3019 @@
+{
+    "definitionVersion": "2.0",
+    "deformLayer": {
+        "dag": [],
+        "settings": [],
+        "metadata": [
+            {
+                "name": "deformJointColor",
+                "Type": 31,
+                "default": [
+                    0.0,
+                    0.001,
+                    0.117
+                ],
+                "value": [
+                    1.0,
+                    0.3505637736205146,
+                    0.07323895587840545
+                ]
+            },
+            {
+                "name": "deformJointRadius",
+                "Type": 5,
+                "default": 1.0,
+                "value": 1.0
+            },
+            {
+                "name": "nonDeformJointRadius",
+                "Type": 5,
+                "default": 0.2,
+                "value": 0.2
+            },
+            {
+                "name": "deformJointDrawMode",
+                "Type": 12,
+                "default": 0,
+                "value": 0,
+                "enums": [
+                    "Bone",
+                    "Multi-Box",
+                    "None",
+                    "Joint"
+                ]
+            }
+        ]
+    },
+    "guideLayer": {
+        "dag": [
+            {
+                "attributes": [
+                    {
+                        "channelBox": true,
+                        "default": true,
+                        "isArray": false,
+                        "isChild": false,
+                        "isDynamic": true,
+                        "isElement": false,
+                        "keyable": false,
+                        "locked": false,
+                        "max": 1,
+                        "min": 0,
+                        "name": "autoAlign",
+                        "softMax": null,
+                        "softMin": null,
+                        "Type": 0,
+                        "value": true
+                    },
+                    {
+                        "channelBox": true,
+                        "children": [
+                            {
+                                "channelBox": true,
+                                "default": 0,
+                                "isChild": true,
+                                "isDynamic": true,
+                                "name": "autoAlignUpVectorX",
+                                "Type": 5,
+                                "value": 0
+                            },
+                            {
+                                "channelBox": true,
+                                "default": 1,
+                                "isChild": true,
+                                "isDynamic": true,
+                                "name": "autoAlignUpVectorY",
+                                "Type": 5,
+                                "value": 1
+                            },
+                            {
+                                "channelBox": true,
+                                "default": 0,
+                                "isChild": true,
+                                "isDynamic": true,
+                                "name": "autoAlignUpVectorZ",
+                                "Type": 5,
+                                "value": 0
+                            }
+                        ],
+                        "default": [
+                            0,
+                            1,
+                            0
+                        ],
+                        "isArray": false,
+                        "isChild": false,
+                        "isDynamic": true,
+                        "isElement": false,
+                        "keyable": false,
+                        "locked": false,
+                        "name": "autoAlignUpVector",
+                        "Type": 31,
+                        "value": [
+                            0,
+                            1,
+                            0
+                        ]
+                    },
+                    {
+                        "channelBox": true,
+                        "children": [
+                            {
+                                "channelBox": true,
+                                "default": 1,
+                                "isChild": true,
+                                "isDynamic": true,
+                                "name": "autoAlignAimVectorX",
+                                "Type": 5,
+                                "value": 1
+                            },
+                            {
+                                "channelBox": true,
+                                "default": 0,
+                                "isChild": true,
+                                "isDynamic": true,
+                                "name": "autoAlignAimVectorY",
+                                "Type": 5,
+                                "value": 0
+                            },
+                            {
+                                "channelBox": true,
+                                "default": 0,
+                                "isChild": true,
+                                "isDynamic": true,
+                                "name": "autoAlignAimVectorZ",
+                                "Type": 5,
+                                "value": 0
+                            }
+                        ],
+                        "default": [
+                            1,
+                            0,
+                            0
+                        ],
+                        "isArray": false,
+                        "isChild": false,
+                        "isDynamic": true,
+                        "isElement": false,
+                        "keyable": false,
+                        "locked": false,
+                        "name": "autoAlignAimVector",
+                        "Type": 31,
+                        "value": [
+                            1,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "channelBox": true,
+                        "default": true,
+                        "isArray": false,
+                        "isChild": false,
+                        "isDynamic": true,
+                        "isElement": false,
+                        "keyable": false,
+                        "locked": false,
+                        "max": 1,
+                        "min": 0,
+                        "name": "mirror",
+                        "softMax": null,
+                        "softMin": null,
+                        "Type": 0,
+                        "value": true
+                    }
+                ],
+                "children": [
+                    {
+                        "attributes": [
+                            {
+                                "channelBox": true,
+                                "default": true,
+                                "isArray": false,
+                                "isChild": false,
+                                "isDynamic": true,
+                                "isElement": false,
+                                "keyable": false,
+                                "locked": false,
+                                "max": 1,
+                                "min": 0,
+                                "name": "autoAlign",
+                                "softMax": null,
+                                "softMin": null,
+                                "Type": 0,
+                                "value": true
+                            },
+                            {
+                                "channelBox": true,
+                                "children": [
+                                    {
+                                        "channelBox": true,
+                                        "default": 0,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignUpVectorX",
+                                        "Type": 5,
+                                        "value": 0
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "default": 1,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignUpVectorY",
+                                        "Type": 5,
+                                        "value": 1
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "default": 0,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignUpVectorZ",
+                                        "Type": 5,
+                                        "value": 0
+                                    }
+                                ],
+                                "default": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "isArray": false,
+                                "isChild": false,
+                                "isDynamic": true,
+                                "isElement": false,
+                                "keyable": false,
+                                "locked": false,
+                                "name": "autoAlignUpVector",
+                                "Type": 31,
+                                "value": [
+                                    0,
+                                    1,
+                                    0
+                                ]
+                            },
+                            {
+                                "channelBox": true,
+                                "children": [
+                                    {
+                                        "channelBox": true,
+                                        "default": 1,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignAimVectorX",
+                                        "Type": 5,
+                                        "value": 1
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "default": 0,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignAimVectorY",
+                                        "Type": 5,
+                                        "value": 0
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "default": 0,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignAimVectorZ",
+                                        "Type": 5,
+                                        "value": 0
+                                    }
+                                ],
+                                "default": [
+                                    1,
+                                    0,
+                                    0
+                                ],
+                                "isArray": false,
+                                "isChild": false,
+                                "isDynamic": true,
+                                "isElement": false,
+                                "keyable": false,
+                                "locked": false,
+                                "name": "autoAlignAimVector",
+                                "Type": 31,
+                                "value": [
+                                    1,
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "channelBox": true,
+                                "default": true,
+                                "isArray": false,
+                                "isChild": false,
+                                "isDynamic": true,
+                                "isElement": false,
+                                "keyable": false,
+                                "locked": false,
+                                "max": 1,
+                                "min": 0,
+                                "name": "mirror",
+                                "softMax": null,
+                                "softMin": null,
+                                "Type": 0,
+                                "value": true
+                            }
+                        ],
+                        "children": [
+                            {
+                                "attributes": [
+                                    {
+                                        "locked": true,
+                                        "name": "visibility",
+                                        "value": false
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "default": true,
+                                        "isArray": false,
+                                        "isChild": false,
+                                        "isDynamic": true,
+                                        "isElement": false,
+                                        "keyable": false,
+                                        "locked": false,
+                                        "max": 1,
+                                        "min": 0,
+                                        "name": "autoAlign",
+                                        "softMax": null,
+                                        "softMin": null,
+                                        "Type": 0,
+                                        "value": true
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "children": [
+                                            {
+                                                "channelBox": true,
+                                                "default": 0,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignUpVectorX",
+                                                "Type": 5,
+                                                "value": 0
+                                            },
+                                            {
+                                                "channelBox": true,
+                                                "default": 1,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignUpVectorY",
+                                                "Type": 5,
+                                                "value": 1
+                                            },
+                                            {
+                                                "channelBox": true,
+                                                "default": 0,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignUpVectorZ",
+                                                "Type": 5,
+                                                "value": 0
+                                            }
+                                        ],
+                                        "default": [
+                                            0,
+                                            1,
+                                            0
+                                        ],
+                                        "isArray": false,
+                                        "isChild": false,
+                                        "isDynamic": true,
+                                        "isElement": false,
+                                        "keyable": false,
+                                        "locked": false,
+                                        "name": "autoAlignUpVector",
+                                        "Type": 31,
+                                        "value": [
+                                            0,
+                                            1,
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "children": [
+                                            {
+                                                "channelBox": true,
+                                                "default": 1,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignAimVectorX",
+                                                "Type": 5,
+                                                "value": 1
+                                            },
+                                            {
+                                                "channelBox": true,
+                                                "default": 0,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignAimVectorY",
+                                                "Type": 5,
+                                                "value": 0
+                                            },
+                                            {
+                                                "channelBox": true,
+                                                "default": 0,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignAimVectorZ",
+                                                "Type": 5,
+                                                "value": 0
+                                            }
+                                        ],
+                                        "default": [
+                                            1,
+                                            0,
+                                            0
+                                        ],
+                                        "isArray": false,
+                                        "isChild": false,
+                                        "isDynamic": true,
+                                        "isElement": false,
+                                        "keyable": false,
+                                        "locked": false,
+                                        "name": "autoAlignAimVector",
+                                        "Type": 31,
+                                        "value": [
+                                            1,
+                                            0,
+                                            0
+                                        ]
+                                    }
+                                ],
+                                "children": [],
+                                "hiveType": "guide",
+                                "id": "worldUpVecRef",
+                                "matrix": [
+                                    0.6666666666666666,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0.6666666666666666,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0.6666666666666666,
+                                    0,
+                                    1.410593220986745e-37,
+                                    1.4210881820256316e-14,
+                                    2.969333333333335,
+                                    1
+                                ],
+                                "name": "spine_M_worldUpVecRef",
+                                "parent": "worldUpVec",
+                                "pivotColor": [
+                                    0.268,
+                                    0.183,
+                                    1
+                                ],
+                                "pivotShape": "locator",
+                                "rotate": [
+                                    0,
+                                    1,
+                                    0,
+                                    7.27366e-16
+                                ],
+                                "rotateOrder": 0,
+                                "scale": [
+                                    6.0,
+                                    6.0,
+                                    6.0
+                                ],
+                                "shape": {},
+                                "srts": [],
+                                "translate": [
+                                    0,
+                                    0,
+                                    4
+                                ],
+                                "type": "transform"
+                            }
+                        ],
+                        "hiveType": "guide",
+                        "id": "worldUpVec",
+                        "name": "spine_M_worldUpVec",
+                        "parent": "root",
+                        "pivotColor": [
+                            0.268,
+                            0.183,
+                            1
+                        ],
+                        "pivotShape": "arrow_thin",
+                        "rotate": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "rotateOrder": 0,
+                        "scale": [
+                            6,
+                            6,
+                            6
+                        ],
+                        "shape": "arrow_1_thinbev",
+                        "shapeTransform": {
+                            "rotate": [
+                                0,
+                                1,
+                                0,
+                                9.49411e-16
+                            ],
+                            "scale": [
+                                2,
+                                2,
+                                2
+                            ],
+                            "translate": [
+                                0,
+                                0,
+                                5.192
+                            ]
+                        },
+                        "srts": [],
+                        "translate": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "attributes": [
+                            {
+                                "locked": false,
+                                "name": "visibility",
+                                "value": 1
+                            },
+                            {
+                                "channelBox": true,
+                                "default": true,
+                                "isArray": false,
+                                "isChild": false,
+                                "isDynamic": true,
+                                "isElement": false,
+                                "keyable": false,
+                                "locked": false,
+                                "max": 1,
+                                "min": 0,
+                                "name": "autoAlign",
+                                "softMax": null,
+                                "softMin": null,
+                                "Type": 0,
+                                "value": true
+                            },
+                            {
+                                "channelBox": true,
+                                "children": [
+                                    {
+                                        "channelBox": true,
+                                        "default": 0,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignUpVectorX",
+                                        "Type": 5,
+                                        "value": 0
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "default": 1,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignUpVectorY",
+                                        "Type": 5,
+                                        "value": 1
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "default": 0,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignUpVectorZ",
+                                        "Type": 5,
+                                        "value": 0
+                                    }
+                                ],
+                                "default": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "isArray": false,
+                                "isChild": false,
+                                "isDynamic": true,
+                                "isElement": false,
+                                "keyable": false,
+                                "locked": false,
+                                "name": "autoAlignUpVector",
+                                "Type": 31,
+                                "value": [
+                                    0,
+                                    1,
+                                    0
+                                ]
+                            },
+                            {
+                                "channelBox": true,
+                                "children": [
+                                    {
+                                        "channelBox": true,
+                                        "default": 1,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignAimVectorX",
+                                        "Type": 5,
+                                        "value": 1
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "default": 0,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignAimVectorY",
+                                        "Type": 5,
+                                        "value": 0
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "default": 0,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignAimVectorZ",
+                                        "Type": 5,
+                                        "value": 0
+                                    }
+                                ],
+                                "default": [
+                                    1,
+                                    0,
+                                    0
+                                ],
+                                "isArray": false,
+                                "isChild": false,
+                                "isDynamic": true,
+                                "isElement": false,
+                                "keyable": false,
+                                "locked": false,
+                                "name": "autoAlignAimVector",
+                                "Type": 31,
+                                "value": [
+                                    1,
+                                    0,
+                                    0
+                                ]
+                            },
+                            {
+                                "name": "pivotShape",
+                                "Type": 13,
+                                "value": "sphere"
+                            },
+                            {
+                                "name": "pivotColor",
+                                "Type": 31,
+                                "value": [
+                                    1,
+                                    1,
+                                    0
+                                ]
+                            },
+                            {
+                                "channelBox": true,
+                                "default": true,
+                                "isArray": false,
+                                "isChild": false,
+                                "isDynamic": true,
+                                "isElement": false,
+                                "keyable": false,
+                                "locked": false,
+                                "max": 1,
+                                "min": 0,
+                                "name": "mirror",
+                                "softMax": null,
+                                "softMin": null,
+                                "Type": 0,
+                                "value": true
+                            }
+                        ],
+                        "children": [
+                            {
+                                "attributes": [
+                                    {
+                                        "channelBox": true,
+                                        "default": true,
+                                        "isArray": false,
+                                        "isChild": false,
+                                        "isDynamic": true,
+                                        "isElement": false,
+                                        "keyable": false,
+                                        "locked": false,
+                                        "max": 1,
+                                        "min": 0,
+                                        "name": "autoAlign",
+                                        "softMax": null,
+                                        "softMin": null,
+                                        "Type": 0,
+                                        "value": true
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "children": [
+                                            {
+                                                "channelBox": true,
+                                                "default": 0,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignUpVectorX",
+                                                "Type": 5,
+                                                "value": 0
+                                            },
+                                            {
+                                                "channelBox": true,
+                                                "default": 1,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignUpVectorY",
+                                                "Type": 5,
+                                                "value": 1
+                                            },
+                                            {
+                                                "channelBox": true,
+                                                "default": 0,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignUpVectorZ",
+                                                "Type": 5,
+                                                "value": 0
+                                            }
+                                        ],
+                                        "default": [
+                                            0,
+                                            1,
+                                            0
+                                        ],
+                                        "isArray": false,
+                                        "isChild": false,
+                                        "isDynamic": true,
+                                        "isElement": false,
+                                        "keyable": false,
+                                        "locked": false,
+                                        "name": "autoAlignUpVector",
+                                        "Type": 31,
+                                        "value": [
+                                            0,
+                                            1,
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "children": [
+                                            {
+                                                "channelBox": true,
+                                                "default": 1,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignAimVectorX",
+                                                "Type": 5,
+                                                "value": 1
+                                            },
+                                            {
+                                                "channelBox": true,
+                                                "default": 0,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignAimVectorY",
+                                                "Type": 5,
+                                                "value": 0
+                                            },
+                                            {
+                                                "channelBox": true,
+                                                "default": 0,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignAimVectorZ",
+                                                "Type": 5,
+                                                "value": 0
+                                            }
+                                        ],
+                                        "default": [
+                                            1,
+                                            0,
+                                            0
+                                        ],
+                                        "isArray": false,
+                                        "isChild": false,
+                                        "isDynamic": true,
+                                        "isElement": false,
+                                        "keyable": false,
+                                        "locked": false,
+                                        "name": "autoAlignAimVector",
+                                        "Type": 31,
+                                        "value": [
+                                            1,
+                                            0,
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "name": "pivotShape",
+                                        "Type": 13,
+                                        "value": "sphere"
+                                    },
+                                    {
+                                        "name": "pivotColor",
+                                        "Type": 31,
+                                        "value": [
+                                            1,
+                                            1,
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "default": true,
+                                        "isArray": false,
+                                        "isChild": false,
+                                        "isDynamic": true,
+                                        "isElement": false,
+                                        "keyable": false,
+                                        "locked": false,
+                                        "max": 1,
+                                        "min": 0,
+                                        "name": "mirror",
+                                        "softMax": null,
+                                        "softMin": null,
+                                        "Type": 0,
+                                        "value": true
+                                    }
+                                ],
+                                "children": [
+                                    {
+                                        "attributes": [
+                                            {
+                                                "channelBox": true,
+                                                "default": true,
+                                                "isArray": false,
+                                                "isChild": false,
+                                                "isDynamic": true,
+                                                "isElement": false,
+                                                "keyable": false,
+                                                "locked": false,
+                                                "max": 1,
+                                                "min": 0,
+                                                "name": "autoAlign",
+                                                "softMax": null,
+                                                "softMin": null,
+                                                "Type": 0,
+                                                "value": true
+                                            },
+                                            {
+                                                "channelBox": true,
+                                                "children": [
+                                                    {
+                                                        "channelBox": true,
+                                                        "default": 0,
+                                                        "isChild": true,
+                                                        "isDynamic": true,
+                                                        "name": "autoAlignUpVectorX",
+                                                        "Type": 5,
+                                                        "value": 0
+                                                    },
+                                                    {
+                                                        "channelBox": true,
+                                                        "default": 1,
+                                                        "isChild": true,
+                                                        "isDynamic": true,
+                                                        "name": "autoAlignUpVectorY",
+                                                        "Type": 5,
+                                                        "value": 1
+                                                    },
+                                                    {
+                                                        "channelBox": true,
+                                                        "default": 0,
+                                                        "isChild": true,
+                                                        "isDynamic": true,
+                                                        "name": "autoAlignUpVectorZ",
+                                                        "Type": 5,
+                                                        "value": 0
+                                                    }
+                                                ],
+                                                "default": [
+                                                    0,
+                                                    1,
+                                                    0
+                                                ],
+                                                "isArray": false,
+                                                "isChild": false,
+                                                "isDynamic": true,
+                                                "isElement": false,
+                                                "keyable": false,
+                                                "locked": false,
+                                                "name": "autoAlignUpVector",
+                                                "Type": 31,
+                                                "value": [
+                                                    0,
+                                                    1,
+                                                    0
+                                                ]
+                                            },
+                                            {
+                                                "channelBox": true,
+                                                "children": [
+                                                    {
+                                                        "channelBox": true,
+                                                        "default": 1,
+                                                        "isChild": true,
+                                                        "isDynamic": true,
+                                                        "name": "autoAlignAimVectorX",
+                                                        "Type": 5,
+                                                        "value": 1
+                                                    },
+                                                    {
+                                                        "channelBox": true,
+                                                        "default": 0,
+                                                        "isChild": true,
+                                                        "isDynamic": true,
+                                                        "name": "autoAlignAimVectorY",
+                                                        "Type": 5,
+                                                        "value": 0
+                                                    },
+                                                    {
+                                                        "channelBox": true,
+                                                        "default": 0,
+                                                        "isChild": true,
+                                                        "isDynamic": true,
+                                                        "name": "autoAlignAimVectorZ",
+                                                        "Type": 5,
+                                                        "value": 0
+                                                    }
+                                                ],
+                                                "default": [
+                                                    1,
+                                                    0,
+                                                    0
+                                                ],
+                                                "isArray": false,
+                                                "isChild": false,
+                                                "isDynamic": true,
+                                                "isElement": false,
+                                                "keyable": false,
+                                                "locked": false,
+                                                "name": "autoAlignAimVector",
+                                                "Type": 31,
+                                                "value": [
+                                                    1,
+                                                    0,
+                                                    0
+                                                ]
+                                            },
+                                            {
+                                                "name": "pivotShape",
+                                                "Type": 13,
+                                                "value": "sphere"
+                                            },
+                                            {
+                                                "name": "pivotColor",
+                                                "Type": 31,
+                                                "value": [
+                                                    1,
+                                                    1,
+                                                    0
+                                                ]
+                                            },
+                                            {
+                                                "channelBox": true,
+                                                "default": true,
+                                                "isArray": false,
+                                                "isChild": false,
+                                                "isDynamic": true,
+                                                "isElement": false,
+                                                "keyable": false,
+                                                "locked": false,
+                                                "max": 1,
+                                                "min": 0,
+                                                "name": "mirror",
+                                                "softMax": null,
+                                                "softMin": null,
+                                                "Type": 0,
+                                                "value": true
+                                            }
+                                        ],
+                                        "children": [
+                                            {
+                                                "attributes": [
+                                                    {
+                                                        "channelBox": true,
+                                                        "default": true,
+                                                        "isArray": false,
+                                                        "isChild": false,
+                                                        "isDynamic": true,
+                                                        "isElement": false,
+                                                        "keyable": false,
+                                                        "locked": false,
+                                                        "max": 1,
+                                                        "min": 0,
+                                                        "name": "autoAlign",
+                                                        "softMax": null,
+                                                        "softMin": null,
+                                                        "Type": 0,
+                                                        "value": true
+                                                    },
+                                                    {
+                                                        "channelBox": true,
+                                                        "children": [
+                                                            {
+                                                                "channelBox": true,
+                                                                "default": 0,
+                                                                "isChild": true,
+                                                                "isDynamic": true,
+                                                                "name": "autoAlignUpVectorX",
+                                                                "Type": 5,
+                                                                "value": 0
+                                                            },
+                                                            {
+                                                                "channelBox": true,
+                                                                "default": 1,
+                                                                "isChild": true,
+                                                                "isDynamic": true,
+                                                                "name": "autoAlignUpVectorY",
+                                                                "Type": 5,
+                                                                "value": 1
+                                                            },
+                                                            {
+                                                                "channelBox": true,
+                                                                "default": 0,
+                                                                "isChild": true,
+                                                                "isDynamic": true,
+                                                                "name": "autoAlignUpVectorZ",
+                                                                "Type": 5,
+                                                                "value": 0
+                                                            }
+                                                        ],
+                                                        "default": [
+                                                            0,
+                                                            1,
+                                                            0
+                                                        ],
+                                                        "isArray": false,
+                                                        "isChild": false,
+                                                        "isDynamic": true,
+                                                        "isElement": false,
+                                                        "keyable": false,
+                                                        "locked": false,
+                                                        "name": "autoAlignUpVector",
+                                                        "Type": 31,
+                                                        "value": [
+                                                            0,
+                                                            1,
+                                                            0
+                                                        ]
+                                                    },
+                                                    {
+                                                        "channelBox": true,
+                                                        "children": [
+                                                            {
+                                                                "channelBox": true,
+                                                                "default": 1,
+                                                                "isChild": true,
+                                                                "isDynamic": true,
+                                                                "name": "autoAlignAimVectorX",
+                                                                "Type": 5,
+                                                                "value": 1
+                                                            },
+                                                            {
+                                                                "channelBox": true,
+                                                                "default": 0,
+                                                                "isChild": true,
+                                                                "isDynamic": true,
+                                                                "name": "autoAlignAimVectorY",
+                                                                "Type": 5,
+                                                                "value": 0
+                                                            },
+                                                            {
+                                                                "channelBox": true,
+                                                                "default": 0,
+                                                                "isChild": true,
+                                                                "isDynamic": true,
+                                                                "name": "autoAlignAimVectorZ",
+                                                                "Type": 5,
+                                                                "value": 0
+                                                            }
+                                                        ],
+                                                        "default": [
+                                                            1,
+                                                            0,
+                                                            0
+                                                        ],
+                                                        "isArray": false,
+                                                        "isChild": false,
+                                                        "isDynamic": true,
+                                                        "isElement": false,
+                                                        "keyable": false,
+                                                        "locked": false,
+                                                        "name": "autoAlignAimVector",
+                                                        "Type": 31,
+                                                        "value": [
+                                                            1,
+                                                            0,
+                                                            0
+                                                        ]
+                                                    },
+                                                    {
+                                                        "name": "pivotShape",
+                                                        "Type": 13,
+                                                        "value": "sphere"
+                                                    },
+                                                    {
+                                                        "name": "pivotColor",
+                                                        "Type": 31,
+                                                        "value": [
+                                                            1,
+                                                            1,
+                                                            0
+                                                        ]
+                                                    },
+                                                    {
+                                                        "channelBox": true,
+                                                        "default": true,
+                                                        "isArray": false,
+                                                        "isChild": false,
+                                                        "isDynamic": true,
+                                                        "isElement": false,
+                                                        "keyable": false,
+                                                        "locked": false,
+                                                        "max": 1,
+                                                        "min": 0,
+                                                        "name": "mirror",
+                                                        "softMax": null,
+                                                        "softMin": null,
+                                                        "Type": 0,
+                                                        "value": true
+                                                    }
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "attributes": [
+                                                            {
+                                                                "channelBox": true,
+                                                                "default": true,
+                                                                "isArray": false,
+                                                                "isChild": false,
+                                                                "isDynamic": true,
+                                                                "isElement": false,
+                                                                "keyable": false,
+                                                                "locked": false,
+                                                                "max": 1,
+                                                                "min": 0,
+                                                                "name": "autoAlign",
+                                                                "softMax": null,
+                                                                "softMin": null,
+                                                                "Type": 0,
+                                                                "value": true
+                                                            },
+                                                            {
+                                                                "channelBox": true,
+                                                                "children": [
+                                                                    {
+                                                                        "channelBox": true,
+                                                                        "default": 0,
+                                                                        "isChild": true,
+                                                                        "isDynamic": true,
+                                                                        "name": "autoAlignUpVectorX",
+                                                                        "Type": 5,
+                                                                        "value": 0
+                                                                    },
+                                                                    {
+                                                                        "channelBox": true,
+                                                                        "default": 1,
+                                                                        "isChild": true,
+                                                                        "isDynamic": true,
+                                                                        "name": "autoAlignUpVectorY",
+                                                                        "Type": 5,
+                                                                        "value": 1
+                                                                    },
+                                                                    {
+                                                                        "channelBox": true,
+                                                                        "default": 0,
+                                                                        "isChild": true,
+                                                                        "isDynamic": true,
+                                                                        "name": "autoAlignUpVectorZ",
+                                                                        "Type": 5,
+                                                                        "value": 0
+                                                                    }
+                                                                ],
+                                                                "default": [
+                                                                    0,
+                                                                    1,
+                                                                    0
+                                                                ],
+                                                                "isArray": false,
+                                                                "isChild": false,
+                                                                "isDynamic": true,
+                                                                "isElement": false,
+                                                                "keyable": false,
+                                                                "locked": false,
+                                                                "name": "autoAlignUpVector",
+                                                                "Type": 31,
+                                                                "value": [
+                                                                    0,
+                                                                    1,
+                                                                    0
+                                                                ]
+                                                            },
+                                                            {
+                                                                "channelBox": true,
+                                                                "children": [
+                                                                    {
+                                                                        "channelBox": true,
+                                                                        "default": 1,
+                                                                        "isChild": true,
+                                                                        "isDynamic": true,
+                                                                        "name": "autoAlignAimVectorX",
+                                                                        "Type": 5,
+                                                                        "value": 1
+                                                                    },
+                                                                    {
+                                                                        "channelBox": true,
+                                                                        "default": 0,
+                                                                        "isChild": true,
+                                                                        "isDynamic": true,
+                                                                        "name": "autoAlignAimVectorY",
+                                                                        "Type": 5,
+                                                                        "value": 0
+                                                                    },
+                                                                    {
+                                                                        "channelBox": true,
+                                                                        "default": 0,
+                                                                        "isChild": true,
+                                                                        "isDynamic": true,
+                                                                        "name": "autoAlignAimVectorZ",
+                                                                        "Type": 5,
+                                                                        "value": 0
+                                                                    }
+                                                                ],
+                                                                "default": [
+                                                                    1,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "isArray": false,
+                                                                "isChild": false,
+                                                                "isDynamic": true,
+                                                                "isElement": false,
+                                                                "keyable": false,
+                                                                "locked": false,
+                                                                "name": "autoAlignAimVector",
+                                                                "Type": 31,
+                                                                "value": [
+                                                                    1,
+                                                                    0,
+                                                                    0
+                                                                ]
+                                                            },
+                                                            {
+                                                                "name": "pivotShape",
+                                                                "Type": 13,
+                                                                "value": "sphere"
+                                                            },
+                                                            {
+                                                                "name": "pivotColor",
+                                                                "Type": 31,
+                                                                "value": [
+                                                                    1,
+                                                                    1,
+                                                                    0
+                                                                ]
+                                                            },
+                                                            {
+                                                                "channelBox": true,
+                                                                "default": true,
+                                                                "isArray": false,
+                                                                "isChild": false,
+                                                                "isDynamic": true,
+                                                                "isElement": false,
+                                                                "keyable": false,
+                                                                "locked": false,
+                                                                "max": 1,
+                                                                "min": 0,
+                                                                "name": "mirror",
+                                                                "softMax": null,
+                                                                "softMin": null,
+                                                                "Type": 0,
+                                                                "value": true
+                                                            }
+                                                        ],
+                                                        "children": [
+                                                            {
+                                                                "attributes": [
+                                                                    {
+                                                                        "channelBox": true,
+                                                                        "default": true,
+                                                                        "isArray": false,
+                                                                        "isChild": false,
+                                                                        "isDynamic": true,
+                                                                        "isElement": false,
+                                                                        "keyable": false,
+                                                                        "locked": false,
+                                                                        "max": 1,
+                                                                        "min": 0,
+                                                                        "name": "autoAlign",
+                                                                        "softMax": null,
+                                                                        "softMin": null,
+                                                                        "Type": 0,
+                                                                        "value": true
+                                                                    },
+                                                                    {
+                                                                        "channelBox": true,
+                                                                        "children": [
+                                                                            {
+                                                                                "channelBox": true,
+                                                                                "default": 0,
+                                                                                "isChild": true,
+                                                                                "isDynamic": true,
+                                                                                "name": "autoAlignUpVectorX",
+                                                                                "Type": 5,
+                                                                                "value": 0
+                                                                            },
+                                                                            {
+                                                                                "channelBox": true,
+                                                                                "default": 1,
+                                                                                "isChild": true,
+                                                                                "isDynamic": true,
+                                                                                "name": "autoAlignUpVectorY",
+                                                                                "Type": 5,
+                                                                                "value": 1
+                                                                            },
+                                                                            {
+                                                                                "channelBox": true,
+                                                                                "default": 0,
+                                                                                "isChild": true,
+                                                                                "isDynamic": true,
+                                                                                "name": "autoAlignUpVectorZ",
+                                                                                "Type": 5,
+                                                                                "value": 0
+                                                                            }
+                                                                        ],
+                                                                        "default": [
+                                                                            0,
+                                                                            1,
+                                                                            0
+                                                                        ],
+                                                                        "isArray": false,
+                                                                        "isChild": false,
+                                                                        "isDynamic": true,
+                                                                        "isElement": false,
+                                                                        "keyable": false,
+                                                                        "locked": false,
+                                                                        "name": "autoAlignUpVector",
+                                                                        "Type": 31,
+                                                                        "value": [
+                                                                            0,
+                                                                            1,
+                                                                            0
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "channelBox": true,
+                                                                        "children": [
+                                                                            {
+                                                                                "channelBox": true,
+                                                                                "default": 1,
+                                                                                "isChild": true,
+                                                                                "isDynamic": true,
+                                                                                "name": "autoAlignAimVectorX",
+                                                                                "Type": 5,
+                                                                                "value": 1
+                                                                            },
+                                                                            {
+                                                                                "channelBox": true,
+                                                                                "default": 0,
+                                                                                "isChild": true,
+                                                                                "isDynamic": true,
+                                                                                "name": "autoAlignAimVectorY",
+                                                                                "Type": 5,
+                                                                                "value": 0
+                                                                            },
+                                                                            {
+                                                                                "channelBox": true,
+                                                                                "default": 0,
+                                                                                "isChild": true,
+                                                                                "isDynamic": true,
+                                                                                "name": "autoAlignAimVectorZ",
+                                                                                "Type": 5,
+                                                                                "value": 0
+                                                                            }
+                                                                        ],
+                                                                        "default": [
+                                                                            1,
+                                                                            0,
+                                                                            0
+                                                                        ],
+                                                                        "isArray": false,
+                                                                        "isChild": false,
+                                                                        "isDynamic": true,
+                                                                        "isElement": false,
+                                                                        "keyable": false,
+                                                                        "locked": false,
+                                                                        "name": "autoAlignAimVector",
+                                                                        "Type": 31,
+                                                                        "value": [
+                                                                            1,
+                                                                            0,
+                                                                            0
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "name": "pivotShape",
+                                                                        "Type": 13,
+                                                                        "value": "sphere"
+                                                                    },
+                                                                    {
+                                                                        "name": "pivotColor",
+                                                                        "Type": 31,
+                                                                        "value": [
+                                                                            1,
+                                                                            1,
+                                                                            0
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "channelBox": true,
+                                                                        "default": true,
+                                                                        "isArray": false,
+                                                                        "isChild": false,
+                                                                        "isDynamic": true,
+                                                                        "isElement": false,
+                                                                        "keyable": false,
+                                                                        "locked": false,
+                                                                        "max": 1,
+                                                                        "min": 0,
+                                                                        "name": "mirror",
+                                                                        "softMax": null,
+                                                                        "softMin": null,
+                                                                        "Type": 0,
+                                                                        "value": true
+                                                                    }
+                                                                ],
+                                                                "children": [],
+                                                                "hiveType": "guide",
+                                                                "id": "bind05",
+                                                                "matrix": [
+                                                                    0.9999999999999903,
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    1.000000000000004,
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    1.0000000000000047,
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    1
+                                                                ],
+                                                                "name": "chainnet_M_05",
+                                                                "parent": "bind04",
+                                                                "pivotColor": [
+                                                                    1,
+                                                                    1,
+                                                                    0
+                                                                ],
+                                                                "pivotShape": "sphere",
+                                                                "rotate": [
+                                                                    0.5000678110984937,
+                                                                    0.4999321797035687,
+                                                                    0.5000678110984937,
+                                                                    0.4999321797035687
+                                                                ],
+                                                                "rotateOrder": 0,
+                                                                "scale": [
+                                                                    0.567890073595999,
+                                                                    0.5678900735960031,
+                                                                    0.5678900735960121
+                                                                ],
+                                                                "shape": {},
+                                                                "shapeTransform": {
+                                                                    "rotate": [],
+                                                                    "scale": [],
+                                                                    "translate": []
+                                                                },
+                                                                "srts": [
+                                                                    {
+                                                                        "attributes": [],
+                                                                        "children": [],
+                                                                        "hiveType": "transform",
+                                                                        "matrix": [
+                                                                            0.9999999675992268,
+                                                                            0.00025456147625443134,
+                                                                            0,
+                                                                            0,
+                                                                            -0.00025456147625443134,
+                                                                            0.9999999675992268,
+                                                                            0,
+                                                                            0,
+                                                                            0,
+                                                                            0,
+                                                                            1,
+                                                                            0,
+                                                                            7.395700020325815,
+                                                                            0.0008018857494092703,
+                                                                            8.449531693153925e-16,
+                                                                            1
+                                                                        ],
+                                                                        "name": "bind05_piv_srt",
+                                                                        "parent": "chainnet_M_04_guide",
+                                                                        "rotate": [
+                                                                            0.5000678110984937,
+                                                                            0.4999321797035687,
+                                                                            0.5000678110984937,
+                                                                            0.4999321797035687
+                                                                        ],
+                                                                        "rotateOrder": 0,
+                                                                        "scale": [
+                                                                            0.5678900735960044,
+                                                                            0.5678900735960009,
+                                                                            0.5678900735960094
+                                                                        ],
+                                                                        "translate": [
+                                                                            -2.1314471231815972e-15,
+                                                                            21.00023934841112,
+                                                                            1.9233746539892849e-16
+                                                                        ],
+                                                                        "type": "transform",
+                                                                        "worldMatrix": [
+                                                                            0,
+                                                                            0.5678900527023345,
+                                                                            0.00015404744427494543,
+                                                                            0,
+                                                                            0,
+                                                                            -0.0001540474442749152,
+                                                                            0.567890052702331,
+                                                                            0,
+                                                                            0.5678900735960094,
+                                                                            0,
+                                                                            0,
+                                                                            0,
+                                                                            -2.1314471231815972e-15,
+                                                                            21.00023934841112,
+                                                                            1.9233746539892849e-16,
+                                                                            1
+                                                                        ]
+                                                                    }
+                                                                ],
+                                                                "translate": [
+                                                                    -2.1314471231815972e-15,
+                                                                    21.00023934841112,
+                                                                    1.9233746539892849e-16
+                                                                ],
+                                                                "type": "transform",
+                                                                "worldMatrix": [
+                                                                    0,
+                                                                    0.5678900527023291,
+                                                                    0.00015404744427494394,
+                                                                    0,
+                                                                    0,
+                                                                    -0.00015404744427491583,
+                                                                    0.5678900527023332,
+                                                                    0,
+                                                                    0.5678900735960121,
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    -2.1314471231815972e-15,
+                                                                    21.00023934841112,
+                                                                    1.9233746539892849e-16,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "hiveType": "guide",
+                                                        "id": "bind04",
+                                                        "matrix": [
+                                                            0.9999999999999964,
+                                                            0,
+                                                            0,
+                                                            0,
+                                                            0,
+                                                            0.999999999999997,
+                                                            0,
+                                                            0,
+                                                            0,
+                                                            0,
+                                                            1.0000000000000029,
+                                                            0,
+                                                            0,
+                                                            0,
+                                                            0,
+                                                            1
+                                                        ],
+                                                        "name": "chainnet_M_04",
+                                                        "parent": "bind03",
+                                                        "pivotColor": [
+                                                            1,
+                                                            1,
+                                                            0
+                                                        ],
+                                                        "pivotShape": "sphere",
+                                                        "rotate": [
+                                                            0.5000041753104862,
+                                                            0.49999582465464726,
+                                                            0.5000041753104862,
+                                                            0.49999582465464726
+                                                        ],
+                                                        "rotateOrder": 0,
+                                                        "scale": [
+                                                            0.5678900735960045,
+                                                            0.567890073596001,
+                                                            0.5678900735960094
+                                                        ],
+                                                        "shape": {},
+                                                        "shapeTransform": {
+                                                            "rotate": [],
+                                                            "scale": [],
+                                                            "translate": []
+                                                        },
+                                                        "srts": [
+                                                            {
+                                                                "attributes": [],
+                                                                "children": [],
+                                                                "hiveType": "transform",
+                                                                "matrix": [
+                                                                    0.9999999971289434,
+                                                                    7.577673071980097e-05,
+                                                                    0,
+                                                                    0,
+                                                                    -7.577673071980097e-05,
+                                                                    0.9999999971289434,
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    0.9999999999999998,
+                                                                    0,
+                                                                    7.395646646369027,
+                                                                    0.00019121239263715614,
+                                                                    -1.9241424954653653e-15,
+                                                                    1
+                                                                ],
+                                                                "name": "bind04_piv_srt",
+                                                                "parent": "chainnet_M_03_guide",
+                                                                "rotate": [
+                                                                    0.5000041753104862,
+                                                                    0.49999582465464726,
+                                                                    0.5000041753104862,
+                                                                    0.49999582465464726
+                                                                ],
+                                                                "rotateOrder": 0,
+                                                                "scale": [
+                                                                    0.5678900735960065,
+                                                                    0.5678900735960026,
+                                                                    0.5678900735960077
+                                                                ],
+                                                                "translate": [
+                                                                    -2.6112876406892967e-15,
+                                                                    16.800294727765568,
+                                                                    -0.0005255275414575559
+                                                                ],
+                                                                "type": "transform",
+                                                                "worldMatrix": [
+                                                                    0,
+                                                                    0.5678900735168046,
+                                                                    9.484509117576974e-06,
+                                                                    0,
+                                                                    0,
+                                                                    -9.48450911754585e-06,
+                                                                    0.5678900735168008,
+                                                                    0,
+                                                                    0.5678900735960077,
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    -2.6112876406892967e-15,
+                                                                    16.800294727765568,
+                                                                    -0.0005255275414575559,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "translate": [
+                                                            -2.6112876406892967e-15,
+                                                            16.800294727765568,
+                                                            -0.0005255275414575559
+                                                        ],
+                                                        "type": "transform",
+                                                        "worldMatrix": [
+                                                            0,
+                                                            0.5678900735168027,
+                                                            9.48450911757694e-06,
+                                                            0,
+                                                            0,
+                                                            -9.484509117545822e-06,
+                                                            0.5678900735167991,
+                                                            0,
+                                                            0.5678900735960094,
+                                                            0,
+                                                            0,
+                                                            0,
+                                                            -2.6112876406892967e-15,
+                                                            16.800294727765568,
+                                                            -0.0005255275414575559,
+                                                            1
+                                                        ]
+                                                    }
+                                                ],
+                                                "hiveType": "guide",
+                                                "id": "bind03",
+                                                "matrix": [
+                                                    1.3114569008752708,
+                                                    0,
+                                                    0,
+                                                    0,
+                                                    0,
+                                                    1.3114569008752652,
+                                                    0,
+                                                    0,
+                                                    0,
+                                                    0,
+                                                    1.3114569008752759,
+                                                    0,
+                                                    0,
+                                                    0,
+                                                    0,
+                                                    1
+                                                ],
+                                                "name": "chainnet_M_03",
+                                                "parent": "bind02",
+                                                "pivotColor": [
+                                                    1,
+                                                    1,
+                                                    0
+                                                ],
+                                                "pivotShape": "sphere",
+                                                "rotate": [
+                                                    0.4999852309271046,
+                                                    0.5000147686366574,
+                                                    0.4999852309271046,
+                                                    0.5000147686366574
+                                                ],
+                                                "rotateOrder": 0,
+                                                "scale": [
+                                                    0.5678900735960066,
+                                                    0.5678900735960027,
+                                                    0.5678900735960078
+                                                ],
+                                                "shape": {},
+                                                "shapeTransform": {
+                                                    "rotate": [],
+                                                    "scale": [],
+                                                    "translate": []
+                                                },
+                                                "srts": [
+                                                    {
+                                                        "attributes": [],
+                                                        "children": [],
+                                                        "hiveType": "transform",
+                                                        "matrix": [
+                                                            0.9999999993699924,
+                                                            -3.5496685103291474e-05,
+                                                            0,
+                                                            0,
+                                                            3.5496685103291474e-05,
+                                                            0.9999999993699924,
+                                                            0,
+                                                            0,
+                                                            0,
+                                                            0,
+                                                            1,
+                                                            0,
+                                                            9.700370918061708,
+                                                            -0.00020414668450191266,
+                                                            -2.395332755263661e-15,
+                                                            1
+                                                        ],
+                                                        "name": "bind03_piv_srt",
+                                                        "parent": "chainnet_M_02_guide",
+                                                        "rotate": [
+                                                            0.4999852309271046,
+                                                            0.5000147686366574,
+                                                            0.4999852309271046,
+                                                            0.5000147686366574
+                                                        ],
+                                                        "rotateOrder": 0,
+                                                        "scale": [
+                                                            0.4330222923963379,
+                                                            0.4330222923963368,
+                                                            0.43302229239633716
+                                                        ],
+                                                        "translate": [
+                                                            -1.5185862173302643e-15,
+                                                            12.600380410382796,
+                                                            -0.0003860034625423279
+                                                        ],
+                                                        "type": "transform",
+                                                        "worldMatrix": [
+                                                            0,
+                                                            0.4330222916407345,
+                                                            -2.5580973394241095e-05,
+                                                            0,
+                                                            0,
+                                                            2.5580973394265164e-05,
+                                                            0.4330222916407334,
+                                                            0,
+                                                            0.43302229239633716,
+                                                            0,
+                                                            0,
+                                                            0,
+                                                            -1.5185862173302643e-15,
+                                                            12.600380410382796,
+                                                            -0.0003860034625423279,
+                                                            1
+                                                        ]
+                                                    }
+                                                ],
+                                                "translate": [
+                                                    -1.5185862173302643e-15,
+                                                    12.600380410382796,
+                                                    -0.0003860034625423279
+                                                ],
+                                                "type": "transform",
+                                                "worldMatrix": [
+                                                    0,
+                                                    0.5678900726050654,
+                                                    -3.3548344088984185e-05,
+                                                    0,
+                                                    0,
+                                                    3.3548344089015606e-05,
+                                                    0.5678900726050615,
+                                                    0,
+                                                    0.5678900735960078,
+                                                    0,
+                                                    0,
+                                                    0,
+                                                    -1.5185862173302643e-15,
+                                                    12.600380410382796,
+                                                    -0.0003860034625423279,
+                                                    1
+                                                ]
+                                            }
+                                        ],
+                                        "hiveType": "guide",
+                                        "id": "bind02",
+                                        "matrix": [
+                                            0.7776588742343928,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0.7776588742343924,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0.7776588742343898,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            1
+                                        ],
+                                        "name": "chainnet_M_02",
+                                        "parent": "bind01",
+                                        "pivotColor": [
+                                            1,
+                                            1,
+                                            0
+                                        ],
+                                        "pivotShape": "sphere",
+                                        "rotate": [
+                                            0.499994105281752,
+                                            0.5000058946487534,
+                                            0.499994105281752,
+                                            0.5000058946487534
+                                        ],
+                                        "rotateOrder": 0,
+                                        "scale": [
+                                            0.433022292396338,
+                                            0.4330222923963369,
+                                            0.43302229239633716
+                                        ],
+                                        "shape": {},
+                                        "srts": [
+                                            {
+                                                "attributes": [],
+                                                "children": [],
+                                                "hiveType": "transform",
+                                                "matrix": [
+                                                    0.9999999999550063,
+                                                    -9.486168778998092e-06,
+                                                    0,
+                                                    0,
+                                                    9.486168778998092e-06,
+                                                    0.9999999999550063,
+                                                    0,
+                                                    0,
+                                                    0,
+                                                    0,
+                                                    1,
+                                                    0,
+                                                    7.542642533602498,
+                                                    -4.820531025502485e-06,
+                                                    -7.471679586386157e-16,
+                                                    1
+                                                ],
+                                                "name": "bind02_piv_srt",
+                                                "parent": "chainnet_M_01_guide",
+                                                "rotate": [
+                                                    0.499994105281752,
+                                                    0.5000058946487534,
+                                                    0.499994105281752,
+                                                    0.5000058946487534
+                                                ],
+                                                "rotateOrder": 0,
+                                                "scale": [
+                                                    0.5568280730064961,
+                                                    0.556828073006495,
+                                                    0.5568280730064971
+                                                ],
+                                                "translate": [
+                                                    -4.813537365939593e-16,
+                                                    8.399903561600949,
+                                                    -0.00019856147088603032
+                                                ],
+                                                "type": "transform",
+                                                "worldMatrix": [
+                                                    0,
+                                                    0.5568280728517099,
+                                                    -1.3129301017878847e-05,
+                                                    0,
+                                                    0,
+                                                    1.3129301017909755e-05,
+                                                    0.5568280728517088,
+                                                    0,
+                                                    0.5568280730064971,
+                                                    0,
+                                                    0,
+                                                    0,
+                                                    -4.813537365939593e-16,
+                                                    8.399903561600949,
+                                                    -0.00019856147088603032,
+                                                    1
+                                                ]
+                                            }
+                                        ],
+                                        "translate": [
+                                            -4.813537365939593e-16,
+                                            8.399903561600949,
+                                            -0.00019856147088603032
+                                        ],
+                                        "type": "transform",
+                                        "worldMatrix": [
+                                            0,
+                                            0.43302229227596717,
+                                            -1.0210117449048133e-05,
+                                            0,
+                                            0,
+                                            1.0210117449072163e-05,
+                                            0.43302229227596606,
+                                            0,
+                                            0.43302229239633716,
+                                            0,
+                                            0,
+                                            0,
+                                            -4.813537365939593e-16,
+                                            8.399903561600949,
+                                            -0.00019856147088603032,
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "hiveType": "guide",
+                                "id": "bind01",
+                                "matrix": [
+                                    0.6220223260671056,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0.6220223260671044,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0.6220223260671058,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                "name": "chainnet_M_01",
+                                "parent": "bind00",
+                                "pivotColor": [
+                                    1,
+                                    1,
+                                    0
+                                ],
+                                "pivotShape": "sphere",
+                                "rotate": [
+                                    0.49999647684628146,
+                                    0.5000035231288936,
+                                    0.49999647684628146,
+                                    0.5000035231288936
+                                ],
+                                "rotateOrder": 0,
+                                "scale": [
+                                    0.556828073006496,
+                                    0.5568280730064948,
+                                    0.5568280730064971
+                                ],
+                                "shape": {},
+                                "shapeTransform": {
+                                    "rotate": [],
+                                    "scale": [],
+                                    "translate": []
+                                },
+                                "srts": [
+                                    {
+                                        "attributes": [],
+                                        "children": [],
+                                        "hiveType": "transform",
+                                        "matrix": [
+                                            0.9999999988066949,
+                                            4.8852944457081545e-05,
+                                            0,
+                                            0,
+                                            -4.8852944457081545e-05,
+                                            0.9999999988066949,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            1,
+                                            0,
+                                            4.69168462218692,
+                                            0.00014262759306651315,
+                                            -7.295619129855596e-17,
+                                            1
+                                        ],
+                                        "name": "bind01_piv_srt",
+                                        "parent": "chainnet_M_00_guide",
+                                        "rotate": [
+                                            0.49999647684628146,
+                                            0.5000035231288936,
+                                            0.49999647684628146,
+                                            0.5000035231288936
+                                        ],
+                                        "rotateOrder": 0,
+                                        "scale": [
+                                            0.8951898503823538,
+                                            0.8951898503823538,
+                                            0.8951898503823553
+                                        ],
+                                        "translate": [
+                                            -6.53096419730208e-17,
+                                            4.19994845469312,
+                                            -0.00013668912259661304
+                                        ],
+                                        "type": "transform",
+                                        "worldMatrix": [
+                                            0,
+                                            0.8951898502934613,
+                                            -1.2615521354270465e-05,
+                                            0,
+                                            0,
+                                            1.2615521354320162e-05,
+                                            0.8951898502934613,
+                                            0,
+                                            0.8951898503823553,
+                                            0,
+                                            0,
+                                            0,
+                                            -6.53096419730208e-17,
+                                            4.19994845469312,
+                                            -0.00013668912259661304,
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "translate": [
+                                    -6.53096419730208e-17,
+                                    4.19994845469312,
+                                    -0.00013668912259661304
+                                ],
+                                "type": "transform",
+                                "worldMatrix": [
+                                    0,
+                                    0.5568280729512028,
+                                    -7.847135937332557e-06,
+                                    0,
+                                    0,
+                                    7.847135937363455e-06,
+                                    0.5568280729512017,
+                                    0,
+                                    0.5568280730064971,
+                                    0,
+                                    0,
+                                    0,
+                                    -6.53096419730208e-17,
+                                    4.19994845469312,
+                                    -0.00013668912259661304,
+                                    1
+                                ]
+                            }
+                        ],
+                        "hiveType": "guide",
+                        "id": "bind00",
+                        "matrix": [
+                            0.29839661679411805,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0.29839661679411805,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0.29839661679411844,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "name": "chainnet_M_00",
+                        "parent": "root",
+                        "pivotColor": [
+                            1,
+                            1,
+                            0
+                        ],
+                        "pivotShape": "sphere",
+                        "rotate": [
+                            0.49998426337494384,
+                            0.5000157361297891,
+                            0.49998426337494384,
+                            0.5000157361297891
+                        ],
+                        "rotateOrder": 0,
+                        "scale": [
+                            0.8951898503823538,
+                            0.8951898503823538,
+                            0.8951898503823553
+                        ],
+                        "shape": {},
+                        "srts": [
+                            {
+                                "attributes": [],
+                                "children": [],
+                                "hiveType": "transform",
+                                "matrix": [
+                                    0,
+                                    0.9999999980189311,
+                                    -6.294550965929566e-05,
+                                    0,
+                                    0,
+                                    6.294550965935118e-05,
+                                    0.9999999980189311,
+                                    0,
+                                    1,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                "name": "bind00_piv_srt",
+                                "parent": "chainnet_M_root_guide",
+                                "rotate": [
+                                    0.49998426337494384,
+                                    0.5000157361297891,
+                                    0.49998426337494384,
+                                    0.5000157361297891
+                                ],
+                                "rotateOrder": 0,
+                                "scale": [
+                                    2.999999999999999,
+                                    2.999999999999999,
+                                    3
+                                ],
+                                "translate": [
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "type": "transform",
+                                "worldMatrix": [
+                                    0,
+                                    2.999999994056793,
+                                    -0.00018883652897788697,
+                                    0,
+                                    0,
+                                    0.00018883652897805353,
+                                    2.999999994056793,
+                                    0,
+                                    3,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    1
+                                ]
+                            }
+                        ],
+                        "translate": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "type": "transform",
+                        "worldMatrix": [
+                            0,
+                            0.8951898486089214,
+                            -5.634818137414591e-05,
+                            0,
+                            0,
+                            5.634818137419561e-05,
+                            0.8951898486089214,
+                            0,
+                            0.8951898503823553,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "attributes": [
+                            {
+                                "name": "pivotShape",
+                                "Type": 13,
+                                "value": "locator"
+                            },
+                            {
+                                "name": "pivotColor",
+                                "Type": 31,
+                                "value": [
+                                    0.47699999809265137,
+                                    1,
+                                    0.0729999989271164
+                                ]
+                            },
+                            {
+                                "channelBox": true,
+                                "default": true,
+                                "isDynamic": true,
+                                "max": 1,
+                                "min": 0,
+                                "name": "autoAlign",
+                                "Type": 0,
+                                "value": true
+                            },
+                            {
+                                "channelBox": true,
+                                "default": true,
+                                "isDynamic": true,
+                                "max": 1,
+                                "min": 0,
+                                "name": "mirror",
+                                "Type": 0,
+                                "value": true
+                            },
+                            {
+                                "channelBox": true,
+                                "children": [
+                                    {
+                                        "channelBox": true,
+                                        "default": 0,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignUpVectorX",
+                                        "Type": 5,
+                                        "value": 0
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "default": 1,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignUpVectorY",
+                                        "Type": 5,
+                                        "value": 1
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "default": 0,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignUpVectorZ",
+                                        "Type": 5,
+                                        "value": 0
+                                    }
+                                ],
+                                "default": [
+                                    0,
+                                    1,
+                                    0
+                                ],
+                                "isDynamic": true,
+                                "name": "autoAlignUpVector",
+                                "Type": 31,
+                                "value": [
+                                    0,
+                                    1,
+                                    0
+                                ]
+                            },
+                            {
+                                "channelBox": true,
+                                "children": [
+                                    {
+                                        "channelBox": true,
+                                        "default": 1,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignAimVectorX",
+                                        "Type": 5,
+                                        "value": 1
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "default": 0,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignAimVectorY",
+                                        "Type": 5,
+                                        "value": 0
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "default": 0,
+                                        "isChild": true,
+                                        "isDynamic": true,
+                                        "name": "autoAlignAimVectorZ",
+                                        "Type": 5,
+                                        "value": 0
+                                    }
+                                ],
+                                "default": [
+                                    1,
+                                    0,
+                                    0
+                                ],
+                                "isDynamic": true,
+                                "name": "autoAlignAimVector",
+                                "Type": 31,
+                                "value": [
+                                    1,
+                                    0,
+                                    0
+                                ]
+                            }
+                        ],
+                        "children": [
+                            {
+                                "attributes": [
+                                    {
+                                        "name": "pivotShape",
+                                        "Type": 13,
+                                        "value": "locator"
+                                    },
+                                    {
+                                        "name": "pivotColor",
+                                        "Type": 31,
+                                        "value": [
+                                            0.47699999809265137,
+                                            1,
+                                            0.0729999989271164
+                                        ]
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "default": true,
+                                        "isDynamic": true,
+                                        "max": 1,
+                                        "min": 0,
+                                        "name": "autoAlign",
+                                        "Type": 0,
+                                        "value": true
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "default": true,
+                                        "isDynamic": true,
+                                        "max": 1,
+                                        "min": 0,
+                                        "name": "mirror",
+                                        "Type": 0,
+                                        "value": true
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "children": [
+                                            {
+                                                "channelBox": true,
+                                                "default": 0,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignUpVectorX",
+                                                "Type": 5,
+                                                "value": 0
+                                            },
+                                            {
+                                                "channelBox": true,
+                                                "default": 1,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignUpVectorY",
+                                                "Type": 5,
+                                                "value": 1
+                                            },
+                                            {
+                                                "channelBox": true,
+                                                "default": 0,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignUpVectorZ",
+                                                "Type": 5,
+                                                "value": 0
+                                            }
+                                        ],
+                                        "default": [
+                                            0,
+                                            1,
+                                            0
+                                        ],
+                                        "isDynamic": true,
+                                        "name": "autoAlignUpVector",
+                                        "Type": 31,
+                                        "value": [
+                                            0,
+                                            1,
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "channelBox": true,
+                                        "children": [
+                                            {
+                                                "channelBox": true,
+                                                "default": 1,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignAimVectorX",
+                                                "Type": 5,
+                                                "value": 1
+                                            },
+                                            {
+                                                "channelBox": true,
+                                                "default": 0,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignAimVectorY",
+                                                "Type": 5,
+                                                "value": 0
+                                            },
+                                            {
+                                                "channelBox": true,
+                                                "default": 0,
+                                                "isChild": true,
+                                                "isDynamic": true,
+                                                "name": "autoAlignAimVectorZ",
+                                                "Type": 5,
+                                                "value": 0
+                                            }
+                                        ],
+                                        "default": [
+                                            1,
+                                            0,
+                                            0
+                                        ],
+                                        "isDynamic": true,
+                                        "name": "autoAlignAimVector",
+                                        "Type": 31,
+                                        "value": [
+                                            1,
+                                            0,
+                                            0
+                                        ]
+                                    }
+                                ],
+                                "children": [
+                                ],
+                                "hiveType": "guide",
+                                "id": "endCurvePiv",
+                                "matrix": [
+                                    1.4823048118845927,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    1.4823048118845983,
+                                    0,
+                                    0,
+                                    0,
+                                    0,
+                                    1.4823048118845914,
+                                    0,
+                                    -1.0657235615907986e-15,
+                                    10.50011967420556,
+                                    9.615026383887625e-17,
+                                    1
+                                ],
+                                "name": "chainnet_M_endCurvePiv",
+                                "parent": "startCurvePiv",
+                                "pivotColor": [
+                                    1,
+                                    1,
+                                    0
+                                ],
+                                "pivotShape": "locator",
+                                "rotate": [
+                                    0,
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                "rotateOrder": 0,
+                                "scale": [
+                                    1.633,
+                                    1.633,
+                                    1.633
+                                ],
+                                "shape": {},
+                                "srts": [],
+                                "translate": [
+                                    -2.1314471231815972e-15,
+                                    21.00023934841112,
+                                    1.923005276777525e-16
+                                ],
+                                "type": "transform"
+                            }
+                        ],
+                        "hiveType": "guide",
+                        "id": "startCurvePiv",
+                        "matrix": [
+                            0.6666666666666666,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0.6666666666666666,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0.6666666666666666,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "name": "chainnet_M_startCurvePiv",
+                        "parent": "root",
+                        "pivotColor": [
+                            0.47699999809265137,
+                            1,
+                            0.0729999989271164
+                        ],
+                        "pivotShape": "locator",
+                        "rotate": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "rotateOrder": 0,
+                        "scale": [
+                            2,
+                            2,
+                            2
+                        ],
+                        "shape": {},
+                        "srts": [],
+                        "translate": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "type": "transform",
+                        "worldMatrix": [
+                            2,
+                            0,
+                            0,
+                            0,
+                            0,
+                            2,
+                            0,
+                            0,
+                            0,
+                            0,
+                            2,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    }
+                ],
+                "hiveType": "guide",
+                "id": "root",
+                "matrix": [
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "name": "chainnet_M_root",
+                "parent": null,
+                "pivotColor": [
+                    0.800000011920929,
+                    0,
+                    0
+                ],
+                "pivotShape": "cube_bounding",
+                "rotate": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "rotateOrder": 0,
+                "scale": [
+                    3,
+                    3,
+                    3
+                ],
+                "shape": {},
+                "srts": [
+                    {
+                        "attributes": [],
+                        "children": [],
+                        "hiveType": "transform",
+                        "matrix": [
+                            1,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "name": "root_guide_srt",
+                        "parent": "chainnet_M_guideLayer_hrc",
+                        "rotate": [
+                            0,
+                            0,
+                            0,
+                            1
+                        ],
+                        "rotateOrder": 0,
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "translate": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "type": "transform",
+                        "worldMatrix": [
+                            1,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                            0,
+                            0,
+                            1
+                        ]
+                    }
+                ],
+                "translate": [
+                    0,
+                    0,
+                    0
+                ],
+                "type": "transform",
+                "worldMatrix": [
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1
+                ]
+            }
+        ],
+        "settings": [
+            {
+                "channelBox": true,
+                "default": true,
+                "keyable": false,
+                "locked": false,
+                "name": "hasJoints",
+                "Type": 0,
+                "value": true
+            },
+            {
+                "channelBox": true,
+                "default": true,
+                "keyable": false,
+                "locked": false,
+                "name": "hasControls",
+                "Type": 0,
+                "value": true
+            },
+            {
+                "channelBox": true,
+                "default": 6,
+                "keyable": false,
+                "locked": false,
+                "max": 9999,
+                "min": 1,
+                "name": "jointCount",
+                "Type": 2,
+                "value": 6
+            },
+            {
+                "channelBox": true,
+                "default": 50,
+                "keyable": false,
+                "locked": false,
+                "max": 100,
+                "min": 0,
+                "name": "percent",
+                "Type": 2,
+                "value": 50
+           },
+            {
+                "channelBox": false,
+                "default": 4,
+                "isDynamic": true,
+                "keyable": false,
+                "locked": false,
+                "max": 9999,
+                "min": 1,
+                "name": "fkCtrlCount",
+                "softMax": null,
+                "softMin": null,
+                "Type": 2,
+                "value": 4
+            },
+            {
+                "channelBox": true,
+                "enums": [
+                    "VISIBILITY"
+                ],
+                "isDynamic": true,
+                "keyable": false,
+                "locked": true,
+                "name": "_",
+                "Type": 12,
+                "value": 0
+            },
+            {
+                "channelBox": true,
+                "default": false,
+                "isDynamic": true,
+                "keyable": false,
+                "locked": false,
+                "name": "showCurveTemplate",
+                "Type": 0,
+                "value": true
+            },
+            {
+                "channelBox": true,
+                "enums": [
+                    "DISTANCES"
+                ],
+                "isDynamic": true,
+                "keyable": false,
+                "locked": true,
+                "name": "__",
+                "Type": 12,
+                "value": 0
+            },
+            {
+                "channelBox": true,
+                "keyable": false,
+                "max": 1,
+                "min": 0,
+                "name": "bind00Distance",
+                "Type": 5,
+                "value": 0
+            },
+            {
+                "channelBox": true,
+                "keyable": false,
+                "max": 1,
+                "min": 0,
+                "name": "bind01Distance",
+                "Type": 5,
+                "value": 0.20000000298023224
+            },
+            {
+                "channelBox": true,
+                "keyable": false,
+                "max": 1,
+                "min": 0,
+                "name": "bind02Distance",
+                "Type": 5,
+                "value": 0.4000000059604645
+            },
+            {
+                "channelBox": true,
+                "keyable": false,
+                "max": 1,
+                "min": 0,
+                "name": "bind03Distance",
+                "Type": 5,
+                "value": 0.6000000238418579
+            },
+            {
+                "channelBox": true,
+                "keyable": false,
+                "max": 1,
+                "min": 0,
+                "name": "bind04Distance",
+                "Type": 5,
+                "value": 0.800000011920929
+            },
+            {
+                "channelBox": true,
+                "keyable": false,
+                "max": 1,
+                "min": 0,
+                "name": "bind05Distance",
+                "Type": 5,
+                "value": 1
+            }
+        ],
+        "shape": {}
+    },
+    "inputLayer": {
+        "dag": [
+            {
+                "hiveType": "input",
+                "id": "world",
+                "name": "world_in",
+                "root": false
+            },
+            {
+                "hiveType": "input",
+                "id": "parent",
+                "name": "parent_in",
+                "root": true
+            },
+            {
+                "name": "masterA_in",
+                "id": "masterA",
+                "root": false,
+                "children": [],
+                "hiveType": "input",
+                "rotateOrder": 0
+            },
+            {
+                "name": "masterB_in",
+                "id": "masterB",
+                "root": false,
+                "children": [],
+                "hiveType": "input",
+                "rotateOrder": 0
+            }
+        ],
+        "settings": []
+    },
+    "mm_anim_Layout": "hiveFkChainAnimMenu",
+    "mm_guide_Layout": "hiveFkChainGuideMenu",
+    "name": "chainnet",
+    "outputLayer": {
+        "dag": [],
+        "settings": []
+    },
+    "parent": "",
+    "rigLayer": {
+        "dag": [],
+        "settings": {
+            "constants": [
+            ],
+            "controlPanel": [
+                {
+                    "channelBox": true,
+                    "enums": [
+                        "SETTINGS"
+                    ],
+                    "keyable": false,
+                    "locked": true,
+                    "name": "_",
+                    "Type": 12
+                },
+                {
+                    "channelBox": false,
+                    "default": 1.0,
+                    "keyable": true,
+                    "locked": false,
+                    "max": 10.0,
+                    "min": 1.0,
+                    "name": "length_ratio",
+                    "Type": 5,
+                    "value": 1.0
+                },
+                {
+                    "name": "ikVis",
+                    "default": false,
+                    "Type": 0,
+                    "value": false,
+                    "channelBox": true,
+                    "keyable": false
+                },
+              {
+                    "name": "fkVis",
+                    "default": true,
+                    "Type": 0,
+                    "value": true,
+                    "channelBox": true,
+                    "keyable": false
+                },
+              {
+                    "channelBox": true,
+                    "default": 0.0,
+                    "keyable": false,
+                    "locked": false,
+                    "max": 1.0,
+                    "min": 0.0,
+                    "name": "bend",
+                    "Type": 5,
+                    "value": 0.0
+              }
+            ]
+        }
+    },
+    "side": "M",
+    "spaceSwitching": [],
+    "type": "chainnetcomponent",
+    "version": "1.0.0"
+}

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+
+if [ "$CGRIGTOOLS_PRO_ROOT" == "" ];then
+    export CGRIGTOOLS_PRO_ROOT="$DIR/../"
+else
+    echo "Custom CgRigtools root specified CGRIGTOOLS_PRO_ROOT"
+fi
+if [ "$CGRIG_PYTHON_INTERPRETER" == "" ];then
+    echo "Using default python"
+    export CGRIG_PYTHON_INTERPRETER="python"
+else
+    echo "Custom python interpreter specified $CGRIG_PYTHON_INTERPRETER"
+fi
+echo $CGRIG_PYTHON_INTERPRETER
+
+"$CGRIG_PYTHON_INTERPRETER" "$CGRIGTOOLS_PRO_ROOT/scripts/cgrig_cmd.py" "$@"

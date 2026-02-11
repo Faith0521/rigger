@@ -1,0 +1,87 @@
+{
+  "sortOrder": 0,
+  "shelves": [
+    {
+      "name": "CgRigToolsPro",
+      "children": [
+        {
+          "id": "cgrig.rigging.shelf",
+          "displayLabel": false,
+          "type": "button",
+          "icon": "cgrig_rigging_shelf",
+          "tooltip": "CgRig Rigging Shelf: \nGeneral CgRig Rigging & Skinning Tools.",
+          "children": [
+            {
+              "type": "toolset",
+              "id": "controlCreator"
+            },
+            {
+              "type": "toolset",
+              "id": "editControls"
+            },
+            {
+              "type": "toolset",
+              "id": "colorOverrides"
+            },
+            {
+              "type": "action",
+              "id": "cgrig.utilityActions",
+              "tooltip": "FreezeMatrix (Right-Click)",
+              "icon": "matrix",
+              "iconColor": "lightBlue",
+              "arguments": {
+                "operation": "freezeMatrix"
+              }
+            },
+            {
+              "type": "action",
+              "id": "cgrig.modellingActions",
+              "tooltip": "Select Menu (Left-Click)",
+              "icon": "cursorSelect",
+              "iconColor": "lightBlue",
+              "arguments": {
+                "operation": "selectHierarchy"
+              }
+            },
+            {
+              "type": "separator"
+            },
+            {
+              "type": "toolset",
+              "id": "jointTool"
+            },
+            {
+              "type": "toolset",
+              "id": "constraintToolbox"
+            },
+            {
+              "type": "toolset",
+              "id": "cgrigRenamer"
+            },
+            {
+              "type": "action",
+              "id": "cgrig.riggingActions",
+              "tooltip": "Skin Selected (Right-Click)",
+              "icon": "skinYoga",
+              "iconColor": "lightBlue",
+              "arguments": {
+                "operation": "skinSelected"
+              }
+            },
+            {
+              "type": "action",
+              "id": "cgrig.riggingActions",
+              "tooltip": "Transfer Skin Weights (Right-Click)",
+              "icon": "transfer",
+              "iconColor": "lightBlue",
+              "arguments": {
+                "operation": "transferSkinWeights"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

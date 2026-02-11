@@ -1,0 +1,47 @@
+{
+    "author": "Create3dCharacters",
+    "authorEmail": "info@create3dcharacters.com",
+    "commands": [
+        "{self}/scripts/cgrig_model_assets_startup.py"
+    ],
+    "description": "Model Assets for CgRig Tools Pro",
+    "displayName": "CgRig Model Assets",
+    "documentation": {
+        "masterDoc": "index.rst",
+        "sourceCodeFolder": "{self}/cgrig",
+        "sourceFolder": "{self}/docs/source"
+    },
+    "environment": {
+        "PYTHONPATH": [
+            "{self}"
+        ],
+        "CGRIG_ACTIONPLUGIN_MODULES": [
+            "{self}/cgrig/apps/integration/maya/cgrig_model_assets_actionplugins.py"
+        ],
+        "CGRIG_BASE_PATHS": [
+            "{self}"
+        ],
+        "CGRIG_ICON_PATHS": [
+            "{self}/icons"
+        ],
+        "CGRIG_MENU_LAYOUTS": [
+        ],
+        "CGRIG_SHELF_LAYOUTS": [
+        ],
+        "CGRIG_TOOLSET_LAYOUTS": [
+        ],
+        "CGRIG_TOOLSET_UI_PATHS": [
+            "{self}/cgrig/apps/uitoolsets"
+        ]
+    },
+    "name": "cgrig_model_assets",
+    "requirements": [
+        "cgrig_core",
+        "cgrig_preferences",
+        "cgrig_pyside",
+        "cgrig_maya",
+        "cgrig_toolsets",
+        "cgrig_artist_palette"
+    ],
+    "version": "1.1.26"
+}

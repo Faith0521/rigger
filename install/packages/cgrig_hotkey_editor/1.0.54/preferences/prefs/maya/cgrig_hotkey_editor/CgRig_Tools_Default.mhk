@@ -1,0 +1,3456 @@
+//Maya Preference 2025 (Release 1)
+//
+//
+
+//
+// The runtime commands referenced by the hotkeys
+//
+runTimeCommand
+	-label ""
+	-annotation "CgRigMove5FramesForwardNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.animMoveTimeForwards5Frames()")
+	move5FramesForward;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigCurveCycleGraphRemoveNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.removeCycleAnimation()")
+	cgrigCurveCycleGraphRemove;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigLambert50PercentGreyNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Display"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("setAttr \"lambert1.color\" -type double3 0.214037 0.214037 0.214037 ;")
+	lambert50PercentGrey;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlRenamerNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Windows"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.open_cgrigRenamer(advancedMode=False)")
+	cgrigRenamer;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlNudge1FrameBackNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.cgrigTools"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.nudge(offset=-1.0, operationMode=\"selectedObjs\", moveAfter=True)")
+	cgrigTlNudge1FrameBack;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigSetMeshSculptKnifeAlphaToolNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Sculpt"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.sculptToolKnifeMel()")
+	cgrigSetMeshSculptKnifeAlphaTool;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigSymmetricalToggleNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("//symmetricModelling -e -symmetry (!`symmetricModelling -q -symmetry`);\n\n{\n    string $sel[] = `ls -sl`;\n    int $state = `symmetricModelling -q -symmetry`;\n    if (1 - $state)\n    {    \n        symmetricModelling -symmetry 1;\n        select -r -sym $sel;\n        print (\"Symmetry is on\");\n        \n    }\n    else \n    {\n        select -r -sym $sel;\n        print (\"select\");\n        symmetricModelling -symmetry 0;\n        print (\"Symmetry is off\");\n    }\n}")
+	symmetricalToggle;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigFreezeTransformMarkingMenuPressNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.freezeTransformMarkingMenuPress(alt=True, shift=False, ctrl=False)")
+	cgrigFreezeTransformMarkingMenuPress;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigAlignSelectionHotkeyPrsNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Object"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.alignSelection()")
+	cgrigAlignSelection_hotkeyPrs;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlNudge10FramesPreBackNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.cgrigTools"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.nudge(offset=-10.0, operationMode=\"selectedObjs\", moveAfter=False)")
+	cgrigTlNudge10FramesPreBack;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigSetKeyframeNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.setKeyframeChannelBox()")
+	cgrigSetKeyframe;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigCreateCubeMatchNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.createCubeMatch()")
+	createCubeMatch;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigPolyHardenEdgeNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("SoftPolyEdgeElements 0;\ntoggleSelMode;\ntoggleSelMode;")
+	polyHardenEdgeCgRig;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigPolyAppendAndCompleteNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("CompleteCurrentTool;\nAppendToPolygonTool;")
+	poly_appendAndComplete;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigCyclePerspCamerasNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Camera"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.cyclePerspCameras(limitPerspective=True)")
+	cgrigCyclePerspCameras;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigAnimGhostEditorWindowNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.openGhostEditor()")
+	cgrigAnimGhostEditorWindow;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigSetKeyframeAllNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.setKeyAll()")
+	setKeyframeAll;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigCreateLocatorMatchNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.createLocatorMatch()")
+	CgRigCreateLocatorMatch;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigKeyDeleteCurrentFrameNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("timeSliderClearKey;")
+	key_deleteCurrentFrame;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigMotionTrailMarkingMenuPressNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.motionTrailMarkingMenuPress(alt=False, shift=False, ctrl=False)")
+	cgrigMotionTrailMarkingMenuPress;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigShaderMarkingMenuPressNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.shaderMarkingMenuPress(alt=False, shift=False, ctrl=False)")
+	CgRigShaderMarkingMenuPress;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigBakeKeysNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.bakeKeys()")
+	cgrigBakeKeys;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigWireframeOnShadedToggleNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Display"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.displayToggleWireOnShadedMode()")
+	wireframeOnShadedToggle;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigSkinMarkingMenuPressNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.skinMarkingMenuPress(alt=False, shift=True, ctrl=False)")
+	CgRig_SkinMarkingMenu_Press;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigHotkeySetToggleNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Settings"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.hotkeySetToggle()")
+	CgRigHotkeySetToggle;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigCreateSphereMatchNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.createSphereMatch()")
+	createSphereMatch;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigObjectModeAndDeselectNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Select"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("select -r `ls -hl`;\nif (`selectMode -q -co`)\n    selectMode -o;")
+	object_objectModeAndDeselect;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlNudge5FramesPreBackNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.cgrigTools"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.nudge(offset=-5.0, operationMode=\"selectedObjs\", moveAfter=False)")
+	cgrigTlNudge5FramesPreBack;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigPlaybackRangeStartNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.timeRangeStart()")
+	cgrigPlaybackRangeStart;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigSelectHierarchyNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Select"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("\nfrom cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.selectHierarchy()")
+	cgrig_selectHierarchy;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigCreateCamRooXzyNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Camera"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.createCamRooXzy()")
+	CgRigCreateCamROOxzy;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTriggerToggleVisNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Display"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.toogleKeyVisibility()")
+	object_triggerToggle;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigPlaybackAnimStartNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.playRangeStart()")
+	playbackAnimStart;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlNudge1FramePreNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.cgrigTools"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.nudge(offset=1.0, operationMode=\"selectedObjs\", moveAfter=False)")
+	cgrigTlNudge1FramePre;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlNudge10FramesBackNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.cgrigTools"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.nudge(offset=-10.0, operationMode=\"selectedObjs\", moveAfter=True)")
+	cgrigTlNudge10FramesBack;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigXrayToggleNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Display"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.displayToggleXrayMode()")
+	xRayToggle;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigCurveCycleGraphsNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.cycleInfinity()")
+	curve_cycleGraphs;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigLightsMarkingMenuReleaseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.lightMarkingMenuRelease()")
+	CgRig_LightsMarkingMenu_Release;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigDisplayMarkingMenuPressNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.apps.hotkeyeditor.markingmenus import display_markingmenu\ncgrigDisplayMarkingMenuInstance = display_markingmenu.DisplayMMenu(ctrlModifier=False, altModifier=False, shiftModifier=False)\ncgrigDisplayMarkingMenuInstance.pressHotkey()")
+	CgRigDisplayMarkingMenuPress;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigPolyEdgeLoopSplitAutoOffNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.edgeLoopToFromToolMel()")
+	cgrigPolyEdgeLoopSplitAutoOff;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigNodeEditorShowCurrentSelectionNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Windows"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("string $nen=`nodeEditorWindow`; \nstring $ncmd=\"nodeEditor -e -frameAll -rfs 1 -ups 1 -ds 1 \"+$nen; evalDeferred $ncmd;")
+	nodeEditorShowCurrentSelection_HM;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigCreateCylinderMatchNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.createCylinderMatch()")
+	createCylinderMatch;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlShaderManagerNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Windows"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.open_shaderManager(advancedMode=False)")
+	cgrigTlShaderManager;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigOpenLightEditorNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Windows"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("\nimport cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.open_mayLightEditor()")
+	openLightEditor;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigPolySoftenEdgeNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("SoftPolyEdgeElements 1;\ntoggleSelMode;\ntoggleSelMode;")
+	polySoftenEdgeCgRig;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigJointsMarkingMenuReleaseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.jointControlMarkingMenuRelease()")
+	CgRig_JointsMarkingMenu_Release;
+
+runTimeCommand
+	-label ""
+	-annotation "cgrigResetAttrs_hotkeyPrsNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Object"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.resetAttrs()")
+	cgrigResetAttrs_hotkeyPrs;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigViewportLightingToggleNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Display"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.displayToggleLightingMode()")
+	viewport_lightingToggle;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigAnimationMarkingMenuReleaseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.animationMarkingMenuRelease()")
+	cgrigAnimationMarkingMenuRelease;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigMove5FramesBackNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.animMoveTimeBack5Frames()")
+	move5FramesBack;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigPlayReverseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.playReversePause()")
+	cgrigPlayReverse;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlNudge5FramesNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.cgrigTools"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.nudge(offset=5.0, operationMode=\"selectedObjs\", moveAfter=True)")
+	cgrigTlNudge5Frames;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlBrSkinImportExportNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.cgrigTools"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.open_brTransferSkinWeights_export(advancedMode=False)")
+	cgrigTlBrSkinImportExport;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlNudge5FramesPreNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.cgrigTools"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.nudge(offset=5.0, operationMode=\"selectedObjs\", moveAfter=False)")
+	cgrigTlNudge5FramesPre;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlNudge1FramePreBackNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.cgrigTools"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.nudge(offset=-1.0, operationMode=\"selectedObjs\", moveAfter=False)")
+	cgrigTlNudge1FramePreBack;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlSelectTimelineSelectionInGraphNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.cgrigTools"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.selectTimelineSelectionInGraph()")
+	cgrigTlSelectTimelineSelectionInGraph;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigWireFrameShadedToggleNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Display"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.displayToggleWireShadedMode()")
+	wireToShadedToggle;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigMirrorInstanceGroupWorldxNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.mirrorInstanceGroupWorldX()")
+	mirrorInstanceGroupWorldX;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigSelectionSetMarkingMenuPressNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.selectionSetMarkingMenuPress(alt=False, shift=False, ctrl=False)")
+	CgRigSelectionSetMarkingMenuPress;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigDisplayMarkingMenuReleaseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.apps.hotkeyeditor.markingmenus import display_markingmenu\ncgrigDisplayMarkingMenuInstance.releaseHotkey()\ndel cgrigDisplayMarkingMenuInstance")
+	CgRigMarkingMenuRelease;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigFaceModeNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Select"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("setSelectMode components Components; selectType -smp 0 -sme 0 -smf 1 -smu 0 -pv 0 -pe 0 -pf 1 -puv 0;\n")
+	faceMode;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigBevelBoolMarkingMenuReleaseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.bevelBoolMarkingMenuRelease()")
+	cgrigBevelBoolMarkingMenuRelease;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigKeySnapRetainSpacingNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("\nimport cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.keySnapToTime()")
+	cgrigMoveKeysSelectedTime;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigHiveArtistUiNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Windows"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.open_hiveArtistUI()")
+	cgrigHiveArtistUI;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigRangeEndNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.playbackRangeEndToCurrentFrame(animationEndTime=True)")
+	rangeEnd;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigCreateCvCurveToolNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.createCvCurveTool()")
+	CgRigCreateCvCurveTool;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigToggleAndKeyVisNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.toogleKeyVisibility()")
+	toggleAndKeyVis;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigSubdMarkingMenuPressNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.subDMarkingMenuPress(alt=False, shift=False, ctrl=False)")
+	cgrigSubDMarkingMenuPress;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigMotionTrailMarkingMenuReleaseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.motionTrailMarkingMenuRelease()")
+	cgrigMotionTrailMarkingMenuRelease;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigKeyJumpSelectedTimeNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.jumpKeySelectedTime()")
+	cgrigJumpSelectedTime;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigDeleteHistoryMarkingMenuReleaseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.deleteHistoryMarkingMenuRelease()")
+	cgrigDeleteHistoryMarkingMenuRelease;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlNudge1FrameNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.cgrigTools"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.nudge(offset=1.0, operationMode=\"selectedObjs\", moveAfter=True)")
+	cgrigTlNudge1Frame;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigSetMeshWaxAlphaToolNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Sculpt"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.waxToolMelHardAlpha()")
+	cgrigSetMeshWaxAlphaTool;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigMoveKeyForwardOneNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("// Get current time\nint $currentTime = `currentTime -q`;\n// Find and store selected key set (stores frame numbers)\nfloat $selectedKeys[] = `keyframe -query -selected`;\nfloat $sortedKeys[] = `sort $selectedKeys`;\nfloat $firstKey = $sortedKeys[0];\nfloat $offset = 1;\n// Move all keys by this amount\nstring $selCurves[] = `keyframe -query -name -sl`;\nfloat $keyTimes[];\nfor( $curve in $selCurves )\n{\n    clear $keyTimes;\n    $keyTimes = `keyframe -sl -q -tc $curve`;\n    for($time in $keyTimes )\n    {\n    keyframe -e -iub true -r -o over -tc $offset -t $time $curve ;\n    }\n}")
+	moveKeyForwardOne;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigUnInstanceNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.uninstanceSelected()")
+	cgrigUnInstance;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigShaderMarkingMenuReleaseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.shaderMarkingMenuRelease()")
+	CgRigShaderMarkingMenuRelease;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigMoveKeyBackOneNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("// Get current time\nint $currentTime = `currentTime -q`;\n// Find and store selected key set (stores frame numbers)\nfloat $selectedKeys[] = `keyframe -query -selected`;\nfloat $sortedKeys[] = `sort $selectedKeys`;\nfloat $firstKey = $sortedKeys[0];\nfloat $offset = -1;\n// Move all keys by this amount\nstring $selCurves[] = `keyframe -query -name -sl`;\nfloat $keyTimes[];\nfor( $curve in $selCurves )\n{\n    clear $keyTimes;\n    $keyTimes = `keyframe -sl -q -tc $curve`;\n    for($time in $keyTimes )\n    {\n    keyframe -e -iub true -r -o over -tc $offset -t $time $curve ;\n    }\n}")
+	moveKeyBackOne;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigPreviousFrameNoUndoNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("playButtonStepBackward;")
+	previousFrameNoUndo;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigGraphInfinityNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.toggleInfinity()")
+	graph_infinityGraph;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigEdgeModeNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Select"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("setSelectMode components Components; selectType -smp 0 -sme 1 -smf 0 -smu 0 -pv 0 -pe 1 -pf 0 -puv 0;\n\n")
+	edgeMode;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigPolyMergeNoMoveNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("polyMergeVertex  -d 0.001 -am 1 -ch 1;")
+	poly_mergeNoMove;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigPlaybackRangeEndNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.timeRangeEnd()")
+	cgrigPlaybackRangeEnd;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigToggleTexturesNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Display"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.displayToggleTextureMode()")
+	toggleTextures;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlNudge5FramesBackNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.cgrigTools"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.nudge(offset=-5.0, operationMode=\"selectedObjs\", moveAfter=True)")
+	cgrigTlNudge5FramesBack;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigSkinMarkingMenuReleaseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.skinMarkingMenuRelease()")
+	CgRig_SkinMarkingMenu_Release;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigRangeStartNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.playbackRangeStartToCurrentFrame(animationStartTime=True)")
+	rangeStart;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigConstraintMarkingMenuReleaseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.constraintMarkingMenuRelease()")
+	CgRig_ConstraintMarkingMenu_Release;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigVertModeNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Select"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("setSelectMode components Components; selectType -smp 1 -sme 0 -smf 0 -smu 0 -pv 1 -pe 0 -pf 0 -puv 0;\n")
+	vertMode;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigGraphEditorMarkingMenuReleaseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.graphEditorMarkingMenuRelease()")
+	cgrigGraphEditorMarkingMenuRelease;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigHiveToggleControlPanelNodesSelNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Windows"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.hiveToggleControlPanelNodesSel()")
+	cgrigHiveToggleControlPanelNodesSel;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigCycleBackgroundColorsNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Display"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.cgrigCycleBackgroundColors()")
+	cgrigCycleBackgroundColors;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigAnimSnapWholeFrameNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.snapKeysWholeFrames()")
+	cgrigAnimSnapWholeFrame;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigCreateMarkCenterPivotNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Rig"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.createCenterPivot()")
+	cgrigCreateMarkCenterPivot_;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigFreezeTransformMarkingMenuReleaseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.freezeTransformMarkingMenuRelease()")
+	cgrigFreezeTransformMarkingMenuRelease;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlHotkeyManagerNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Windows"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.open_cgrigHotkeyEditor()")
+	cgrigHotkeyManagerWindow;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigRendermanIprNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Render"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("rmanLoadPlugin;\nrmanChangeToRenderMan;\n//setTestResolutionVar(4);\nrmanRerenderStart(1);")
+	rendermanIPR;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigCycleAllCamerasNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Camera"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.cyclePerspCameras(limitPerspective=False)")
+	cgrigCycleAllCameras;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlTweenMachinePopupRelCloseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("# Behaviour like a marking menu, on slide release close the window. \nfrom cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.open_tweenMachinePopup(cursorOnSlider=True, clickOffClose=True, closeOnRelease=True)")
+	cgrigTlTweenMachinePopupRelClose;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigDeleteHistoryMarkingMenuPressNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.deleteHistoryMarkingMenuPress(alt=True, shift=True, ctrl=False)")
+	cgrigDeleteHistoryMarkingMenuPress;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigNextFrameNoUndoNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("playButtonStepForward;")
+	nextFrameNoUndo;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigSelectFromFcurveNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.selectObjFromFCurve()")
+	cgrigSelectFromFCurve;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlNudge10FramesNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.cgrigTools"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.nudge(offset=10.0, operationMode=\"selectedObjs\", moveAfter=True)")
+	cgrigTlNudge10Frames;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigBevelBoolMarkingMenuPressNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.bevelBoolMarkingMenuPress(alt=False, shift=False, ctrl=True)")
+	cgrigBevelBoolMarkingMenuPress;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigMirrorPolygonGeometryNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.mirrorPolygonPlus()")
+	mirrorPolygonPlus;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigShelfFloatingWindowNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Windows"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.open_cgrigShelfFloatingWindow()")
+	cgrigShelfFloatingWindow;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigSelectCamInViewNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Camera"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.selectCamInView()")
+	selectCamInView;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigNextKeyNoUndoNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("undoInfo -swf off;\ncurrentTime -edit `findKeyframe -timeSlider -which next`;\nundoInfo -swf on;")
+	nextKeyNoUndo;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigSmoothPolyObjectNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("performPolySmooth 0;\ntoggleSelMode;\ntoggleSelMode;\nselect -addFirst polySmoothFace1 ;\n")
+	smoothPolyObject;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigDeformersMarkingMenuPressNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.deformerMarkingMenuPress(alt=False, shift=True, ctrl=False)")
+	CgRig_DeformersMarkingMenu_Press;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigPreviousKeyNoUndoNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("undoInfo -swf off;\ncurrentTime -edit `findKeyframe -timeSlider -which previous`;\nundoInfo -swf on")
+	previousKeyNoUndo;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigObjectBackfaceCullingToggleNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Object"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("toggleSurfaceBackfaceCulling();")
+	object_backfaceCullingToggle;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigJointsMarkingMenuPressNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.jointControlMarkingMenuPress(alt=False, shift=True, ctrl=False)")
+	CgRig_JointsMarkingMenu_Press;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigSelectionSetMarkingMenuReleaseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.selectionSetMarkingMenuRelease()")
+	CgRigSelectionSetMarkingMenuRelease;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigDeformersMarkingMenuReleaseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.deformerMarkingMenuRelease()")
+	CgRig_DeformersMarkingMenu_Release;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigAnimationMarkingMenuPressNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.animationMarkingMenuPress(alt=False, shift=False, ctrl=False)")
+	cgrigAnimationMarkingMenuPress;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigExtractFaceToObjectModeNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("performPolyChipOff 0 0;\ntoggleSelMode;\n")
+	extractFaceToObjectMode;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigReloadNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Dev"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.reloadCgRigTools()")
+	cgrigReload;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigLightsMarkingMenuPressNameCommand"
+	-longAnnotation ""
+	-category "Other items.User Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.lightMarkingMenuPress(alt=False, shift=False, ctrl=False)")
+	CgRig_LightsMarkingMenu_Press;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigCreatePlaneMatchNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.createPlaneMatch()")
+	createPlaneMatch;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigTlNudge10FramesPreNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.cgrigTools"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.nudge(offset=10.0, operationMode=\"selectedObjs\", moveAfter=False)")
+	cgrigTlNudge10FramesPre;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigEulerFilterNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.eulerFilter()")
+	cgrigEulerFilter;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigPlaybackAnimEndNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Anim"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("import cgrig.libs.maya.cmds.hotkeys.definedhotkeys as hk\nhk.playRangeEnd()")
+	playbackAnimEnd;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigConstraintMarkingMenuPressNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.constraintMarkingMenuPress(alt=False, shift=True, ctrl=False)")
+	CgRig_ConstraintMarkingMenu_Press;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigSubdMarkingMenuReleaseNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.subDMarkingMenuRelease()")
+	cgrigSubDMarkingMenuRelease;
+
+runTimeCommand
+	-label ""
+	-annotation "MayaRefreshViewportNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Display"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("ogs -r")
+	mayaRefreshViewport;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigGraphEditorMarkingMenuPressNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Marking Menus"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.graphEditorMarkingMenuPress(alt=True, shift=False, ctrl=False)")
+	cgrigGraphEditorMarkingMenuPress;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigCreateNurbsCylinderMatchNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Model"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.createNurbsCircleMatch()")
+	CgRigCreateNurbsCylinderMatch;
+
+runTimeCommand
+	-label ""
+	-annotation "CgRigSelectNodeOrShaderAttrEditorNameCommand"
+	-longAnnotation ""
+	-category "Custom Scripts.CgRig Object"
+	-image ""
+	-tags ""
+	-keywords ""
+	-plugin ""
+	-helpUrl ""
+	-hotkeyCtx ""
+	-commandLanguage "python"
+	-command ("from cgrig.libs.maya.cmds.hotkeys import definedhotkeys\ndefinedhotkeys.selectNodeOrShaderAttrEditor()")
+	selectNodeAttrEditorOtherwiseShader;
+
+//
+// The name commands referenced by the hotkeys
+//
+nameCommand
+	-annotation "CgRigHotkeySetToggleNameCommand"
+	-sourceType "mel"
+	-command ("CgRigHotkeySetToggle")
+	CgRigHotkeySetToggleNameCommand;
+
+nameCommand
+	-annotation "CgRigTlHotkeyManagerNameCommand"
+	-sourceType "mel"
+	-command ("cgrigHotkeyManagerWindow")
+	CgRigTlHotkeyManagerNameCommand;
+
+nameCommand
+	-annotation "MayaHotkeyPreferencesWindowNameCommand"
+	-sourceType "mel"
+	-command ("HotkeyPreferencesWindow")
+	MayaHotkeyPreferencesWindowNameCommand;
+
+nameCommand
+	-annotation "MayaTimeDraggerToolActivateNameCommand"
+	-sourceType "mel"
+	-command ("TimeDraggerToolActivate")
+	MayaTimeDraggerToolActivateNameCommand;
+
+nameCommand
+	-annotation "MayaTimeDraggerToolDeactivateNameCommand"
+	-sourceType "mel"
+	-command ("TimeDraggerToolDeactivate")
+	MayaTimeDraggerToolDeactivateNameCommand;
+
+nameCommand
+	-annotation "cgrigResetAttrs_hotkeyPrsNameCommand"
+	-sourceType "mel"
+	-command ("cgrigResetAttrs_hotkeyPrs")
+	cgrigResetAttrs_hotkeyPrsNameCommand;
+
+nameCommand
+	-annotation "MayaToggleIsolateSelectNameCommand"
+	-sourceType "mel"
+	-command ("ToggleIsolateSelect")
+	MayaToggleIsolateSelectNameCommand;
+
+nameCommand
+	-annotation "MayaEnterEditModeReleaseNameCommand"
+	-sourceType "mel"
+	-command ("EnterEditModeRelease")
+	MayaEnterEditModeReleaseNameCommand;
+
+nameCommand
+	-annotation "MayaEnterEditModePressNameCommand"
+	-sourceType "mel"
+	-command ("EnterEditModePress")
+	MayaEnterEditModePressNameCommand;
+
+nameCommand
+	-annotation "MayaChannelControlEditorNameCommand"
+	-sourceType "mel"
+	-command ("ChannelControlEditor")
+	MayaChannelControlEditorNameCommand;
+
+nameCommand
+	-annotation "MayaSubdLowQualityDisplayNameCommand"
+	-sourceType "mel"
+	-command ("LowQualityDisplay")
+	MayaSubdLowQualityDisplayNameCommand;
+
+nameCommand
+	-annotation "MayaSubdMediumQualityDisplayNameCommand"
+	-sourceType "mel"
+	-command ("MediumQualityDisplay")
+	MayaSubdMediumQualityDisplayNameCommand;
+
+nameCommand
+	-annotation "MayaSubdHighQualityDisplayNameCommand"
+	-sourceType "mel"
+	-command ("HighQualityDisplay")
+	MayaSubdHighQualityDisplayNameCommand;
+
+nameCommand
+	-annotation "MayaConnectionEditorNameCommand"
+	-sourceType "mel"
+	-command ("ConnectionEditor")
+	MayaConnectionEditorNameCommand;
+
+nameCommand
+	-annotation "MayaNodeEditorWindowNameCommand"
+	-sourceType "mel"
+	-command ("NodeEditorWindow")
+	MayaNodeEditorWindowNameCommand;
+
+nameCommand
+	-annotation "MayaRenderGlobalsWindowNameCommand"
+	-sourceType "mel"
+	-command ("RenderGlobalsWindow")
+	MayaRenderGlobalsWindowNameCommand;
+
+nameCommand
+	-annotation "MayaSpreadSheetEditorNameCommand"
+	-sourceType "mel"
+	-command ("SpreadSheetEditor")
+	MayaSpreadSheetEditorNameCommand;
+
+nameCommand
+	-annotation "MayaComponentEditorNameCommand"
+	-sourceType "mel"
+	-command ("ComponentEditor")
+	MayaComponentEditorNameCommand;
+
+nameCommand
+	-annotation "MayaBridgeEdgeNameCommand"
+	-sourceType "mel"
+	-command ("BridgeOrFill")
+	MayaBridgeEdgeNameCommand;
+
+nameCommand
+	-annotation "MayaCombinePolygonsNameCommand"
+	-sourceType "mel"
+	-command ("CombinePolygons")
+	MayaCombinePolygonsNameCommand;
+
+nameCommand
+	-annotation "MayaSetDrivenKeyOptionsNameCommand"
+	-sourceType "mel"
+	-command ("SetDrivenKeyOptions")
+	MayaSetDrivenKeyOptionsNameCommand;
+
+nameCommand
+	-annotation "MayaPreferencesWindowNameCommand"
+	-sourceType "mel"
+	-command ("PreferencesWindow")
+	MayaPreferencesWindowNameCommand;
+
+nameCommand
+	-annotation "MayaDrCurveSnapPressNameCommand"
+	-sourceType "mel"
+	-command ("dR_curveSnapPress")
+	MayaDrCurveSnapPressNameCommand;
+
+nameCommand
+	-annotation "MayaDrCurveSnapReleaseNameCommand"
+	-sourceType "mel"
+	-command ("dR_curveSnapRelease")
+	MayaDrCurveSnapReleaseNameCommand;
+
+nameCommand
+	-annotation "MayaDrGridSnapReleaseNameCommand"
+	-sourceType "mel"
+	-command ("dR_gridSnapRelease")
+	MayaDrGridSnapReleaseNameCommand;
+
+nameCommand
+	-annotation "MayaHypershadeWindowNameCommand"
+	-sourceType "mel"
+	-command ("HypershadeWindow")
+	MayaHypershadeWindowNameCommand;
+
+nameCommand
+	-annotation "MayaRenderViewWindowNameCommand"
+	-sourceType "mel"
+	-command ("RenderViewWindow")
+	MayaRenderViewWindowNameCommand;
+
+nameCommand
+	-annotation "MayaSequenceEditorNameCommand"
+	-sourceType "mel"
+	-command ("SequenceEditor")
+	MayaSequenceEditorNameCommand;
+
+nameCommand
+	-annotation "MayaDrQuadDrawToolNameCommand"
+	-sourceType "mel"
+	-command ("dR_quadDrawTool")
+	MayaDrQuadDrawToolNameCommand;
+
+nameCommand
+	-annotation "MayaGraphEditorNameCommand"
+	-sourceType "mel"
+	-command ("GraphEditor")
+	MayaGraphEditorNameCommand;
+
+nameCommand
+	-annotation "MayaScriptEditorNameCommand"
+	-sourceType "mel"
+	-command ("ScriptEditor")
+	MayaScriptEditorNameCommand;
+
+nameCommand
+	-annotation "MayaSculptGeometryToolNameCommand"
+	-sourceType "mel"
+	-command ("SculptGeometryTool")
+	MayaSculptGeometryToolNameCommand;
+
+nameCommand
+	-annotation "MayaTextureViewWindowNameCommand"
+	-sourceType "mel"
+	-command ("TextureViewWindow")
+	MayaTextureViewWindowNameCommand;
+
+nameCommand
+	-annotation "MayaDrMultiCutToolNameCommand"
+	-sourceType "mel"
+	-command ("dR_multiCutTool")
+	MayaDrMultiCutToolNameCommand;
+
+nameCommand
+	-annotation "MayaToggleSelectionHandlesNameCommand"
+	-sourceType "mel"
+	-command ("ToggleSelectionHandles")
+	MayaToggleSelectionHandlesNameCommand;
+
+nameCommand
+	-annotation "MayaCenterPivotNameCommand"
+	-sourceType "mel"
+	-command ("CenterPivot")
+	MayaCenterPivotNameCommand;
+
+nameCommand
+	-annotation "MayaPolyMergeNameCommand"
+	-sourceType "mel"
+	-command ("PolyMerge")
+	MayaPolyMergeNameCommand;
+
+nameCommand
+	-annotation "MayaMergeToCenterNameCommand"
+	-sourceType "mel"
+	-command ("MergeToCenter")
+	MayaMergeToCenterNameCommand;
+
+nameCommand
+	-annotation "MayaShowAllNameCommand"
+	-sourceType "mel"
+	-command ("ShowAll")
+	MayaShowAllNameCommand;
+
+nameCommand
+	-annotation "MayaNamespaceEditorNameCommand"
+	-sourceType "mel"
+	-command ("NamespaceEditor")
+	MayaNamespaceEditorNameCommand;
+
+nameCommand
+	-annotation "MayaDuplicateWithTransformNameCommand"
+	-sourceType "mel"
+	-command ("DuplicateWithTransform")
+	MayaDuplicateWithTransformNameCommand;
+
+nameCommand
+	-annotation "MayaCreateCameraFromViewNameCommand"
+	-sourceType "mel"
+	-command ("CreateCameraFromView")
+	MayaCreateCameraFromViewNameCommand;
+
+nameCommand
+	-annotation "MayaSculptMeshUnfreezeAllNameCommand"
+	-sourceType "mel"
+	-command ("SculptMeshUnfreezeAll")
+	MayaSculptMeshUnfreezeAllNameCommand;
+
+nameCommand
+	-annotation "MayaSculptMeshInvertFreezeNameCommand"
+	-sourceType "mel"
+	-command ("SculptMeshInvertFreeze")
+	MayaSculptMeshInvertFreezeNameCommand;
+
+nameCommand
+	-annotation "MayaSetMeshScrapeToolNameCommand"
+	-sourceType "mel"
+	-command ("SetMeshScrapeTool")
+	MayaSetMeshScrapeToolNameCommand;
+
+nameCommand
+	-annotation "MayaSetMeshFillToolNameCommand"
+	-sourceType "mel"
+	-command ("SetMeshFillTool")
+	MayaSetMeshFillToolNameCommand;
+
+nameCommand
+	-annotation "MayaToggleFrameRateNameCommand"
+	-sourceType "mel"
+	-command ("ToggleFrameRate")
+	MayaToggleFrameRateNameCommand;
+
+nameCommand
+	-annotation "MayaToggleCurrentFrameNameCommand"
+	-sourceType "mel"
+	-command ("ToggleCurrentFrame")
+	MayaToggleCurrentFrameNameCommand;
+
+nameCommand
+	-annotation "MayaTogglePolyCountNameCommand"
+	-sourceType "mel"
+	-command ("TogglePolyCount")
+	MayaTogglePolyCountNameCommand;
+
+nameCommand
+	-annotation "MayaEnterEditModeNameCommand"
+	-sourceType "mel"
+	-command ("EnterEditMode")
+	MayaEnterEditModeNameCommand;
+
+nameCommand
+	-annotation "MayaMergeVertexToolNameCommand"
+	-sourceType "mel"
+	-command ("MergeVertexTool")
+	MayaMergeVertexToolNameCommand;
+
+nameCommand
+	-annotation "MayaFillHoleNameCommand"
+	-sourceType "mel"
+	-command ("BridgeOrFill")
+	MayaFillHoleNameCommand;
+
+nameCommand
+	-annotation "MayaPolygonCollapseNameCommand"
+	-sourceType "mel"
+	-command ("PolygonCollapse")
+	MayaPolygonCollapseNameCommand;
+
+nameCommand
+	-annotation "MayaSlideEdgeToolNameCommand"
+	-sourceType "mel"
+	-command ("SlideEdgeTool")
+	MayaSlideEdgeToolNameCommand;
+
+nameCommand
+	-annotation "MayaNodeEditorGridToggleSnaprNameCommand"
+	-sourceType "mel"
+	-command ("NodeEditorGridToggleSnap")
+	MayaNodeEditorGridToggleSnaprNameCommand;
+
+nameCommand
+	-annotation "MayaInsertKeyToolActivateNameCommand"
+	-sourceType "mel"
+	-command ("InsertKeyToolActivate")
+	MayaInsertKeyToolActivateNameCommand;
+
+nameCommand
+	-annotation "MayaInsertKeyToolDeactivateNameCommand"
+	-sourceType "mel"
+	-command ("InsertKeyToolDeactivate")
+	MayaInsertKeyToolDeactivateNameCommand;
+
+nameCommand
+	-annotation "MayaDrGridSnapPressNameCommand"
+	-sourceType "mel"
+	-command ("dR_gridSnapPress")
+	MayaDrGridSnapPressNameCommand;
+
+nameCommand
+	-annotation "MayaDrPointSnapPressNameCommand"
+	-sourceType "mel"
+	-command ("dR_pointSnapPress")
+	MayaDrPointSnapPressNameCommand;
+
+nameCommand
+	-annotation "MayaDrPointSnapReleaseNameCommand"
+	-sourceType "mel"
+	-command ("dR_pointSnapRelease")
+	MayaDrPointSnapReleaseNameCommand;
+
+nameCommand
+	-annotation "CgRigMirrorPolygonGeometryNameCommand"
+	-sourceType "mel"
+	-command ("mirrorPolygonPlus")
+	CgRigMirrorPolygonGeometryNameCommand;
+
+nameCommand
+	-annotation "MayaMirrorPolygonGeometryOptionsNameCommand"
+	-sourceType "mel"
+	-command ("MirrorPolygonGeometryOptions")
+	MayaMirrorPolygonGeometryOptionsNameCommand;
+
+nameCommand
+	-annotation "MayaPluginManagerNameCommand"
+	-sourceType "mel"
+	-command ("PluginManager")
+	MayaPluginManagerNameCommand;
+
+nameCommand
+	-annotation "MayaReversePolygonNormalsNameCommand"
+	-sourceType "mel"
+	-command ("ReversePolygonNormals")
+	MayaReversePolygonNormalsNameCommand;
+
+nameCommand
+	-annotation "MayaNewSceneNameCommand"
+	-sourceType "mel"
+	-command ("NewScene")
+	MayaNewSceneNameCommand;
+
+nameCommand
+	-annotation "CgRigConstraintMarkingMenuPressNameCommand"
+	-sourceType "mel"
+	-command ("CgRig_ConstraintMarkingMenu_Press")
+	CgRigConstraintMarkingMenuPressNameCommand;
+
+nameCommand
+	-annotation "CgRigConstraintMarkingMenuReleaseNameCommand"
+	-sourceType "mel"
+	-command ("CgRig_ConstraintMarkingMenu_Release")
+	CgRigConstraintMarkingMenuReleaseNameCommand;
+
+nameCommand
+	-annotation "CgRigCreateCamRooXzyNameCommand"
+	-sourceType "mel"
+	-command ("CgRigCreateCamROOxzy")
+	CgRigCreateCamRooXzyNameCommand;
+
+nameCommand
+	-annotation "CgRigDeformersMarkingMenuPressNameCommand"
+	-sourceType "mel"
+	-command ("CgRig_DeformersMarkingMenu_Press")
+	CgRigDeformersMarkingMenuPressNameCommand;
+
+nameCommand
+	-annotation "CgRigDeformersMarkingMenuReleaseNameCommand"
+	-sourceType "mel"
+	-command ("CgRig_DeformersMarkingMenu_Release")
+	CgRigDeformersMarkingMenuReleaseNameCommand;
+
+nameCommand
+	-annotation "CgRigSkinMarkingMenuPressNameCommand"
+	-sourceType "mel"
+	-command ("CgRig_SkinMarkingMenu_Press")
+	CgRigSkinMarkingMenuPressNameCommand;
+
+nameCommand
+	-annotation "CgRigSkinMarkingMenuReleaseNameCommand"
+	-sourceType "mel"
+	-command ("CgRig_SkinMarkingMenu_Release")
+	CgRigSkinMarkingMenuReleaseNameCommand;
+
+nameCommand
+	-annotation "CgRigLightsMarkingMenuPressNameCommand"
+	-sourceType "mel"
+	-command ("CgRig_LightsMarkingMenu_Press")
+	CgRigLightsMarkingMenuPressNameCommand;
+
+nameCommand
+	-annotation "CgRigJointsMarkingMenuPressNameCommand"
+	-sourceType "mel"
+	-command ("CgRig_JointsMarkingMenu_Press")
+	CgRigJointsMarkingMenuPressNameCommand;
+
+nameCommand
+	-annotation "CgRigJointsMarkingMenuReleaseNameCommand"
+	-sourceType "mel"
+	-command ("CgRig_JointsMarkingMenu_Release")
+	CgRigJointsMarkingMenuReleaseNameCommand;
+
+nameCommand
+	-annotation "MayaDeletePolyElementsNameCommand"
+	-sourceType "mel"
+	-command ("DeletePolyElements")
+	MayaDeletePolyElementsNameCommand;
+
+nameCommand
+	-annotation "CgRigSelectHierarchyNameCommand"
+	-sourceType "mel"
+	-command ("cgrig_selectHierarchy")
+	CgRigSelectHierarchyNameCommand;
+
+nameCommand
+	-annotation "CgRigKeyJumpSelectedTimeNameCommand"
+	-sourceType "mel"
+	-command ("cgrigJumpSelectedTime")
+	CgRigKeyJumpSelectedTimeNameCommand;
+
+nameCommand
+	-annotation "CgRigKeySnapRetainSpacingNameCommand"
+	-sourceType "mel"
+	-command ("cgrigMoveKeysSelectedTime")
+	CgRigKeySnapRetainSpacingNameCommand;
+
+nameCommand
+	-annotation "CgRigMove5FramesBackNameCommand"
+	-sourceType "mel"
+	-command ("move5FramesBack")
+	CgRigMove5FramesBackNameCommand;
+
+nameCommand
+	-annotation "CgRigMove5FramesForwardNameCommand"
+	-sourceType "mel"
+	-command ("move5FramesForward")
+	CgRigMove5FramesForwardNameCommand;
+
+nameCommand
+	-annotation "CgRigMoveKeyBackOneNameCommand"
+	-sourceType "mel"
+	-command ("moveKeyBackOne")
+	CgRigMoveKeyBackOneNameCommand;
+
+nameCommand
+	-annotation "CgRigNextFrameNoUndoNameCommand"
+	-sourceType "mel"
+	-command ("nextFrameNoUndo")
+	CgRigNextFrameNoUndoNameCommand;
+
+nameCommand
+	-annotation "CgRigNextKeyNoUndoNameCommand"
+	-sourceType "mel"
+	-command ("nextKeyNoUndo")
+	CgRigNextKeyNoUndoNameCommand;
+
+nameCommand
+	-annotation "CgRigMoveKeyForwardOneNameCommand"
+	-sourceType "mel"
+	-command ("moveKeyForwardOne")
+	CgRigMoveKeyForwardOneNameCommand;
+
+nameCommand
+	-annotation "CgRigNodeEditorShowCurrentSelectionNameCommand"
+	-sourceType "mel"
+	-command ("nodeEditorShowCurrentSelection_HM")
+	CgRigNodeEditorShowCurrentSelectionNameCommand;
+
+nameCommand
+	-annotation "CgRigObjectModeAndDeselectNameCommand"
+	-sourceType "mel"
+	-command ("object_objectModeAndDeselect")
+	CgRigObjectModeAndDeselectNameCommand;
+
+nameCommand
+	-annotation "CgRigAlignSelectionHotkeyPrsNameCommand"
+	-sourceType "mel"
+	-command ("cgrigAlignSelection_hotkeyPrs")
+	CgRigAlignSelectionHotkeyPrsNameCommand;
+
+nameCommand
+	-annotation "CgRigToggleAndKeyVisNameCommand"
+	-sourceType "mel"
+	-command ("toggleAndKeyVis")
+	CgRigToggleAndKeyVisNameCommand;
+
+nameCommand
+	-annotation "CgRigViewportLightingToggleNameCommand"
+	-sourceType "mel"
+	-command ("viewport_lightingToggle")
+	CgRigViewportLightingToggleNameCommand;
+
+nameCommand
+	-annotation "CgRigToggleTexturesNameCommand"
+	-sourceType "mel"
+	-command ("toggleTextures")
+	CgRigToggleTexturesNameCommand;
+
+nameCommand
+	-annotation "CgRigWireFrameShadedToggleNameCommand"
+	-sourceType "mel"
+	-command ("wireToShadedToggle")
+	CgRigWireFrameShadedToggleNameCommand;
+
+nameCommand
+	-annotation "CgRigWireframeOnShadedToggleNameCommand"
+	-sourceType "mel"
+	-command ("wireframeOnShadedToggle")
+	CgRigWireframeOnShadedToggleNameCommand;
+
+nameCommand
+	-annotation "CgRigXrayToggleNameCommand"
+	-sourceType "mel"
+	-command ("xRayToggle")
+	CgRigXrayToggleNameCommand;
+
+nameCommand
+	-annotation "CgRigSelectFromFcurveNameCommand"
+	-sourceType "mel"
+	-command ("cgrigSelectFromFCurve")
+	CgRigSelectFromFcurveNameCommand;
+
+nameCommand
+	-annotation "CgRigPolySoftenEdgeNameCommand"
+	-sourceType "mel"
+	-command ("polySoftenEdgeCgRig")
+	CgRigPolySoftenEdgeNameCommand;
+
+nameCommand
+	-annotation "CgRigPolyHardenEdgeNameCommand"
+	-sourceType "mel"
+	-command ("polyHardenEdgeCgRig")
+	CgRigPolyHardenEdgeNameCommand;
+
+nameCommand
+	-annotation "CgRigLambert50PercentGreyNameCommand"
+	-sourceType "mel"
+	-command ("lambert50PercentGrey")
+	CgRigLambert50PercentGreyNameCommand;
+
+nameCommand
+	-annotation "CgRigSelectNodeOrShaderAttrEditorNameCommand"
+	-sourceType "mel"
+	-command ("selectNodeAttrEditorOtherwiseShader")
+	CgRigSelectNodeOrShaderAttrEditorNameCommand;
+
+nameCommand
+	-annotation "CgRigRendermanIprNameCommand"
+	-sourceType "mel"
+	-command ("rendermanIPR")
+	CgRigRendermanIprNameCommand;
+
+nameCommand
+	-annotation "CgRigCurveCycleGraphsNameCommand"
+	-sourceType "mel"
+	-command ("curve_cycleGraphs")
+	CgRigCurveCycleGraphsNameCommand;
+
+nameCommand
+	-annotation "CgRigKeyDeleteCurrentFrameNameCommand"
+	-sourceType "mel"
+	-command ("key_deleteCurrentFrame")
+	CgRigKeyDeleteCurrentFrameNameCommand;
+
+nameCommand
+	-annotation "CgRigGraphInfinityNameCommand"
+	-sourceType "mel"
+	-command ("graph_infinityGraph")
+	CgRigGraphInfinityNameCommand;
+
+nameCommand
+	-annotation "CgRigPreviousKeyNoUndoNameCommand"
+	-sourceType "mel"
+	-command ("previousKeyNoUndo")
+	CgRigPreviousKeyNoUndoNameCommand;
+
+nameCommand
+	-annotation "CgRigPreviousFrameNoUndoNameCommand"
+	-sourceType "mel"
+	-command ("previousFrameNoUndo")
+	CgRigPreviousFrameNoUndoNameCommand;
+
+nameCommand
+	-annotation "CgRigPlaybackAnimEndNameCommand"
+	-sourceType "mel"
+	-command ("playbackAnimEnd")
+	CgRigPlaybackAnimEndNameCommand;
+
+nameCommand
+	-annotation "CgRigPlaybackAnimStartNameCommand"
+	-sourceType "mel"
+	-command ("playbackAnimStart")
+	CgRigPlaybackAnimStartNameCommand;
+
+nameCommand
+	-annotation "CgRigRangeEndNameCommand"
+	-sourceType "mel"
+	-command ("rangeEnd")
+	CgRigRangeEndNameCommand;
+
+nameCommand
+	-annotation "CgRigRangeStartNameCommand"
+	-sourceType "mel"
+	-command ("rangeStart")
+	CgRigRangeStartNameCommand;
+
+nameCommand
+	-annotation "CgRigSetKeyframeAllNameCommand"
+	-sourceType "mel"
+	-command ("setKeyframeAll")
+	CgRigSetKeyframeAllNameCommand;
+
+nameCommand
+	-annotation "CgRigSelectCamInViewNameCommand"
+	-sourceType "mel"
+	-command ("selectCamInView")
+	CgRigSelectCamInViewNameCommand;
+
+nameCommand
+	-annotation "CgRigObjectBackfaceCullingToggleNameCommand"
+	-sourceType "mel"
+	-command ("object_backfaceCullingToggle")
+	CgRigObjectBackfaceCullingToggleNameCommand;
+
+nameCommand
+	-annotation "CgRigPolyAppendAndCompleteNameCommand"
+	-sourceType "mel"
+	-command ("poly_appendAndComplete")
+	CgRigPolyAppendAndCompleteNameCommand;
+
+nameCommand
+	-annotation "CgRigPolyMergeNoMoveNameCommand"
+	-sourceType "mel"
+	-command ("poly_mergeNoMove")
+	CgRigPolyMergeNoMoveNameCommand;
+
+nameCommand
+	-annotation "MayaReferenceEditorNameCommand"
+	-sourceType "mel"
+	-command ("ReferenceEditor")
+	MayaReferenceEditorNameCommand;
+
+nameCommand
+	-annotation "CgRigExtractFaceToObjectModeNameCommand"
+	-sourceType "mel"
+	-command ("extractFaceToObjectMode")
+	CgRigExtractFaceToObjectModeNameCommand;
+
+nameCommand
+	-annotation "CgRigEdgeModeNameCommand"
+	-sourceType "mel"
+	-command ("edgeMode")
+	CgRigEdgeModeNameCommand;
+
+nameCommand
+	-annotation "CgRigFaceModeNameCommand"
+	-sourceType "mel"
+	-command ("faceMode")
+	CgRigFaceModeNameCommand;
+
+nameCommand
+	-annotation "CgRigOpenLightEditorNameCommand"
+	-sourceType "mel"
+	-command ("openLightEditor")
+	CgRigOpenLightEditorNameCommand;
+
+nameCommand
+	-annotation "MayaSetMeshFlattenToolNameCommand"
+	-sourceType "mel"
+	-command ("SetMeshFlattenTool")
+	MayaSetMeshFlattenToolNameCommand;
+
+nameCommand
+	-annotation "MayaSetMeshFreezeToolNameCommand"
+	-sourceType "mel"
+	-command ("SetMeshFreezeTool")
+	MayaSetMeshFreezeToolNameCommand;
+
+nameCommand
+	-annotation "MayaSetMeshGrabToolNameCommand"
+	-sourceType "mel"
+	-command ("SetMeshGrabTool")
+	MayaSetMeshGrabToolNameCommand;
+
+nameCommand
+	-annotation "MayaSetMeshPinchToolNameCommand"
+	-sourceType "mel"
+	-command ("SetMeshPinchTool")
+	MayaSetMeshPinchToolNameCommand;
+
+nameCommand
+	-annotation "MayaSetMeshSculptToolNameCommand"
+	-sourceType "mel"
+	-command ("SetMeshSculptTool")
+	MayaSetMeshSculptToolNameCommand;
+
+nameCommand
+	-annotation "CgRigCreateCubeMatchNameCommand"
+	-sourceType "mel"
+	-command ("createCubeMatch")
+	CgRigCreateCubeMatchNameCommand;
+
+nameCommand
+	-annotation "CgRigCreateCylinderMatchNameCommand"
+	-sourceType "mel"
+	-command ("createCylinderMatch")
+	CgRigCreateCylinderMatchNameCommand;
+
+nameCommand
+	-annotation "CgRigCreateSphereMatchNameCommand"
+	-sourceType "mel"
+	-command ("createSphereMatch")
+	CgRigCreateSphereMatchNameCommand;
+
+nameCommand
+	-annotation "CgRigCreatePlaneMatchNameCommand"
+	-sourceType "mel"
+	-command ("createPlaneMatch")
+	CgRigCreatePlaneMatchNameCommand;
+
+nameCommand
+	-annotation "CgRigMirrorInstanceGroupWorldxNameCommand"
+	-sourceType "mel"
+	-command ("mirrorInstanceGroupWorldX")
+	CgRigMirrorInstanceGroupWorldxNameCommand;
+
+nameCommand
+	-annotation "CgRigTriggerToggleVisNameCommand"
+	-sourceType "mel"
+	-command ("object_triggerToggle")
+	CgRigTriggerToggleVisNameCommand;
+
+nameCommand
+	-annotation "CgRigSymmetricalToggleNameCommand"
+	-sourceType "mel"
+	-command ("symmetricalToggle")
+	CgRigSymmetricalToggleNameCommand;
+
+nameCommand
+	-annotation "CgRigVertModeNameCommand"
+	-sourceType "mel"
+	-command ("vertMode")
+	CgRigVertModeNameCommand;
+
+nameCommand
+	-annotation "CgRigSmoothPolyObjectNameCommand"
+	-sourceType "mel"
+	-command ("smoothPolyObject")
+	CgRigSmoothPolyObjectNameCommand;
+
+nameCommand
+	-annotation "MayaPlayNameCommand"
+	-sourceType "mel"
+	-command ("PlaybackToggle")
+	MayaPlayNameCommand;
+
+nameCommand
+	-annotation "MayaCopyGraphAnimKeysNameCommand"
+	-sourceType "mel"
+	-command ("GraphCopy")
+	MayaCopyGraphAnimKeysNameCommand;
+
+nameCommand
+	-annotation "MayaConformPolygonNameCommand"
+	-sourceType "mel"
+	-command ("ConformPolygon")
+	MayaConformPolygonNameCommand;
+
+nameCommand
+	-annotation "MayaMakeLiveNameCommand"
+	-sourceType "mel"
+	-command ("MakeLive")
+	MayaMakeLiveNameCommand;
+
+nameCommand
+	-annotation "MayaNodeEditorGridToggleSnapNameCommand"
+	-sourceType "mel"
+	-command ("NodeEditorGridToggleSnap")
+	MayaNodeEditorGridToggleSnapNameCommand;
+
+nameCommand
+	-annotation "MayaSlideEdgeTool2NameCommand"
+	-sourceType "mel"
+	-command ("SlideEdgeTool")
+	MayaSlideEdgeTool2NameCommand;
+
+nameCommand
+	-annotation "CgRigHiveArtistUiNameCommand"
+	-sourceType "mel"
+	-command ("cgrigHiveArtistUI")
+	CgRigHiveArtistUiNameCommand;
+
+nameCommand
+	-annotation "CgRigReloadNameCommand"
+	-sourceType "mel"
+	-command ("cgrigReload")
+	CgRigReloadNameCommand;
+
+nameCommand
+	-annotation "CgRigDisplayMarkingMenuPressNameCommand"
+	-sourceType "mel"
+	-command ("CgRigDisplayMarkingMenuPress")
+	CgRigDisplayMarkingMenuPressNameCommand;
+
+nameCommand
+	-annotation "CgRigDisplayMarkingMenuReleaseNameCommand"
+	-sourceType "mel"
+	-command ("CgRigMarkingMenuRelease")
+	CgRigDisplayMarkingMenuReleaseNameCommand;
+
+nameCommand
+	-annotation "CgRigTlRenamerNameCommand"
+	-sourceType "mel"
+	-command ("cgrigRenamer")
+	CgRigTlRenamerNameCommand;
+
+nameCommand
+	-annotation "CgRigTlShaderManagerNameCommand"
+	-sourceType "mel"
+	-command ("cgrigTlShaderManager")
+	CgRigTlShaderManagerNameCommand;
+
+nameCommand
+	-annotation "CgRigCycleBackgroundColorsNameCommand"
+	-sourceType "mel"
+	-command ("cgrigCycleBackgroundColors")
+	CgRigCycleBackgroundColorsNameCommand;
+
+nameCommand
+	-annotation "CgRigCyclePerspCamerasNameCommand"
+	-sourceType "mel"
+	-command ("cgrigCyclePerspCameras")
+	CgRigCyclePerspCamerasNameCommand;
+
+nameCommand
+	-annotation "CgRigCycleAllCamerasNameCommand"
+	-sourceType "mel"
+	-command ("cgrigCycleAllCameras")
+	CgRigCycleAllCamerasNameCommand;
+
+nameCommand
+	-annotation "CgRigSetKeyframeNameCommand"
+	-sourceType "mel"
+	-command ("cgrigSetKeyframe")
+	CgRigSetKeyframeNameCommand;
+
+nameCommand
+	-annotation "CgRigAnimSnapWholeFrameNameCommand"
+	-sourceType "mel"
+	-command ("cgrigAnimSnapWholeFrame")
+	CgRigAnimSnapWholeFrameNameCommand;
+
+nameCommand
+	-annotation "CgRigPlayReverseNameCommand"
+	-sourceType "mel"
+	-command ("cgrigPlayReverse")
+	CgRigPlayReverseNameCommand;
+
+nameCommand
+	-annotation "CgRigPlaybackRangeStartNameCommand"
+	-sourceType "mel"
+	-command ("cgrigPlaybackRangeStart")
+	CgRigPlaybackRangeStartNameCommand;
+
+nameCommand
+	-annotation "CgRigPlaybackRangeEndNameCommand"
+	-sourceType "mel"
+	-command ("cgrigPlaybackRangeEnd")
+	CgRigPlaybackRangeEndNameCommand;
+
+nameCommand
+	-annotation "CgRigBakeKeysNameCommand"
+	-sourceType "mel"
+	-command ("cgrigBakeKeys")
+	CgRigBakeKeysNameCommand;
+
+nameCommand
+	-annotation "CgRigEulerFilterNameCommand"
+	-sourceType "mel"
+	-command ("cgrigEulerFilter")
+	CgRigEulerFilterNameCommand;
+
+nameCommand
+	-annotation "CgRigAnimGhostEditorWindowNameCommand"
+	-sourceType "mel"
+	-command ("cgrigAnimGhostEditorWindow")
+	CgRigAnimGhostEditorWindowNameCommand;
+
+nameCommand
+	-annotation "CgRigCurveCycleGraphRemoveNameCommand"
+	-sourceType "mel"
+	-command ("cgrigCurveCycleGraphRemove")
+	CgRigCurveCycleGraphRemoveNameCommand;
+
+nameCommand
+	-annotation "CgRigUnInstanceNameCommand"
+	-sourceType "mel"
+	-command ("cgrigUnInstance")
+	CgRigUnInstanceNameCommand;
+
+nameCommand
+	-annotation "CgRigLightsMarkingMenuReleaseNameCommand"
+	-sourceType "mel"
+	-command ("CgRig_LightsMarkingMenu_Release")
+	CgRigLightsMarkingMenuReleaseNameCommand;
+
+nameCommand
+	-annotation "CgRigShaderMarkingMenuPressNameCommand"
+	-sourceType "mel"
+	-command ("CgRigShaderMarkingMenuPress")
+	CgRigShaderMarkingMenuPressNameCommand;
+
+nameCommand
+	-annotation "CgRigShaderMarkingMenuReleaseNameCommand"
+	-sourceType "mel"
+	-command ("CgRigShaderMarkingMenuRelease")
+	CgRigShaderMarkingMenuReleaseNameCommand;
+
+nameCommand
+	-annotation "CgRigSelectionSetMarkingMenuPressNameCommand"
+	-sourceType "mel"
+	-command ("CgRigSelectionSetMarkingMenuPress")
+	CgRigSelectionSetMarkingMenuPressNameCommand;
+
+nameCommand
+	-annotation "CgRigSelectionSetMarkingMenuReleaseNameCommand"
+	-sourceType "mel"
+	-command ("CgRigSelectionSetMarkingMenuRelease")
+	CgRigSelectionSetMarkingMenuReleaseNameCommand;
+
+nameCommand
+	-annotation "CgRigCreateNurbsCylinderMatchNameCommand"
+	-sourceType "mel"
+	-command ("CgRigCreateNurbsCylinderMatch")
+	CgRigCreateNurbsCylinderMatchNameCommand;
+
+nameCommand
+	-annotation "CgRigCreateLocatorMatchNameCommand"
+	-sourceType "mel"
+	-command ("CgRigCreateLocatorMatch")
+	CgRigCreateLocatorMatchNameCommand;
+
+nameCommand
+	-annotation "CgRigCreateMarkCenterPivotNameCommand"
+	-sourceType "mel"
+	-command ("cgrigCreateMarkCenterPivot_")
+	CgRigCreateMarkCenterPivotNameCommand;
+
+nameCommand
+	-annotation "CgRigCreateCvCurveToolNameCommand"
+	-sourceType "mel"
+	-command ("CgRigCreateCvCurveTool")
+	CgRigCreateCvCurveToolNameCommand;
+
+nameCommand
+	-annotation "CgRigMotionTrailMarkingMenuPressNameCommand"
+	-sourceType "mel"
+	-command ("cgrigMotionTrailMarkingMenuPress")
+	CgRigMotionTrailMarkingMenuPressNameCommand;
+
+nameCommand
+	-annotation "CgRigMotionTrailMarkingMenuReleaseNameCommand"
+	-sourceType "mel"
+	-command ("cgrigMotionTrailMarkingMenuRelease")
+	CgRigMotionTrailMarkingMenuReleaseNameCommand;
+
+nameCommand
+	-annotation "MayaRefreshViewportNameCommand"
+	-sourceType "mel"
+	-command ("mayaRefreshViewport")
+	MayaRefreshViewportNameCommand;
+
+nameCommand
+	-annotation "CgRigSubdMarkingMenuPressNameCommand"
+	-sourceType "mel"
+	-command ("cgrigSubDMarkingMenuPress")
+	CgRigSubdMarkingMenuPressNameCommand;
+
+nameCommand
+	-annotation "CgRigSubdMarkingMenuReleaseNameCommand"
+	-sourceType "mel"
+	-command ("cgrigSubDMarkingMenuRelease")
+	CgRigSubdMarkingMenuReleaseNameCommand;
+
+nameCommand
+	-annotation "CgRigShelfFloatingWindowNameCommand"
+	-sourceType "mel"
+	-command ("cgrigShelfFloatingWindow")
+	CgRigShelfFloatingWindowNameCommand;
+
+nameCommand
+	-annotation "CgRigSetMeshWaxAlphaToolNameCommand"
+	-sourceType "mel"
+	-command ("cgrigSetMeshWaxAlphaTool")
+	CgRigSetMeshWaxAlphaToolNameCommand;
+
+nameCommand
+	-annotation "CgRigAnimationMarkingMenuPressNameCommand"
+	-sourceType "mel"
+	-command ("cgrigAnimationMarkingMenuPress")
+	CgRigAnimationMarkingMenuPressNameCommand;
+
+nameCommand
+	-annotation "CgRigAnimationMarkingMenuReleaseNameCommand"
+	-sourceType "mel"
+	-command ("cgrigAnimationMarkingMenuRelease")
+	CgRigAnimationMarkingMenuReleaseNameCommand;
+
+nameCommand
+	-annotation "CgRigGraphEditorMarkingMenuPressNameCommand"
+	-sourceType "mel"
+	-command ("cgrigGraphEditorMarkingMenuPress")
+	CgRigGraphEditorMarkingMenuPressNameCommand;
+
+nameCommand
+	-annotation "CgRigGraphEditorMarkingMenuReleaseNameCommand"
+	-sourceType "mel"
+	-command ("cgrigGraphEditorMarkingMenuRelease")
+	CgRigGraphEditorMarkingMenuReleaseNameCommand;
+
+nameCommand
+	-annotation "CgRigSetMeshSculptKnifeAlphaToolNameCommand"
+	-sourceType "mel"
+	-command ("cgrigSetMeshSculptKnifeAlphaTool")
+	CgRigSetMeshSculptKnifeAlphaToolNameCommand;
+
+nameCommand
+	-annotation "CgRigPolyEdgeLoopSplitAutoOffNameCommand"
+	-sourceType "mel"
+	-command ("cgrigPolyEdgeLoopSplitAutoOff")
+	CgRigPolyEdgeLoopSplitAutoOffNameCommand;
+
+nameCommand
+	-annotation "MayaSelectContiguousEdgesNameCommand"
+	-sourceType "mel"
+	-command ("SelectContiguousEdges")
+	MayaSelectContiguousEdgesNameCommand;
+
+nameCommand
+	-annotation "CgRigHiveToggleControlPanelNodesSelNameCommand"
+	-sourceType "mel"
+	-command ("cgrigHiveToggleControlPanelNodesSel")
+	CgRigHiveToggleControlPanelNodesSelNameCommand;
+
+nameCommand
+	-annotation "CgRigTlTweenMachinePopupRelCloseNameCommand"
+	-sourceType "mel"
+	-command ("cgrigTlTweenMachinePopupRelClose")
+	CgRigTlTweenMachinePopupRelCloseNameCommand;
+
+nameCommand
+	-annotation "MayaSearchEngineNameCommand"
+	-sourceType "mel"
+	-command ("SearchEngine")
+	MayaSearchEngineNameCommand;
+
+nameCommand
+	-annotation "CgRigBevelBoolMarkingMenuPressNameCommand"
+	-sourceType "mel"
+	-command ("cgrigBevelBoolMarkingMenuPress")
+	CgRigBevelBoolMarkingMenuPressNameCommand;
+
+nameCommand
+	-annotation "CgRigDeleteHistoryMarkingMenuPressNameCommand"
+	-sourceType "mel"
+	-command ("cgrigDeleteHistoryMarkingMenuPress")
+	CgRigDeleteHistoryMarkingMenuPressNameCommand;
+
+nameCommand
+	-annotation "CgRigFreezeTransformMarkingMenuPressNameCommand"
+	-sourceType "mel"
+	-command ("cgrigFreezeTransformMarkingMenuPress")
+	CgRigFreezeTransformMarkingMenuPressNameCommand;
+
+nameCommand
+	-annotation "CgRigBevelBoolMarkingMenuReleaseNameCommand"
+	-sourceType "mel"
+	-command ("cgrigBevelBoolMarkingMenuRelease")
+	CgRigBevelBoolMarkingMenuReleaseNameCommand;
+
+nameCommand
+	-annotation "CgRigDeleteHistoryMarkingMenuReleaseNameCommand"
+	-sourceType "mel"
+	-command ("cgrigDeleteHistoryMarkingMenuRelease")
+	CgRigDeleteHistoryMarkingMenuReleaseNameCommand;
+
+nameCommand
+	-annotation "CgRigFreezeTransformMarkingMenuReleaseNameCommand"
+	-sourceType "mel"
+	-command ("cgrigFreezeTransformMarkingMenuRelease")
+	CgRigFreezeTransformMarkingMenuReleaseNameCommand;
+
+nameCommand
+	-annotation "CgRigTlBrSkinImportExportNameCommand"
+	-sourceType "mel"
+	-command ("cgrigTlBrSkinImportExport")
+	CgRigTlBrSkinImportExportNameCommand;
+
+nameCommand
+	-annotation "CgRigTlNudge1FrameNameCommand"
+	-sourceType "mel"
+	-command ("cgrigTlNudge1Frame")
+	CgRigTlNudge1FrameNameCommand;
+
+nameCommand
+	-annotation "CgRigTlNudge5FramesNameCommand"
+	-sourceType "mel"
+	-command ("cgrigTlNudge5Frames")
+	CgRigTlNudge5FramesNameCommand;
+
+nameCommand
+	-annotation "CgRigTlNudge10FramesNameCommand"
+	-sourceType "mel"
+	-command ("cgrigTlNudge10Frames")
+	CgRigTlNudge10FramesNameCommand;
+
+nameCommand
+	-annotation "CgRigTlNudge1FrameBackNameCommand"
+	-sourceType "mel"
+	-command ("cgrigTlNudge1FrameBack")
+	CgRigTlNudge1FrameBackNameCommand;
+
+nameCommand
+	-annotation "CgRigTlNudge5FramesBackNameCommand"
+	-sourceType "mel"
+	-command ("cgrigTlNudge5FramesBack")
+	CgRigTlNudge5FramesBackNameCommand;
+
+nameCommand
+	-annotation "CgRigTlNudge10FramesBackNameCommand"
+	-sourceType "mel"
+	-command ("cgrigTlNudge10FramesBack")
+	CgRigTlNudge10FramesBackNameCommand;
+
+nameCommand
+	-annotation "CgRigTlNudge10FramesPreNameCommand"
+	-sourceType "mel"
+	-command ("cgrigTlNudge10FramesPre")
+	CgRigTlNudge10FramesPreNameCommand;
+
+nameCommand
+	-annotation "CgRigTlNudge5FramesPreNameCommand"
+	-sourceType "mel"
+	-command ("cgrigTlNudge5FramesPre")
+	CgRigTlNudge5FramesPreNameCommand;
+
+nameCommand
+	-annotation "CgRigTlNudge1FramePreBackNameCommand"
+	-sourceType "mel"
+	-command ("cgrigTlNudge1FramePreBack")
+	CgRigTlNudge1FramePreBackNameCommand;
+
+nameCommand
+	-annotation "CgRigTlNudge5FramesPreBackNameCommand"
+	-sourceType "mel"
+	-command ("cgrigTlNudge5FramesPreBack")
+	CgRigTlNudge5FramesPreBackNameCommand;
+
+nameCommand
+	-annotation "CgRigTlNudge10FramesPreBackNameCommand"
+	-sourceType "mel"
+	-command ("cgrigTlNudge10FramesPreBack")
+	CgRigTlNudge10FramesPreBackNameCommand;
+
+nameCommand
+	-annotation "CgRigTlNudge1FramePreNameCommand"
+	-sourceType "mel"
+	-command ("cgrigTlNudge1FramePre")
+	CgRigTlNudge1FramePreNameCommand;
+
+nameCommand
+	-annotation "CgRigTlSelectTimelineSelectionInGraphNameCommand"
+	-sourceType "mel"
+	-command ("cgrigTlSelectTimelineSelectionInGraph")
+	CgRigTlSelectTimelineSelectionInGraphNameCommand;
+
+//
+// The user hotkeys
+//
+//
+// The hotkey set
+//
+hotkeySet -source "Maya_Default" -current CgRig_Tools_Default;
+//
+// The hotkey contexts and hotkeys
+//
+hotkey -keyShortcut "u" -sht -name ("MayaShowAllNameCommand");
+hotkey -keyShortcut "q" -ctl -name ("MayaDrMultiCutToolNameCommand");
+hotkey -keyShortcut "x" -sht -name ("CgRigJointsMarkingMenuPressNameCommand");
+hotkey -keyShortcut "p" -ctl -alt -name ("MayaSculptGeometryToolNameCommand");
+hotkey -keyShortcut "," -ctl -alt -name ("CgRigPlaybackAnimStartNameCommand");
+hotkey -keyShortcut "f" -ctl -releaseName ("MayaEnterEditModeReleaseNameCommand");
+hotkey -keyShortcut "$" -name ("MayaNodeEditorWindowNameCommand");
+hotkey -keyShortcut "@" -name ("CgRigWireframeOnShadedToggleNameCommand");
+hotkey -keyShortcut "l" -ctl -sht -name ("CgRigCreateMarkCenterPivotNameCommand");
+hotkey -keyShortcut "v" -name ("MayaTimeDraggerToolActivateNameCommand");
+hotkey -keyShortcut "x" -ctl -alt -name ("CgRigMove5FramesBackNameCommand");
+hotkey -keyShortcut "p" -ctl -sht -name ("CgRigCreatePlaneMatchNameCommand");
+hotkey -keyShortcut "." -releaseName ("MayaDrCurveSnapReleaseNameCommand");
+hotkey -keyShortcut "3" -alt -name ("CgRigFaceModeNameCommand");
+hotkey -keyShortcut "a" -alt -sht -name ("CgRigKeyJumpSelectedTimeNameCommand");
+hotkey -keyShortcut "k" -alt -name ("MayaCreateCameraFromViewNameCommand");
+hotkey -keyShortcut "0" -ctl -name ("CgRigTlHotkeyManagerNameCommand");
+hotkey -keyShortcut "9" -name ("MayaTextureViewWindowNameCommand");
+hotkey -keyShortcut "o" -ctl -sht -name ("CgRigCreateSphereMatchNameCommand");
+hotkey -keyShortcut "%" -name ("MayaRenderGlobalsWindowNameCommand");
+hotkey -keyShortcut "y" -sht -name ("CgRigSkinMarkingMenuPressNameCommand");
+hotkey -keyShortcut "f" -ctl -alt -sht -name ("MayaSearchEngineNameCommand");
+hotkey -keyShortcut "f" -sht -name ("CgRigDeformersMarkingMenuPressNameCommand");
+hotkey -keyShortcut "&" -name ("MayaSpreadSheetEditorNameCommand");
+hotkey -keyShortcut "," -name ("MayaDrGridSnapPressNameCommand");
+hotkey -keyShortcut "1" -ctl -name ("CgRigViewportLightingToggleNameCommand");
+hotkey -keyShortcut "Right" -ctl -alt -name ("CgRigTlNudge5FramesNameCommand");
+hotkey -keyShortcut "x" -name ("CgRigPreviousKeyNoUndoNameCommand");
+hotkey -keyShortcut "`" -alt -name ("MayaSlideEdgeTool2NameCommand");
+hotkey -keyShortcut "\\" -alt -name ("CgRigPolyAppendAndCompleteNameCommand");
+hotkey -keyShortcut "b" -ctl -name ("CgRigBevelBoolMarkingMenuPressNameCommand");
+hotkey -keyShortcut "i" -ctl -alt -sht -name ("CgRigUnInstanceNameCommand");
+hotkey -keyShortcut "d" -sht -name ("MayaDuplicateWithTransformNameCommand");
+hotkey -keyShortcut "(" -name ("MayaComponentEditorNameCommand");
+hotkey -keyShortcut "k" -ctl -sht -name ("CgRigCyclePerspCamerasNameCommand");
+hotkey -keyShortcut "`" -ctl -name ("MayaToggleIsolateSelectNameCommand");
+hotkey -keyShortcut "r" -ctl -alt -name ("MayaReversePolygonNormalsNameCommand");
+hotkey -keyShortcut "s" -ctl -alt -sht -name ("cgrigResetAttrs_hotkeyPrsNameCommand");
+hotkey -keyShortcut "3" -releaseName ("CgRigSubdMarkingMenuReleaseNameCommand");
+hotkey -keyShortcut "'" -name ("CgRigMotionTrailMarkingMenuPressNameCommand");
+hotkey -keyShortcut "Down" -sht -name ("CgRigTlNudge1FramePreBackNameCommand");
+hotkey -keyShortcut "Left" -sht -name ("CgRigTlNudge1FrameBackNameCommand");
+hotkey -keyShortcut "!" -name ("CgRigXrayToggleNameCommand");
+hotkey -keyShortcut "l" -releaseName ("CgRigLightsMarkingMenuReleaseNameCommand");
+hotkey -keyShortcut "f" -ctl -sht -name ("MayaFillHoleNameCommand");
+hotkey -keyShortcut "f" -sht -releaseName ("CgRigDeformersMarkingMenuReleaseNameCommand");
+hotkey -keyShortcut "," -releaseName ("MayaDrGridSnapReleaseNameCommand");
+hotkey -keyShortcut "w" -ctl -alt -name ("CgRigPolyMergeNoMoveNameCommand");
+hotkey -keyShortcut "m" -ctl -alt -name ("CgRigTlShaderManagerNameCommand");
+hotkey -keyShortcut "l" -sht -name ("CgRigCreateLocatorMatchNameCommand");
+hotkey -keyShortcut "b" -ctl -releaseName ("CgRigBevelBoolMarkingMenuReleaseNameCommand");
+hotkey -keyShortcut "i" -sht -name ("CgRigGraphInfinityNameCommand");
+hotkey -keyShortcut "v" -ctl -sht -name ("CgRigKeyDeleteCurrentFrameNameCommand");
+hotkey -keyShortcut "$" -ctl -name ("MayaChannelControlEditorNameCommand");
+hotkey -keyShortcut "o" -ctl -alt -name ("CgRigCurveCycleGraphRemoveNameCommand");
+hotkey -keyShortcut "^" -name ("MayaNamespaceEditorNameCommand");
+hotkey -keyShortcut "6" -alt -name ("MayaPreferencesWindowNameCommand");
+hotkey -keyShortcut "y" -sht -releaseName ("CgRigSkinMarkingMenuReleaseNameCommand");
+hotkey -keyShortcut "'" -releaseName ("CgRigMotionTrailMarkingMenuReleaseNameCommand");
+hotkey -keyShortcut "8" -name ("MayaScriptEditorNameCommand");
+hotkey -keyShortcut "Right" -ctl -alt -sht -name ("CgRigTlNudge10FramesNameCommand");
+hotkey -keyShortcut "r" -ctl -alt -sht -name ("MayaToggleFrameRateNameCommand");
+hotkey -keyShortcut "l" -name ("CgRigLightsMarkingMenuPressNameCommand");
+hotkey -keyShortcut "t" -alt -name ("MayaDeletePolyElementsNameCommand");
+hotkey -keyShortcut "z" -ctl -alt -name ("MayaSetMeshFillToolNameCommand");
+hotkey -keyShortcut "t" -ctl -alt -sht -name ("MayaToggleCurrentFrameNameCommand");
+hotkey -keyShortcut "Left" -ctl -alt -name ("CgRigTlNudge5FramesBackNameCommand");
+hotkey -keyShortcut "{" -ctl -alt -name ("CgRigReloadNameCommand");
+hotkey -keyShortcut "" -name ("CgRigTlBrSkinImportExportNameCommand");
+hotkey -keyShortcut "Up" -sht -name ("CgRigTlNudge1FramePreNameCommand");
+hotkey -keyShortcut "d" -ctl -alt -name ("MayaEnterEditModeNameCommand");
+hotkey -keyShortcut "Down" -ctl -alt -sht -name ("CgRigTlNudge10FramesPreBackNameCommand");
+hotkey -keyShortcut "w" -ctl -sht -name ("MayaMergeVertexToolNameCommand");
+hotkey -keyShortcut "3" -name ("CgRigSubdMarkingMenuPressNameCommand");
+hotkey -keyShortcut "4" -name ("MayaHypershadeWindowNameCommand");
+hotkey -keyShortcut "e" -ctl -alt -sht -name ("CgRigPolyHardenEdgeNameCommand");
+hotkey -keyShortcut "z" -alt -name ("CgRigPlayReverseNameCommand");
+hotkey -keyShortcut "f" -ctl -name ("MayaEnterEditModePressNameCommand");
+hotkey -keyShortcut "o" -alt -name ("CgRigCurveCycleGraphsNameCommand");
+hotkey -keyShortcut "." -ctl -alt -sht -name ("CgRigPlaybackRangeEndNameCommand");
+hotkey -keyShortcut "x" -sht -releaseName ("CgRigJointsMarkingMenuReleaseNameCommand");
+hotkey -keyShortcut "." -name ("MayaDrCurveSnapPressNameCommand");
+hotkey -keyShortcut "h" -alt -name ("MayaToggleSelectionHandlesNameCommand");
+hotkey -keyShortcut "l" -alt -name ("MayaMakeLiveNameCommand");
+hotkey -keyShortcut "2" -name ("CgRigToggleTexturesNameCommand");
+hotkey -keyShortcut "t" -ctl -sht -name ("CgRigTriggerToggleVisNameCommand");
+hotkey -keyShortcut "?" -name ("CgRigHiveToggleControlPanelNodesSelNameCommand");
+hotkey -keyShortcut "v" -releaseName ("MayaTimeDraggerToolDeactivateNameCommand");
+hotkey -keyShortcut "*" -name ("MayaSetDrivenKeyOptionsNameCommand");
+hotkey -keyShortcut "3" -ctl -alt -name ("MayaSubdHighQualityDisplayNameCommand");
+hotkey -keyShortcut "d" -name ("CgRigDisplayMarkingMenuPressNameCommand");
+hotkey -keyShortcut "d" -alt -sht -name ("CgRigDeleteHistoryMarkingMenuPressNameCommand");
+hotkey -keyShortcut "y" -ctl -name ("MayaSlideEdgeToolNameCommand");
+hotkey -keyShortcut "\\" -ctl -name ("CgRigRendermanIprNameCommand");
+hotkey -keyShortcut "<" -ctl -alt -name ("CgRigRangeStartNameCommand");
+hotkey -keyShortcut "7" -name ("MayaGraphEditorNameCommand");
+hotkey -keyShortcut "]" -alt -sht -name ("CgRigAnimGhostEditorWindowNameCommand");
+hotkey -keyShortcut "z" -alt -sht -name ("CgRigCreateCvCurveToolNameCommand");
+hotkey -keyShortcut "u" -releaseName ("CgRigSelectionSetMarkingMenuReleaseNameCommand");
+hotkey -keyShortcut "n" -sht -name ("MayaInsertKeyToolActivateNameCommand");
+hotkey -keyShortcut "1" -name ("CgRigWireFrameShadedToggleNameCommand");
+hotkey -keyShortcut "q" -ctl -sht -name ("MayaDrQuadDrawToolNameCommand");
+hotkey -keyShortcut "x" -ctl -sht -name ("CgRigMoveKeyBackOneNameCommand");
+hotkey -keyShortcut "z" -ctl -sht -name ("MayaSetMeshScrapeToolNameCommand");
+hotkey -keyShortcut "p" -alt -sht -name ("CgRigAlignSelectionHotkeyPrsNameCommand");
+hotkey -keyShortcut "a" -alt -releaseName ("CgRigGraphEditorMarkingMenuReleaseNameCommand");
+hotkey -keyShortcut "1" -ctl -alt -name ("MayaSubdLowQualityDisplayNameCommand");
+hotkey -keyShortcut "l" -ctl -alt -sht -name ("CgRigLambert50PercentGreyNameCommand");
+hotkey -keyShortcut "q" -alt -sht -name ("CgRigShelfFloatingWindowNameCommand");
+hotkey -keyShortcut "m" -ctl -alt -sht -name ("MayaMirrorPolygonGeometryOptionsNameCommand");
+hotkey -keyShortcut "Down" -ctl -alt -name ("CgRigTlNudge5FramesPreBackNameCommand");
+hotkey -keyShortcut "," -ctl -alt -sht -name ("CgRigPlaybackRangeStartNameCommand");
+hotkey -keyShortcut "e" -ctl -sht -name ("CgRigPolySoftenEdgeNameCommand");
+hotkey -keyShortcut "/" -releaseName ("MayaDrPointSnapReleaseNameCommand");
+hotkey -keyShortcut "i" -ctl -sht -name ("CgRigCreateCylinderMatchNameCommand");
+hotkey -keyShortcut "1" -alt -name ("CgRigVertModeNameCommand");
+hotkey -keyShortcut "." -ctl -alt -name ("CgRigPlaybackAnimEndNameCommand");
+hotkey -keyShortcut "c" -alt -name ("CgRigNextFrameNoUndoNameCommand");
+hotkey -keyShortcut ";" -name ("CgRigHotkeySetToggleNameCommand");
+hotkey -keyShortcut "v" -sht -releaseName ("CgRigConstraintMarkingMenuReleaseNameCommand");
+hotkey -keyShortcut "k" -sht -name ("CgRigCreateCamRooXzyNameCommand");
+hotkey -keyShortcut "0" -name ("MayaHotkeyPreferencesWindowNameCommand");
+hotkey -keyShortcut "b" -alt -name ("CgRigCycleBackgroundColorsNameCommand");
+hotkey -keyShortcut "e" -ctl -alt -name ("MayaSelectContiguousEdgesNameCommand");
+hotkey -keyShortcut "z" -ctl -alt -sht -name ("CgRigSelectHierarchyNameCommand");
+hotkey -keyShortcut "f" -alt -releaseName ("CgRigFreezeTransformMarkingMenuReleaseNameCommand");
+hotkey -keyShortcut "?" -ctl -name ("CgRigHiveArtistUiNameCommand");
+hotkey -keyShortcut "x" -alt -sht -name ("CgRigSetMeshSculptKnifeAlphaToolNameCommand");
+hotkey -keyShortcut "o" -releaseName ("CgRigShaderMarkingMenuReleaseNameCommand");
+hotkey -keyShortcut "x" -ctl -alt -sht -name ("CgRigTlSelectTimelineSelectionInGraphNameCommand");
+hotkey -keyShortcut "s" -sht -name ("CgRigSetKeyframeAllNameCommand");
+hotkey -keyShortcut "a" -releaseName ("CgRigAnimationMarkingMenuReleaseNameCommand");
+hotkey -keyShortcut "Up" -ctl -alt -name ("CgRigTlNudge5FramesPreNameCommand");
+hotkey -keyShortcut "2" -alt -name ("CgRigEdgeModeNameCommand");
+hotkey -keyShortcut "b" -ctl -alt -sht -name ("MayaBridgeEdgeNameCommand");
+hotkey -keyShortcut "w" -ctl -alt -sht -name ("MayaPolyMergeNameCommand");
+hotkey -keyShortcut "/" -ctl -name ("MayaRefreshViewportNameCommand");
+hotkey -keyShortcut "e" -alt -sht -name ("CgRigPolyEdgeLoopSplitAutoOffNameCommand");
+hotkey -keyShortcut "w" -alt -name ("CgRigSetMeshWaxAlphaToolNameCommand");
+hotkey -keyShortcut "k" -ctl -alt -name ("CgRigCycleAllCamerasNameCommand");
+hotkey -keyShortcut "g" -alt -name ("CgRigTlTweenMachinePopupRelCloseNameCommand");
+hotkey -keyShortcut "c" -sht -name ("MayaCenterPivotNameCommand");
+hotkey -keyShortcut "r" -alt -sht -name ("CgRigTlRenamerNameCommand");
+hotkey -keyShortcut "6" -name ("MayaSequenceEditorNameCommand");
+hotkey -keyShortcut "c" -alt -sht -name ("MayaConformPolygonNameCommand");
+hotkey -keyShortcut "a" -name ("CgRigAnimationMarkingMenuPressNameCommand");
+hotkey -keyShortcut "u" -ctl -sht -name ("CgRigCreateCubeMatchNameCommand");
+hotkey -keyShortcut "|" -ctl -alt -name ("MayaNewSceneNameCommand");
+hotkey -keyShortcut "o" -alt -sht -name ("CgRigAnimSnapWholeFrameNameCommand");
+hotkey -keyShortcut "k" -name ("CgRigSelectCamInViewNameCommand");
+hotkey -keyShortcut "o" -ctl -alt -sht -name ("CgRigCreateNurbsCylinderMatchNameCommand");
+hotkey -keyShortcut "4" -alt -name ("CgRigNodeEditorShowCurrentSelectionNameCommand");
+hotkey -keyShortcut "2" -ctl -alt -name ("MayaSubdMediumQualityDisplayNameCommand");
+hotkey -keyShortcut "o" -name ("CgRigShaderMarkingMenuPressNameCommand");
+hotkey -keyShortcut "q" -alt -name ("CgRigObjectModeAndDeselectNameCommand");
+hotkey -keyShortcut "v" -alt -name ("MayaPlayNameCommand");
+hotkey -keyShortcut "Left" -ctl -alt -sht -name ("CgRigTlNudge10FramesBackNameCommand");
+hotkey -keyShortcut "r" -ctl -sht -name ("MayaReferenceEditorNameCommand");
+hotkey -keyShortcut "Up" -ctl -alt -sht -name ("CgRigTlNudge10FramesPreNameCommand");
+hotkey -keyShortcut "Right" -sht -name ("CgRigTlNudge1FrameNameCommand");
+hotkey -keyShortcut "b" -ctl -sht -name ("CgRigObjectBackfaceCullingToggleNameCommand");
+hotkey -keyShortcut "b" -alt -sht -name ("CgRigBakeKeysNameCommand");
+hotkey -keyShortcut "c" -ctl -alt -sht -name ("MayaCombinePolygonsNameCommand");
+hotkey -keyShortcut "x" -alt -name ("CgRigPreviousFrameNoUndoNameCommand");
+hotkey -keyShortcut "y" -ctl -alt -sht -name ("MayaTogglePolyCountNameCommand");
+hotkey -keyShortcut "#" -name ("CgRigOpenLightEditorNameCommand");
+hotkey -keyShortcut "g" -ctl -alt -sht -name ("CgRigEulerFilterNameCommand");
+hotkey -keyShortcut "m" -alt -name ("CgRigSymmetricalToggleNameCommand");
+hotkey -keyShortcut "m" -sht -name ("CgRigMirrorPolygonGeometryNameCommand");
+hotkey -keyShortcut "c" -name ("CgRigNextKeyNoUndoNameCommand");
+hotkey -keyShortcut "2" -ctl -name ("MayaMergeToCenterNameCommand");
+hotkey -keyShortcut "v" -ctl -alt -sht -name ("CgRigToggleAndKeyVisNameCommand");
+hotkey -keyShortcut "n" -sht -releaseName ("MayaInsertKeyToolDeactivateNameCommand");
+hotkey -keyShortcut "n" -ctl -sht -name ("CgRigSelectNodeOrShaderAttrEditorNameCommand");
+hotkey -keyShortcut "e" -alt -name ("CgRigExtractFaceToObjectModeNameCommand");
+hotkey -keyShortcut "a" -alt -name ("CgRigGraphEditorMarkingMenuPressNameCommand");
+hotkey -keyShortcut "5" -name ("MayaRenderViewWindowNameCommand");
+hotkey -keyShortcut ">" -ctl -alt -name ("CgRigRangeEndNameCommand");
+hotkey -keyShortcut "d" -releaseName ("CgRigDisplayMarkingMenuReleaseNameCommand");
+hotkey -keyShortcut "a" -ctl -alt -sht -name ("CgRigSelectFromFcurveNameCommand");
+hotkey -keyShortcut "d" -alt -sht -releaseName ("CgRigDeleteHistoryMarkingMenuReleaseNameCommand");
+hotkey -keyShortcut "3" -ctl -name ("MayaPluginManagerNameCommand");
+hotkey -keyShortcut "a" -ctl -alt -name ("CgRigKeySnapRetainSpacingNameCommand");
+hotkey -keyShortcut "s" -name ("CgRigSetKeyframeNameCommand");
+hotkey -keyShortcut "u" -name ("CgRigSelectionSetMarkingMenuPressNameCommand");
+hotkey -keyShortcut "m" -alt -sht -name ("CgRigMirrorInstanceGroupWorldxNameCommand");
+hotkey -keyShortcut "q" -ctl -alt -sht -name ("MayaPolygonCollapseNameCommand");
+hotkey -keyShortcut "4" -ctl -name ("MayaConnectionEditorNameCommand");
+hotkey -keyShortcut "c" -ctl -alt -name ("CgRigMove5FramesForwardNameCommand");
+hotkey -keyShortcut "c" -ctl -sht -name ("CgRigMoveKeyForwardOneNameCommand");
+hotkey -keyShortcut "s" -alt -name ("CgRigSmoothPolyObjectNameCommand");
+hotkey -keyShortcut "f" -alt -name ("CgRigFreezeTransformMarkingMenuPressNameCommand");
+hotkey -keyShortcut "/" -name ("MayaDrPointSnapPressNameCommand");
+hotkey -keyShortcut "v" -sht -name ("CgRigConstraintMarkingMenuPressNameCommand");
+hotkeyCtx -type "Editor" -addClient "profilerPanel";
+hotkeyCtx -type "Editor" -addClient "polyTexturePlacementPanel;;;;";
+hotkeyCtx -type "Editor" -addClient "shapePanel";
+hotkeyCtx -type "Editor" -addClient "outlinerPanel";
+hotkeyCtx -type "Editor" -addClient "outlinerPanel;";
+hotkeyCtx -type "Editor" -addClient "graphEditor;;;;";
+hotkeyCtx -type "Editor" -addClient "nodeEditorPanel;;";
+hotkeyCtx -type "Editor" -addClient "posePanel";
+hotkeyCtx -type "Editor" -addClient "profilerPanel;;;";
+hotkeyCtx -type "Editor" -addClient "polyTexturePlacementPanel";
+hotkeyCtx -type "Editor" -addClient "hyperGraphPanel;;";
+hotkeyCtx -type "Editor" -addClient "profilerPanel;;";
+hotkeyCtx -type "Editor" -addClient "shapePanel;;;";
+hotkeyCtx -type "Editor" -addClient "posePanel;;";
+hotkeyCtx -type "Editor" -addClient "shapePanel;;;;";
+hotkeyCtx -type "Editor" -addClient "timeEditorPanel;";
+hotkeyCtx -type "Editor" -addClient "graphEditor";
+hotkey -keyShortcut "c" -ctl -name ("MayaCopyGraphAnimKeysNameCommand");
+hotkeyCtx -type "Editor" -addClient "nodeEditorPanel;;;";
+hotkeyCtx -type "Editor" -addClient "hyperGraphPanel;;;;";
+hotkeyCtx -type "Editor" -addClient "polyTexturePlacementPanel;;";
+hotkeyCtx -type "Editor" -addClient "nodeEditorPanel;";
+hotkeyCtx -type "Editor" -addClient "hyperShadePanel;;;";
+hotkeyCtx -type "Editor" -addClient "profilerPanel;";
+hotkeyCtx -type "Editor" -addClient "timeEditorPanel;;;";
+hotkeyCtx -type "Editor" -addClient "nodeEditorPanel";
+hotkey -keyShortcut "," -releaseName ("MayaNodeEditorGridToggleSnaprNameCommand");
+hotkey -keyShortcut "," -name ("MayaNodeEditorGridToggleSnapNameCommand");
+hotkeyCtx -type "Editor" -addClient "shapePanel;";
+hotkeyCtx -type "Editor" -addClient "outlinerPanel;;;";
+hotkeyCtx -type "Editor" -addClient "hyperGraphPanel";
+hotkeyCtx -type "Editor" -addClient "timeEditorPanel";
+hotkeyCtx -type "Editor" -addClient "cteEditor;;;;";
+hotkeyCtx -type "Editor" -addClient "hyperGraphPanel;";
+hotkeyCtx -type "Editor" -addClient "posePanel;;;;";
+hotkeyCtx -type "Editor" -addClient "hyperShadePanel;;;;";
+hotkeyCtx -type "Editor" -addClient "shapePanel;;";
+hotkeyCtx -type "Editor" -addClient "dopeSheetPanel";
+hotkeyCtx -type "Editor" -addClient "hyperGraphPanel;;;";
+hotkeyCtx -type "Editor" -addClient "posePanel;;;";
+hotkeyCtx -type "Editor" -addClient "timeEditorPanel;;;;";
+hotkeyCtx -type "Editor" -addClient "polyTexturePlacementPanel;";
+hotkeyCtx -type "Editor" -addClient "outlinerPanel;;;;";
+hotkeyCtx -type "Editor" -addClient "profilerPanel;;;;";
+hotkeyCtx -type "Editor" -addClient "polyTexturePlacementPanel;;;";
+hotkeyCtx -type "Editor" -addClient "hyperShadePanel";
+hotkeyCtx -type "Editor" -addClient "outlinerPanel;;";
+hotkeyCtx -type "Editor" -addClient "timeEditorPanel;;";
+hotkeyCtx -type "Editor" -addClient "graphEditor;";
+hotkeyCtx -type "Editor" -addClient "nodeEditorPanel;;;;";
+hotkeyCtx -type "Editor" -addClient "posePanel;";
+hotkeyCtx -type "Editor" -addClient "hyperShadePanel;;";
+hotkeyCtx -type "Editor" -addClient "graphEditor;;;";
+hotkeyCtx -type "Editor" -addClient "graphEditor;;";
+hotkeyCtx -type "Editor" -addClient "hyperShadePanel;";
+hotkeyCtx -type "Tool" -addClient "texSculptCacheContext";
+hotkeyCtx -type "Tool" -addClient "texSculptCacheContext;";
+hotkeyCtx -type "Tool" -addClient "sculptMeshCache;;;;";
+hotkeyCtx -type "Tool" -addClient "SymmetrizeUVBrush;";
+hotkeyCtx -type "Tool" -addClient "xgmIGBrush;;;";
+hotkeyCtx -type "Tool" -addClient "polyCutUV";
+hotkeyCtx -type "Tool" -addClient "SymmetrizeUVBrush;;";
+hotkeyCtx -type "Tool" -addClient "texCutContext;;;";
+hotkeyCtx -type "Tool" -addClient "SymmetrizeUVBrush;;;";
+hotkeyCtx -type "Tool" -addClient "sculptMeshCache";
+hotkey -keyShortcut "d" -name ("MayaSetMeshFlattenToolNameCommand");
+hotkey -keyShortcut "a" -name ("MayaSetMeshGrabToolNameCommand");
+hotkey -keyShortcut "c" -name ("MayaSetMeshFreezeToolNameCommand");
+hotkey -keyShortcut "x" -name ("MayaSetMeshPinchToolNameCommand");
+hotkey -keyShortcut "s" -name ("MayaSetMeshSculptToolNameCommand");
+hotkey -keyShortcut "c" -ctl -name ("MayaSculptMeshInvertFreezeNameCommand");
+hotkey -keyShortcut "c" -sht -name ("MayaSculptMeshUnfreezeAllNameCommand");
+hotkeyCtx -type "Tool" -addClient "xgmIGBrush;;;;";
+hotkeyCtx -type "Tool" -addClient "polyCutUV;;";
+hotkeyCtx -type "Tool" -addClient "sculptMeshCache;;;";
+hotkeyCtx -type "Tool" -addClient "texSculptCacheContext;;";
+hotkeyCtx -type "Tool" -addClient "xgmIGBrush;";
+hotkeyCtx -type "Tool" -addClient "Unfold3DBrush";
+hotkeyCtx -type "Tool" -addClient "texCutContext;;;;";
+hotkeyCtx -type "Tool" -addClient "xgmIGBrush";
+hotkeyCtx -type "Tool" -addClient "texSculptCacheContext;;;";
+hotkeyCtx -type "Tool" -addClient "SymmetrizeUVBrush";
+hotkeyCtx -type "Tool" -addClient "sculptMeshCache;";
+hotkeyCtx -type "Tool" -addClient "texCutContext;;";
+hotkeyCtx -type "Tool" -addClient "xgmIGBrush;;";
+hotkeyCtx -type "Tool" -addClient "texSculptCacheContext;;;;";
+hotkeyCtx -type "Tool" -addClient "Unfold3DBrush;;";
+hotkeyCtx -type "Tool" -addClient "polyCutUV;";
+hotkeyCtx -type "Tool" -addClient "Unfold3DBrush;;;";
+hotkeyCtx -type "Tool" -addClient "sculptMeshCache;;";
+hotkeyCtx -type "Tool" -addClient "SymmetrizeUVBrush;;;;";
+hotkeyCtx -type "Tool" -addClient "bpDraw";
+hotkeyCtx -type "Tool" -addClient "texCutContext;";
+hotkeyCtx -type "Tool" -addClient "texCutContext";
+hotkeyCtx -type "Tool" -addClient "polyCutUV;;;;";
+hotkeyCtx -type "Tool" -addClient "Unfold3DBrush;";
+hotkeyCtx -type "Tool" -addClient "Unfold3DBrush;;;;";
+hotkeyCtx -type "Tool" -addClient "polyCutUV;;;";

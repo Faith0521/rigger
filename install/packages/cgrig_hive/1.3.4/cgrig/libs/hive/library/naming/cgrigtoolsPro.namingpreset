@@ -1,0 +1,78 @@
+{
+    "name": "CgRigToolsPro",
+    "configs": [
+        {
+            "name": "cgrigtoolsProGlobalConfig",
+            "hiveType": "global"
+        },
+        {
+            "name": "cgrigtoolsProRigConfig",
+            "hiveType": "rig"
+        },
+        {
+            "name": "cgrigtoolsProGlobalVChainComponent",
+            "hiveType": "vchaincomponent"
+        },
+        {
+            "name": "cgrigtoolsProGlobalAimComponent",
+            "hiveType": "aimcomponent"
+        },
+        {
+            "name": "cgrigtoolsProGlobalFkComponent",
+            "hiveType": "fkchain"
+        },
+        {
+            "name": "cgrigtoolsProGlobalGodNodeComponent",
+            "hiveType": "godnodecomponent"
+        },
+        {
+            "name": "cgrigtoolsProGlobalFingerComponent",
+            "hiveType": "finger"
+        },
+        {
+            "name": "cgrigtoolsProGlobalHeadComponent",
+            "hiveType": "headcomponent"
+        },
+        {
+            "name": "cgrigtoolsProGlobalJawComponent",
+            "hiveType": "jaw"
+        },
+        {
+            "name": "cgrigtoolsProGlobalLegComponent",
+            "hiveType": "legcomponent"
+        },
+        {
+            "name": "cgrigtoolsProGlobalSpineFkComponent",
+            "hiveType": "spineFk"
+        },
+        {
+            "name": "cgrigtoolsProGlobalArmComponent",
+            "hiveType": "armcomponent"
+        },
+        {
+            "name": "cgrigtoolsProGlobalSpineIkComponent",
+            "hiveType": "spineIk"
+        },
+        {
+            "name": "cgrigtoolsProGlobalQuadrupedLegComponent",
+            "hiveType": "quadLeg"
+        },
+        {
+            "name": "cgrigtoolsProGlobalEyeComponent",
+            "hiveType": "eyecomponent"
+        },
+        {
+            "name": "cgrigtoolsProGlobalBrowComponent",
+            "hiveType": "browcomponent"
+        },
+        {
+            "name": "cgrigtoolsProGlobalMouthComponent",
+            "hiveType": "mouthcomponent"
+        },
+        {
+            "name": "cgrigtoolsProGlobalCheeksComponent",
+            "hiveType": "cheekcomponent"
+        }
+
+    ]
+}

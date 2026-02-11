@@ -1,0 +1,114 @@
+{
+    "sortOrder": -1,
+    "shelves": [
+        {
+            "name": "CgRigToolsPro",
+            "children": [
+                {
+                    "id": "cgrig.shelf.help",
+                    "icon": "helpMenu_shlf",
+                    "tooltip": "Help Menu: \nOpen CgRig Tools & Create3dCharacters.com online help, training and documentation. ",
+                    "displayLabel": false,
+                    "children": [
+                        {
+                            "id": "create3dcharacters",
+                            "label": "Create3dCharacters.com",
+                            "icon": "webpage"
+                        },
+                        {
+                            "type": "separator"
+                        },
+                        {
+                            "id": "latestNews",
+                            "label": "Check For Updates",
+                            "icon": "webpage"
+                        },
+                        {
+                            "id": "cgrigToolsGettingStarted",
+                            "label": "CgRig Tools Getting Started",
+                            "icon": "play"
+                        },
+                        {
+                            "id": "cgrigToolsHelpContents",
+                            "label": "CgRig Tools Help Contents",
+                            "icon": "help"
+                        },
+                        {
+                            "type": "separator"
+                        },
+                        {
+                            "id": "cgrigToolsInstallUpdate",
+                            "label": "CgRig Tools Install/Upgrade",
+                            "icon": "downloadCircle"
+                        },
+                        {
+                            "id": "cgrigToolsAssetsPresets",
+                            "label": "CgRig Tools Assets/Presets",
+                            "icon": "downloadCircle"
+                        },
+                        {
+                            "type": "separator"
+                        },
+                        {
+                            "id": "cgrigChangelog",
+                            "label": "CgRig Tools Changelog",
+                            "icon": "toolsets"
+                        },
+                        {
+                            "id": "cgrigIssuesFixes",
+                            "label": "CgRig Tools Issues/Fixes",
+                            "icon": "toolsets"
+                        },
+                        {
+                            "type": "separator"
+                        },
+                        {
+                            "id": "coursesByOrder",
+                            "label": "Courses By Order",
+                            "icon": "tutorials"
+                        },
+                        {
+                            "id": "coursesByPopularity",
+                            "label": "Courses By Popularity",
+                            "icon": "tutorials"
+                        },
+                        {
+                            "id": "coursesByDateAdded",
+                            "label": "Courses By Date Added",
+                            "icon": "tutorials"
+                        },
+                        {
+                            "type": "separator"
+                        },
+                        {
+                            "id": "intermediateCourse",
+                            "label": "Intermediate Course",
+                            "icon": "tutorials"
+                        },
+                        {
+                            "id": "advancedCourse",
+                            "label": "Advanced Course",
+                            "icon": "tutorials"
+                        },
+                        {
+                            "type": "separator"
+                        },
+                        {
+                            "id": "mayaHotkeyList",
+                            "label": "Maya Hotkey List",
+                            "icon": "keyboard"
+                        },
+                        {
+                            "type": "separator"
+                        },
+                        {
+                            "id": "developerDocumentation",
+                            "label": "CgRig Developer Documentation",
+                            "icon": "code"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

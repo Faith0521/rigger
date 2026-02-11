@@ -1,0 +1,47 @@
+{
+    "author": "Create3dCharacters",
+    "authorEmail": "info@create3dcharacters.com",
+    "description": "Hive Artist UI for CgRig Tools Pro",
+    "displayName": "CgRig Hive Artist UI",
+    "environment": {
+        "HIVE_COMPONENT_MODELS": [
+            "{self}/cgrig/apps/hiveartistui/componentmodels"
+        ],
+        "HIVE_UI_TOOLS": [
+            "{self}/cgrig/apps/hiveartistui/tools"
+        ],
+        "PYTHONPATH": [
+            "{self}"
+        ],
+        "CGRIG_ACTIONPLUGIN_MODULES": [
+            "{self}/cgrig/apps/integration/maya/hive_artist_ui_actionplugins.py"
+        ],
+        "CGRIG_BASE_PATHS": [
+            "{self}"
+        ],
+        "CGRIG_ICON_PATHS": [
+            "{self}/icons"
+        ],
+        "CGRIG_MENU_LAYOUTS": [
+            "{self}/cgrig/apps/integration/maya/hive_artist_ui_menu.layout"
+        ],
+        "CGRIG_SHELF_LAYOUTS": [
+            "{self}/cgrig/apps/integration/maya/hive_artist_ui_shelf.layout"
+        ],
+        "CGRIG_TOOLSET_LAYOUTS": [
+            "{self}/cgrig/apps/integration/maya/hive_toolsets.layout",
+            "{self}/cgrig/apps/integration/maya/hive_artist_ui_toolsets.layout"
+        ],
+        "CGRIG_TOOLSET_UI_PATHS": [
+            "{self}/cgrig/apps/uitoolsets/"
+        ]
+    },
+    "name": "cgrig_hive_artist_ui",
+    "requirements": [
+        "cgrig_core",
+        "cgrig_pyside",
+        "cgrig_maya",
+        "cgrig_hive"
+    ],
+    "version": "1.1.12"
+}

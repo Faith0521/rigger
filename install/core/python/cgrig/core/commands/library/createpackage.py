@@ -1,0 +1,99 @@
+from cgrig.core.util import zlogging
+import os
+import shutil
+
+from cgrig.core.commands import action
+from cgrig.core.packageresolver import package
+from cgrig.core.util import filesystem
+from cgrig.core import constants
+from cgrig.core import errors
+
+logger = zlogging.getLogger(__name__)
+
+DEFAULTS = {
+    "author": "",
+    "authorEmail": "",
+    "description": "",
+    "displayName": "",
+    "environment": {
+        "PYTHONPATH": ["{self}"],
+        "CGRIG_BASE_PATHS": ["{self}"],
+        "CGRIG_ICON_PATHS": ["{self}/icons"],
+
+    },
+    "name": "",
+    "requirements": ["cgrig_core", "cgrig_preferences"],
+    "version": "1.0.0",
+    "tests": [
+        "{self}/tests"
+    ]
+}
+
+
+class CreatePackage(action.Action):
+    id = "createPackage"
+
+    def arguments(self, argParser):
+        argParser.add_argument("--destination",
+                               required=True,
+                               help="",
+                               type=str)
+        argParser.add_argument("--name",
+                               required=True,
+                               help="The name of the package",
+                               type=str)
+        argParser.add_argument("--displayName",
+                               required=False,
+                               help="The display name for the package",
+                               type=str)
+        argParser.add_argument("--author",
+                               required=False,
+                               default="",
+                               type=str)
+        argParser.add_argument("--authorEmail",
+                               required=False,
+                               default="",
+                               type=str)
+        argParser.add_argument("--description",
+                               required=False,
+                               help="The tag message",
+                               default="",
+                               type=str)
+        argParser.add_argument("--force",
+                               action="store_true",
+                               help="If Specified then if the destination exists it will be overridden")
+
+    def run(self):
+        existingDescriptor = self.config.descriptorForPackageName(self.options.name)
+        if existingDescriptor and self.options.force:
+            existingDescriptor.uninstall(remove=True)
+        elif existingDescriptor is not None:
+            raise errors.PackageAlreadyExists(existingDescriptor.name)
+        if os.path.exists(self.options.destination) and self.options.force:
+            logger.debug("Removing destination folder: {}".format(self.options.destination))
+            shutil.rmtree(self.options.destination)
+
+        elif os.path.exists(self.options.destination):
+            raise errors.FileExistsError(self.options.destination)
+
+        destination = os.path.join(self.options.destination, constants.PACKAGE_NAME)
+
+        newPackage = package.Package(destination)
+        info = DEFAULTS.copy()
+        info["name"] = self.options.name
+
+        newPackage.name = self.options.name
+        info["displayName"] = self.options.displayName or self.options.name
+        info["author"] = self.options.author
+        info["authorEmail"] = self.options.authorEmail
+        info["description"] = self.options.description
+        newPackage.processData(info)
+        subFolder = os.path.join(self.config.corePath, "python/cgrig/core/packageresolver/package_stub")
+        filesystem.ensureFolderExists(os.path.dirname(os.path.dirname(destination)))
+        logger.debug("Copying Stub folder to destination {}".format(self.options.destination))
+        shutil.copytree(str(subFolder), self.options.destination, ignore=shutil.ignore_patterns("placeholder*"))
+        logger.debug("Finished copying Stub Folder")
+        newPackage.save()
+        self.config.runCommand("installPackage",
+                               ["--path", self.options.destination,
+                                "--inPlace"])

@@ -1,0 +1,46 @@
+{
+    "author": "Create3dCharacters",
+    "authorEmail": "info@create3dcharacters.com",
+    "description": "Maya control and joint related for CgRig Tools Pro",
+    "displayName": "CgRig Controls Joints",
+    "documentation": {
+        "masterDoc": "index.rst",
+        "sourceCodeFolder": "{self}/cgrig",
+        "sourceFolder": "{self}/docs/source"
+    },
+    "environment": {
+        "PYTHONPATH": [
+            "{self}"
+        ],
+        "CGRIG_ACTIONPLUGIN_MODULES": [
+            "{self}/cgrig/apps/integration/maya/cgrig_skin_actionplugins.py"
+        ],
+        "CGRIG_BASE_PATHS": [
+            "{self}"
+        ],
+        "CGRIG_ICON_PATHS": [
+            "{self}/icons"
+        ],
+        "CGRIG_MENU_LAYOUTS": [
+            "{self}/cgrig/apps/integration/maya/cgrig_skin_menu.layout"
+        ],
+        "CGRIG_SHELF_LAYOUTS": [
+            "{self}/cgrig/apps/integration/maya/cgrig_skin_shelf.layout"
+        ],
+        "CGRIG_TOOLSET_LAYOUTS": [
+            "{self}/cgrig/apps/integration/maya/cgrig_skin_toolsets.layout"
+        ],
+        "CGRIG_TOOLSET_UI_PATHS": [
+            "{self}/cgrig/apps/uitoolsets"
+        ]
+    },
+    "name": "cgrig_skin",
+    "requirements": [
+        "cgrig_core",
+        "cgrig_pyside",
+        "cgrig_maya",
+        "cgrig_toolsets",
+        "cgrig_artist_palette"
+    ],
+    "version": "1.0.0"
+}

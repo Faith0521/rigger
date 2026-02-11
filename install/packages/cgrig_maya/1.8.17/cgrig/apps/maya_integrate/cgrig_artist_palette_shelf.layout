@@ -1,0 +1,54 @@
+{
+    "sortOrder": -2,
+    "shelves": [
+        {
+            "name": "CgRigToolsPro",
+            "children": [
+                {
+                    "id": "cgrig.shelf.dev",
+                    "displayLabel": false,
+                    "icon": "devMenu_shlf",
+                    "type": "button",
+                    "children": [
+                        {
+                            "type": "toolset",
+                            "id": "cgrigIcons"
+                        },
+                        {
+                           "id": "cgrig.triggers.state",
+                            "type": "action"
+                        },
+                        {
+                            "id": "cgrig.reload",
+                            "icon": "cgrig_reload",
+                            "type": "action"
+                        },
+                        {
+                            "id": "cgrig.shutdown",
+                            "icon": "cgrig_shutdown",
+                            "type": "action"
+                        },
+                        {
+                            "type": "action",
+                            "id": "cgrig.packages.installZip"
+                        },
+                        {
+                            "type": "action",
+                            "id": "cgrig.uninstaller"
+                        }
+                    ]
+                },
+                {
+                    "id": "cgrig.preferencesui",
+                    "icon": "preferencesWindow_shlf",
+                    "displayLabel": false
+                },
+                {
+                    "id": "cgrig.hotkeyeditorui",
+                    "icon": "hotkeysWindow_shlf",
+                    "displayLabel": false
+                }
+            ]
+        }
+    ]
+}

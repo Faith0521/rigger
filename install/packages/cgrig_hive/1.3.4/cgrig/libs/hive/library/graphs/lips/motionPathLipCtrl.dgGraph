@@ -1,0 +1,66 @@
+{
+  "id": "motionPathLipCtrl",
+  "name": "motionPathLipCtrl",
+  "metaData": {
+    "version": "1.0.0"
+  },
+  "nodes": [
+    {
+      "id": "motionPath",
+      "data": {
+        "name": "motionPath1",
+        "type": "motionPath"
+      }
+    },
+    {
+      "id": "composeMatrix",
+      "data": {
+        "name": "motionPathMtx",
+        "type": "composeMatrix"
+      }
+    }
+  ],
+  "connections": [
+    {
+      "sourcePlug": "allCoordinates",
+      "source": "motionPath",
+      "destinationPlug": "inputTranslate",
+      "destination": "composeMatrix"
+    }
+  ],
+  "inputs": {
+    "motionUValue": [
+      "motionPath:uValue"
+    ],
+    "motionFrontAxis": [
+      "motionPath:frontAxis"
+    ],
+    "motionUpAxis": [
+      "motionPath:upAxis"
+    ],
+    "motionInverseFront": [
+      "motionPath:inverseFront"
+    ],
+    "motionInverseUp": [
+      "motionPath:inverseUp"
+    ],
+    "motionWorldUpType": [
+      "motionPath:worldUpType"
+    ],
+    "motionWorldUpVector": [
+      "motionPath:worldUpVector"
+    ],
+    "motionWorldUpMatrix": [
+      "motionPath:worldUpMatrix"
+    ],
+    "motionFrontTwist": [
+      "motionPath:frontTwist"
+    ],
+    "worldUpRotate": ["composeMatrix:inputRotate"],
+    "worldUpScale": ["composeMatrix:inputScale"],
+    "worldUpShear": ["composeMatrix:inputShear"]
+  },
+  "outputs": {
+    "outputWorldMatrix": "composeMatrix:outputMatrix"
+  }
+}

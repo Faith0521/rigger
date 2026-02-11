@@ -1,0 +1,30 @@
+{
+    "author": "Create3dCharacters",
+    "authorEmail": "info@create3dcharacters.com",
+    "commands": [
+        "{self}/scripts/cgrig_prefs_startup.py"
+    ],
+    "description": "Preferences related code for CgRig Tools Pro",
+    "displayName": "CgRig Preferences",
+    "environment": {
+        "PYTHONPATH": [
+            "{self}"
+        ],
+        "CGRIG_ACTIONPLUGIN_MODULES": [
+            "{self}/cgrig/apps/integration/standalone/cgrig_preferences_actions.py"
+        ],
+        "CGRIG_BASE_PATHS": [
+            "{self}"
+        ],
+        "CGRIG_ICON_PATHS": [
+            "{self}/icons"
+        ]
+    },
+    "name": "cgrig_preferences",
+    "requirements": [
+        "cgrig_core",
+        "cgrig_maya",
+        "cgrig_pyside"
+    ],
+    "version": "1.1.24"
+}
