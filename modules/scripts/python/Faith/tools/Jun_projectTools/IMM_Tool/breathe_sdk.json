@@ -1,0 +1,54 @@
+{
+    "neck_1_ctrl_sdk_rotateY": {
+        "keys": [
+            [
+                0.0,
+                0.0,
+                "linear",
+                "linear",
+                0.0,
+                0.9166542670833882
+            ],
+            [
+                10.0,
+                4.0,
+                "linear",
+                "linear",
+                0.9166542670833882,
+                0.0
+            ]
+        ],
+        "type": "animCurveUA",
+        "preInfinity": 4,
+        "postInfinity": 4,
+        "weightedTangents": false,
+        "driver": "breathe_ctrl.breathe",
+        "driven": "neck_1_ctrl_sdk.rotateY"
+    },
+    "chest_ctrl_sdk_rotateY": {
+        "keys": [
+            [
+                0.0,
+                0.0,
+                "linear",
+                "linear",
+                0.0,
+                -1.1457628515458038
+            ],
+            [
+                10.0,
+                -5.0,
+                "linear",
+                "linear",
+                -1.1457628515458038,
+                0.0
+            ]
+        ],
+        "type": "animCurveUA",
+        "preInfinity": 4,
+        "postInfinity": 4,
+        "weightedTangents": false,
+        "driver": "breathe_ctrl.breathe",
+        "driven": "chest_ctrl_sdk.rotateY"
+    }
+}

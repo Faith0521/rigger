@@ -1,0 +1,11 @@
+#获取控制某个点的骨骼列表和权重值比例分配被约束物体的跟随比例
+import sys
+sys.path.insert(0,r'R:\JueJi\JueJiTool')
+import FollowTool as FollowTool
+reload(FollowTool)
+ft = FollowTool.followTool()
+lockObj = 'pSphere2' #被约束物体
+addAttrObj = ''#添加跟随切换属性物体，不需要切换属性就为空''
+attr = 'follow'#跟随属性，不需要切换属性就为空''
+constrainType = ['parent']#约束方式 ['orient','point','parent']
+ft.vtxWeight_follow(lockObj,addAttrObj,attr,constrainType)

@@ -1,0 +1,3546 @@
+{
+    "facePoseList": {
+        "Brows": [
+            {
+                "brows_up": {
+                    "ctrlNames": [
+                        "BrowIn_L_cntr",
+                        "BrowIn_R_cntr",
+                        "BrowOut_L_cntr",
+                        "BrowOut_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty",
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "brows_up_l-brows_up_r",
+                        "brows_up_out_l-brows_up_in_l",
+                        "brows_up_out_r-brows_up_in_r"
+                    ],
+                    "SplitweightList": [
+                        "brows_l",
+                        "brows_out_l",
+                        "brows_out_r"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u62ac\u7709"
+                }
+            },
+            {
+                "brows_dn": {
+                    "ctrlNames": [
+                        "BrowIn_L_cntr",
+                        "BrowIn_R_cntr",
+                        "BrowOut_L_cntr",
+                        "BrowOut_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty",
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0,
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "brows_dn_l-brows_dn_r",
+                        "brows_dn_out_l-brows_dn_in_l",
+                        "brows_dn_out_r-brows_dn_in_r"
+                    ],
+                    "SplitweightList": [
+                        "brows_l",
+                        "brows_out_l",
+                        "brows_out_r"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u538b\u7709"
+                }
+            },
+            {
+                "brows_squez": {
+                    "ctrlNames": [
+                        "BrowIn_L_cntr",
+                        "BrowIn_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "brows_squez_l-brows_squez_r"
+                    ],
+                    "SplitweightList": [
+                        "brows_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u76b1\u7709"
+                }
+            },
+            {
+                "brows_squez_up": {
+                    "ctrlNames": [
+                        "Brow_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u6311\u7709"
+                }
+            }
+        ],
+        "Eyelid": [
+            {
+                "eye_blink_b": {
+                    "ctrlNames": [
+                        "UprLid_L_cntr",
+                        "UprLid_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "eye_blink_b_l-eye_blink_b_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "X\u8f74\u4e0b\u773c\u76ae\u8054\u52a8\u95ed\u773cb"
+                }
+            },
+            {
+                "eye_blink_a": {
+                    "ctrlNames": [
+                        "UprLid_L_cntr",
+                        "UprLid_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        -0.50001,
+                        -0.50001
+                    ],
+                    "weightDataSplitList": [
+                        "eye_blink_a_l-eye_blink_a_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [
+                        "eye_blink_b"
+                    ],
+                    "subFaceValues": [
+                        -0.5
+                    ],
+                    "doc": "X\u8f74\u4e0b\u773c\u76ae\u8054\u52a8\u95ed\u773c\uff0c0.5\u65f6\u907f\u514d\u548c\u773c\u7403\u7a7f\u63d2"
+                }
+            },
+            {
+                "upr_lid_dn_b": {
+                    "ctrlNames": [
+                        "UprLid_L_cntr",
+                        "UprLid_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "upr_lid_dn_b_l-upr_lid_dn_b_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u5355\u72ec\u4e0a\u773c\u76ae\u95ed\u773c"
+                }
+            },
+            {
+                "upr_lid_dn_a": {
+                    "ctrlNames": [
+                        "UprLid_L_cntr",
+                        "UprLid_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -0.50001,
+                        -0.50001
+                    ],
+                    "weightDataSplitList": [
+                        "upr_lid_dn_a_l-upr_lid_dn_a_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [
+                        "upr_lid_dn_b"
+                    ],
+                    "subFaceValues": [
+                        -0.5
+                    ],
+                    "doc": "\u5355\u72ec\u4e0a\u773c\u76ae\u95ed\u773c,0.5\u65f6\u907f\u514d\u548c\u773c\u7403\u7a7f\u63d2"
+                }
+            },
+            {
+                "upr_lid_up": {
+                    "ctrlNames": [
+                        "UprLid_L_cntr",
+                        "UprLid_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "upr_lid_up_l-upr_lid_up_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0a\u773c\u76ae\u5f80\u4e0a"
+                }
+            },
+            {
+                "lwr_lid_dn": {
+                    "ctrlNames": [
+                        "LwrLid_L_cntr",
+                        "LwrLid_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "lwr_lid_dn_l-lwr_lid_dn_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u773c\u76ae\u5f80\u4e0b"
+                }
+            },
+            {
+                "lwr_lid_up": {
+                    "ctrlNames": [
+                        "LwrLid_L_cntr",
+                        "LwrLid_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "lwr_lid_up_l-lwr_lid_up_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u773c\u76ae\u5f80\u4e0a"
+                }
+            },
+            {
+                "lwr_lid_out": {
+                    "ctrlNames": [
+                        "LwrLid_L_cntr",
+                        "LwrLid_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz",
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "lwr_lid_out_l-lwr_lid_out_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u773c\u76ae\u5f80\u5916"
+                }
+            },
+            {
+                "double_eyelid_up": {
+                    "ctrlNames": [
+                        "UprLid_L_cntr",
+                        "UprLid_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz",
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "double_eyelid_up_l-double_eyelid_up_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u53cc\u773c\u76ae\u5f80\u4e0a \u4fee\u578b\u9700\u8981\u624b\u52a8\u6dfb\u52a0\u5e76\u9a71\u52a8\u597d\u624d\u80fd\u62c6\u5206"
+                }
+            },
+            {
+                "double_eyelid_dn": {
+                    "ctrlNames": [
+                        "UprLid_L_cntr",
+                        "UprLid_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz",
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "double_eyelid_dn_l-double_eyelid_dn_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u53cc\u773c\u76ae\u5f80\u4e0b \u4fee\u578b\u9700\u8981\u624b\u52a8\u6dfb\u52a0\u5e76\u9a71\u52a8\u597d\u624d\u80fd\u62c6\u5206"
+                }
+            },
+            {
+                "blink_brs_up": {
+                    "ctrlNames": [
+                        "BrowIn_L_cntr",
+                        "BrowIn_R_cntr",
+                        "BrowOut_L_cntr",
+                        "BrowOut_R_cntr",
+                        "UprLid_L_cntr",
+                        "UprLid_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty",
+                        ".ty",
+                        ".ty",
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "blink_brs_up2_l-blink_brs_up2_r",
+                        "blink_brs_up_out_l-blink_brs_up_in_l",
+                        "blink_brs_up_out_r-blink_brs_up_in_r"
+                    ],
+                    "SplitweightList": [
+                        "brows_l",
+                        "brows_out_l",
+                        "brows_out_r"
+                    ],
+                    "subFaces": [
+                        "eye_blink_b",
+                        "brows_up"
+                    ],
+                    "subFaceValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "doc": "\u62ac\u7709+\u95ed\u773c"
+                }
+            },
+            {
+                "blink_brs_dn": {
+                    "ctrlNames": [
+                        "BrowIn_L_cntr",
+                        "BrowIn_R_cntr",
+                        "BrowOut_L_cntr",
+                        "BrowOut_R_cntr",
+                        "UprLid_L_cntr",
+                        "UprLid_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty",
+                        ".ty",
+                        ".ty",
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0,
+                        -1.0,
+                        -1.0,
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "blink_brs_dn_l-blink_brs_dn_r",
+                        "blink_brs_dn_out_l-blink_brs_dn_in_l",
+                        "blink_brs_dn_out_r-blink_brs_dn_in_r"
+                    ],
+                    "SplitweightList": [
+                        "brows_l",
+                        "brows_out_l",
+                        "brows_out_r"
+                    ],
+                    "subFaces": [
+                        "eye_blink_b",
+                        "brows_dn"
+                    ],
+                    "subFaceValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "doc": "\u538b\u7709+\u95ed\u773c"
+                }
+            },
+            {
+                "eye_squint": {
+                    "ctrlNames": [
+                        "EyeSqz_L_cntr",
+                        "EyeSqz_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "eye_squint_l-eye_squint_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u772f\u773c "
+                }
+            },
+            {
+                "eye_sqz": {
+                    "ctrlNames": [
+                        "EyeSqz_L_cntr",
+                        "EyeSqz_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "eye_sqz_l-eye_sqz_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u538b\u53cc\u773c\u76ae "
+                }
+            },
+            {
+                "eye_squint_blink": {
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx",
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlNames": [
+                        "UprLid_L_cntr",
+                        "UprLid_R_cntr",
+                        "EyeSqz_L_cntr",
+                        "EyeSqz_R_cntr"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0,
+                        -1.0,
+                        -1.0
+                    ],
+                    "doc": "\u772f\u773c\u95ed\u773c\u8054\u5408(\u65b0\u589e)",
+                    "subFaceValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "subFaces": [
+                        "eye_blink_b",
+                        "eye_squint"
+                    ],
+                    "weightDataSplitList": [
+                        "eye_squint_blink_l-eye_squint_blink_r"
+                    ]
+                }
+            }
+        ],
+        "Eyelid Follow": [
+            {
+                "eye_look_up": {
+                    "ctrlNames": [
+                        "L_eye_ctrl",
+                        "R_eye_ctrl"
+                    ],
+                    "ctrlAttrs": [
+                        ".rx",
+                        ".rx"
+                    ],
+                    "ctrlValues": [
+                        -30.0,
+                        -30.0
+                    ],
+                    "weightDataSplitList": [
+                        "eye_look_up_l-eye_look_up_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u773c\u7403\u5f80\u4e0a\u770b"
+                }
+            },
+            {
+                "eye_look_dn_b": {
+                    "ctrlNames": [
+                        "L_eye_ctrl",
+                        "R_eye_ctrl"
+                    ],
+                    "ctrlAttrs": [
+                        ".rx",
+                        ".rx"
+                    ],
+                    "ctrlValues": [
+                        35.0,
+                        35.0
+                    ],
+                    "weightDataSplitList": [
+                        "eye_look_dn_b_l-eye_look_dn_b_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u773c\u7403\u5f80\u4e0b\u770bb"
+                }
+            },
+            {
+                "eye_look_dn_a": {
+                    "ctrlNames": [
+                        "L_eye_ctrl",
+                        "R_eye_ctrl"
+                    ],
+                    "ctrlAttrs": [
+                        ".rx",
+                        ".rx"
+                    ],
+                    "ctrlValues": [
+                        17.5,
+                        17.5
+                    ],
+                    "weightDataSplitList": [
+                        "eye_look_dn_a_l-eye_look_dn_a_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [
+                        "eye_look_dn_b"
+                    ],
+                    "subFaceValues": [
+                        -0.5
+                    ],
+                    "doc": "\u773c\u7403\u5f80\u4e0b\u770ba"
+                }
+            },
+            {
+                "eye_look_out": {
+                    "ctrlNames": [
+                        "L_eye_ctrl",
+                        "R_eye_ctrl"
+                    ],
+                    "ctrlAttrs": [
+                        ".ry",
+                        ".ry"
+                    ],
+                    "ctrlValues": [
+                        40.0,
+                        -40.0
+                    ],
+                    "weightDataSplitList": [
+                        "eye_look_out_l-eye_look_out_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u773c\u7403\u5f80\u5916\u770b"
+                }
+            },
+            {
+                "eye_look_out_mid": {
+                    "ctrlNames": [
+                        "L_eye_ctrl",
+                        "R_eye_ctrl"
+                    ],
+                    "ctrlAttrs": [
+                        ".ry",
+                        ".ry"
+                    ],
+                    "ctrlValues": [
+                        20.0,
+                        -20.0
+                    ],
+                    "weightDataSplitList": [
+                        "eye_look_out_mid_l-eye_look_out_mid_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [
+                        "eye_look_out"
+                    ],
+                    "subFaceValues": [
+                        -0.5
+                    ],
+                    "doc": "\u773c\u7403\u5f80\u5916\u770b_\u5904\u7406\u4e2d\u95f4\u7a7f\u63d2"
+                }
+            },
+            {
+                "eye_look_in": {
+                    "ctrlNames": [
+                        "L_eye_ctrl",
+                        "R_eye_ctrl"
+                    ],
+                    "ctrlAttrs": [
+                        ".ry",
+                        ".ry"
+                    ],
+                    "ctrlValues": [
+                        -35.0,
+                        35.0
+                    ],
+                    "weightDataSplitList": [
+                        "eye_look_in_l-eye_look_in_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u773c\u7403\u5f80\u5185\u770b"
+                }
+            },
+            {
+                "eye_look_in_mid": {
+                    "ctrlNames": [
+                        "L_eye_ctrl",
+                        "R_eye_ctrl"
+                    ],
+                    "ctrlAttrs": [
+                        ".ry",
+                        ".ry"
+                    ],
+                    "ctrlValues": [
+                        -17.5,
+                        17.5
+                    ],
+                    "weightDataSplitList": [
+                        "eye_look_in_mid_l-eye_look_in_mid_r"
+                    ],
+                    "SplitweightList": [
+                        "eye_lid_l"
+                    ],
+                    "subFaces": [
+                        "eye_look_in"
+                    ],
+                    "subFaceValues": [
+                        -0.5
+                    ],
+                    "doc": "\u773c\u7403\u5f80\u5185\u770b_\u5904\u7406\u4e2d\u95f4\u7a7f\u63d2"
+                }
+            }
+        ],
+        "Cheek": [
+            {
+                "cheek_raise": {
+                    "ctrlNames": [
+                        "Cheek_L_cntr",
+                        "Cheek_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "cheek_raise_l-cheek_raise_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u98a7\u9aa8"
+                }
+            },
+            {
+                "puff": {
+                    "ctrlNames": [
+                        "Cheek_L_2_cntr",
+                        "Cheek_R_2_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "puff_l-puff_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u9f13\u6c14"
+                }
+            },
+            {
+                "suck": {
+                    "ctrlNames": [
+                        "Cheek_L_2_cntr",
+                        "Cheek_R_2_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "suck_l-suck_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u6536\u6c14"
+                }
+            },
+            {
+                "puff_up": {
+                    "ctrlNames": [
+                        "Cheek_L_2_cntr",
+                        "Cheek_R_2_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "puff_up_l-puff_up_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0a\u5507\u9f13\u6c14,C\u7c7b\u4e0d\u7528\u5236\u4f5c"
+                }
+            },
+            {
+                "puff_dn": {
+                    "ctrlNames": [
+                        "Cheek_L_2_cntr",
+                        "Cheek_R_2_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "puff_dn_l-puff_dn_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u5507\u9f13\u6c14,C\u7c7b\u4e0d\u7528\u5236\u4f5c"
+                }
+            },
+            {
+                "cheekRaise_Eblink": {
+                    "ctrlNames": [
+                        "UprLid_L_cntr",
+                        "UprLid_R_cntr",
+                        "Cheek_L_cntr",
+                        "Cheek_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx",
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "cheekRaise_Eblink_l-cheekRaise_Eblink_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [
+                        "eye_blink_b",
+                        "cheek_raise"
+                    ],
+                    "subFaceValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "doc": "\u98a7\u9aa8\u95ed\u773c\u8054\u5408(\u65b0\u589e)"
+                }
+            }
+        ],
+        "Nose": [
+            {
+                "nose_open": {
+                    "ctrlNames": [
+                        "Nose_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u9f3b\u5b54\u6269\u5f20"
+                }
+            },
+            {
+                "nose_close": {
+                    "ctrlNames": [
+                        "Nose_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        -1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u9f3b\u5b54\u6536\u7f29"
+                }
+            },
+            {
+                "nose_dn": {
+                    "ctrlNames": [
+                        "Nose_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u9f3b\u5934\u5f80\u4e0b"
+                }
+            },
+            {
+                "sneer_only": {
+                    "ctrlNames": [
+                        "Nose_L_cntr",
+                        "Nose_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "sneer_only_l-sneer_only_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u76b1\u9f3b"
+                }
+            },
+            {
+                "nasolabial_deep": {
+                    "ctrlNames": [
+                        "Nose_L_cntr",
+                        "Nose_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "nasolabial_deep_l-nasolabial_deep_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u9f3b\u5507\u6c9f\u52a0\u6df1 CG\u73af\u8282\u5ffd\u7565"
+                }
+            },
+            {
+                "funel": {
+                    "ctrlNames": [
+                        "UprLip_L_2_cntr",
+                        "UprLip_R_2_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "funel_l-funel_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u9f3b\u5507\u6c9f\u6324\u538b\u9f3b\u5b50,C\u7c7b\u4e0d\u7528\u5236\u4f5c"
+                }
+            }
+        ],
+        "lip1": [
+            {
+                "disgust": {
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlNames": [
+                        "UprLip_L_2_cntr",
+                        "UprLip_R_2_cntr"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0
+                    ],
+                    "doc": "\u9f3b\u5507\u6c9f\u548c\u4e0a\u5507\u5f80\u4e0a:\u9f3b\u5507\u6c9f\u62c9\u626f\u4e0a\u5507\u5f80\u4e0a,\u9f3b\u5507\u6c9f\u52a8\u6001\u591a\u4e8e\u5634\u5507",
+                    "subFaceValues": [],
+                    "subFaces": [],
+                    "weightDataSplitList": [
+                        "disgust_l-disgust_r"
+                    ]
+                }
+            },
+            {
+                "disgust_close": {
+                    "ctrlNames": [
+                        "UprLip_L_2_cntr",
+                        "UprLip_R_2_cntr",
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx",
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "disgust_close_l-disgust_close_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [
+                        "disgust"
+                    ],
+                    "subFaceValues": [
+                        -1.0
+                    ],
+                    "doc": "\u9f3b\u5507\u6c9f\u548c\u4e0a\u5507\u5f80\u4e0a + \u5634\u5507\u95ed\u5408"
+                }
+            },
+            {
+                "grin": {
+                    "ctrlNames": [
+                        "UprLip_L_2_cntr",
+                        "UprLip_R_2_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "grin_l-grin_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u9732\u4e0a\u5507\u7b11\uff0c\u4e0a\u5507\u9f87\u7259,\u53ef\u4ee5\u914d\u5408\u5f20\u5634\u6124\u6012\u4f7f\u7528"
+                }
+            },
+            {
+                "pull": {
+                    "ctrlNames": [
+                        "Chin_L_cntr",
+                        "Chin_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "pull_l-pull_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u5507\u9f87\u7259,\u4e0b\u5507\u548c\u5634\u89d2\u5f80\u4e0b\u5f80\u5916\u62c9\u626f"
+                }
+            },
+            {
+                "grin_pull": {
+                    "ctrlNames": [
+                        "Chin_L_cntr",
+                        "Chin_R_cntr",
+                        "UprLip_L_2_cntr",
+                        "UprLip_R_2_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty",
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "grin_pull_l-grin_pull_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [
+                        "grin",
+                        "pull"
+                    ],
+                    "subFaceValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "doc": "\u4e0a\u9f87\u7259+\u4e0b\u9f87\u7259 \u8054\u5408"
+                }
+            },
+            {
+                "pull_close": {
+                    "ctrlNames": [
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr",
+                        "Chin_L_cntr",
+                        "Chin_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx",
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0,
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "pull_close_l-pull_close_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [
+                        "pull"
+                    ],
+                    "subFaceValues": [
+                        -1.0
+                    ],
+                    "doc": "\u4e0b\u5507\u9f87\u7259,\u5634\u5507\u95ed\u5408"
+                }
+            },
+            {
+                "upr_lip_up": {
+                    "ctrlNames": [
+                        "UprLip_L_cntr",
+                        "UprLip_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "upr_lip_up_l-upr_lip_up_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0a\u5507\u5f80\u4e0a"
+                }
+            },
+            {
+                "lwr_lip_dn": {
+                    "ctrlNames": [
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "lwr_lip_dn_l-lwr_lip_dn_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u5507\u5f80\u4e0b"
+                }
+            },
+            {
+                "sneer_close": {
+                    "ctrlNames": [
+                        "UprLip_L_cntr",
+                        "UprLip_R_cntr",
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty",
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "sneer_close_l-sneer_close_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [
+                        "upr_lip_up"
+                    ],
+                    "subFaceValues": [
+                        -1.0
+                    ],
+                    "doc": "\u4e0a\u5507\u5f80\u4e0a + \u5634\u5507\u95ed\u5408"
+                }
+            }
+        ],
+        "lip2": [
+            {
+                "jaw_drop": {
+                    "ctrlNames": [
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u5f20\u5634 :\u5480\u56bc\uff0c\u7b11\uff0c\u9f87\u7259\uff0c\u4e0a\u5507\u5f80\u4e0a\uff0cSH\uff0c\u54ac\u4e0b\u5507\uff0c\u8116\u5b50\u53d1\u529b"
+                }
+            },
+            {
+                "jaw_drop_mid": {
+                    "ctrlNames": [
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -0.50001
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [
+                        "jaw_drop"
+                    ],
+                    "subFaceValues": [
+                        -0.5
+                    ],
+                    "doc": "\u5f20\u5634\u4e2d\u95f4\u5e27"
+                }
+            },
+            {
+                "lip_lk_drop_mid": {
+                    "ctrlNames": [
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr",
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0,
+                        -0.50001
+                    ],
+                    "weightDataSplitList": [
+                        "lip_lk_drop_mid_l-lip_lk_drop_mid_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [
+                        "jaw_drop",
+                        "jaw_drop_mid"
+                    ],
+                    "subFaceValues": [
+                        -0.5,
+                        -1.0
+                    ],
+                    "doc": "\u5f20\u5634 + \u5634\u5507\u95ed\u5408 \u4e2d\u95f4\u6548\u679c"
+                }
+            },
+            {
+                "lip_lk_drop": {
+                    "ctrlNames": [
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr",
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "lip_lk_drop_l-lip_lk_drop_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [
+                        "jaw_drop",
+                        "lip_lk_drop_mid"
+                    ],
+                    "subFaceValues": [
+                        -1.0,
+                        -1.0,
+                        -1.0
+                    ],
+                    "doc": "\u5f20\u5634 + \u5634\u5507\u95ed\u5408"
+                }
+            },
+            {
+                "smile": {
+                    "ctrlNames": [
+                        "Crnr_L_2_cntr",
+                        "Crnr_R_2_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "smile_l-smile_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u7b11\uff1a\u5634\u89d2\u4e0a\u626c\u7b11"
+                }
+            },
+            {
+                "smile_open": {
+                    "ctrlNames": [
+                        "Crnr_L_2_cntr",
+                        "Crnr_R_2_cntr",
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx",
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "smile_open_l-smile_open_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [
+                        "smile"
+                    ],
+                    "subFaceValues": [
+                        -1.0
+                    ],
+                    "doc": "\u9732\u9f7f\u7b11:\u7b11 + \u9732\u9f7f"
+                }
+            },
+            {
+                "smile_close": {
+                    "ctrlNames": [
+                        "Crnr_L_2_cntr",
+                        "Crnr_R_2_cntr",
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx",
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "smile_close_l-smile_close_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [
+                        "smile"
+                    ],
+                    "subFaceValues": [
+                        -1.0
+                    ],
+                    "doc": "\u7b11:\u7b11 + \u5634\u89d2\u548c\u5634\u5507\u6210\u4e00\u6761\u76f4\u7ebf:"
+                }
+            },
+            {
+                "dimple": {
+                    "ctrlNames": [
+                        "Crnr_L_2_cntr",
+                        "Crnr_R_2_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz",
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "dimple_l-dimple_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u6324\u9152\u7a9d"
+                }
+            },
+            {
+                "stretch": {
+                    "ctrlNames": [
+                        "Crnr_L_cntr",
+                        "Crnr_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "stretch_l-stretch_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u62c9\u626f\u5634\u89d2\uff0c\u5634\u89d2\u4e0d\u8981\u4e0a\u7fd8\u548c\u5f80\u4e0b"
+                }
+            },
+            {
+                "tight": {
+                    "ctrlNames": [
+                        "Crnr_L_cntr",
+                        "Crnr_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "tight_l-tight_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u6536\u5634\u89d2"
+                }
+            },
+            {
+                "corners_close": {
+                    "ctrlNames": [
+                        "Crnr_L_cntr",
+                        "Crnr_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "corners_close_l-corners_close_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u51cf\u5c0f\u5634\u89d2\u5bbd\u5ea6,\u914d\u5408\u5f20\u5634\u53e3\u578b,\u8c03\u6574\u5634\u89d2\u4e0a\u4e0b\u5507\u7684\u5bbd\u5ea6"
+                }
+            },
+            {
+                "smile_drop": {
+                    "ctrlNames": [
+                        "Crnr_L_2_cntr",
+                        "Crnr_R_2_cntr",
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "smile_drop_l-smile_drop_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [
+                        "smile",
+                        "jaw_drop"
+                    ],
+                    "subFaceValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "doc": "\u5f20\u5634\u7b11"
+                }
+            },
+            {
+                "grin_pull_drop": {
+                    "ctrlNames": [
+                        "UprLip_L_2_cntr",
+                        "UprLip_R_2_cntr",
+                        "Chin_L_cntr",
+                        "Chin_R_cntr",
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty",
+                        ".ty",
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        -1.0,
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "grin_pull_drop_l-grin_pull_drop_r",
+                        "grin_drop_l-pull_drop_l",
+                        "grin_drop_r-pull_drop_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l",
+                        "mouth_up",
+                        "mouth_up"
+                    ],
+                    "subFaces": [
+                        "grin",
+                        "pull",
+                        "grin_pull",
+                        "jaw_drop"
+                    ],
+                    "subFaceValues": [
+                        -1.0,
+                        -1.0,
+                        -1.0,
+                        -1.0
+                    ],
+                    "doc": "\u5636\u543c:\u5f20\u5634 + \u4e0a\u5507\u9f87\u7259 + \u4e0b\u5507\u9f87\u7259 \u8054\u5408"
+                }
+            },
+            {
+                "upr_lip_up_drop": {
+                    "ctrlNames": [
+                        "UprLip_L_cntr",
+                        "UprLip_R_cntr",
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "upr_lip_up_drop_l-upr_lip_up_drop_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [
+                        "upr_lip_up",
+                        "jaw_drop"
+                    ],
+                    "subFaceValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "doc": "\u5f20\u5634 + \u4e0a\u5507\u5f80\u4e0a \u8054\u5408"
+                }
+            },
+            {
+                "frown": {
+                    "ctrlNames": [
+                        "Crnr_L_2_cntr",
+                        "Crnr_R_2_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "frown_l-frown_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4f24\u5fc3\uff0c\u5634\u89d2\u5f80\u4e0b"
+                }
+            },
+            {
+                "sticky_lips": {
+                    "ctrlNames": [
+                        "UprLip_L_cntr",
+                        "UprLip_R_cntr",
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        -0.25
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u5634\u5507\u7c98\u8fde\uff0c\u624b\u52a8\u5904\u7406\uff0c\u65e0\u6cd5\u62c6\u5206,C\u7c7b\u4e0d\u7528\u5236\u4f5c"
+                }
+            },
+            {
+                "jaw_l": {
+                    "ctrlNames": [
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u5df4\u5f80\u5de6"
+                }
+            },
+            {
+                "lip_lk_mov_l": {
+                    "ctrlNames": [
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr",
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "lip_lk_mov_l_l-lip_lk_mov_l_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [
+                        "jaw_l"
+                    ],
+                    "subFaceValues": [
+                        -1.0
+                    ],
+                    "doc": "\u4e0b\u5df4\u5f80\u5de6 + \u5634\u5507\u95ed\u5408"
+                }
+            },
+            {
+                "jaw_r": {
+                    "ctrlNames": [
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        -1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u5df4\u5f80\u53f3"
+                }
+            },
+            {
+                "lip_lk_mov_r": {
+                    "ctrlNames": [
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr",
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "lip_lk_mov_r_l-lip_lk_mov_r_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [
+                        "jaw_r"
+                    ],
+                    "subFaceValues": [
+                        -1.0
+                    ],
+                    "doc": "\u4e0b\u5df4\u5f80\u53f3 + \u5634\u5507\u95ed\u5408"
+                }
+            },
+            {
+                "jaw_fwd": {
+                    "ctrlNames": [
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u5df4\u5f80\u524d"
+                }
+            },
+            {
+                "lip_lk_fwd": {
+                    "ctrlNames": [
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr",
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx",
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "lip_lk_fwd_l-lip_lk_fwd_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [
+                        "jaw_fwd"
+                    ],
+                    "subFaceValues": [
+                        -1.0
+                    ],
+                    "doc": "\u4e0b\u5df4\u5f80\u524d + \u95ed\u5408"
+                }
+            },
+            {
+                "jaw_back": {
+                    "ctrlNames": [
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        -1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u5df4\u5f80\u540e"
+                }
+            },
+            {
+                "lip_lk_back": {
+                    "ctrlNames": [
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr",
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx",
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "lip_lk_back_l-lip_lk_back_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [
+                        "jaw_back"
+                    ],
+                    "subFaceValues": [
+                        -1.0
+                    ],
+                    "doc": "\u4e0b\u5df4\u5f80\u540e + \u95ed\u5408"
+                }
+            }
+        ],
+        "lip3": [
+            {
+                "upr_lip_tension": {
+                    "ctrlNames": [
+                        "UprLip_2_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4eba\u4e2d\u5f80\u4e2d\u95f4\u6536\u7f29"
+                }
+            },
+            {
+                "mouth_tension": {
+                    "ctrlNames": [
+                        "UprLip_2_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        -1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u5634\u5df4\u6536\u7d27"
+                }
+            },
+            {
+                "mouth_press": {
+                    "ctrlNames": [
+                        "UprLip_2_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u5634\u5507\u4e0a\u4e0b\u6324\u538b"
+                }
+            },
+            {
+                "m_1": {
+                    "ctrlNames": [
+                        "UprLip_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0a\u4e0b\u5634\u5507\u6324\u538b,\u5634\u89d2\u5f80\u4e0a"
+                }
+            },
+            {
+                "upr_lip_funl_l": {
+                    "ctrlNames": [
+                        "UprLip_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0a\u5634\u5507\u5f80\u5de6"
+                }
+            },
+            {
+                "upr_lip_funl_r": {
+                    "ctrlNames": [
+                        "UprLip_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        -1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0a\u5634\u5507\u5f80\u53f3"
+                }
+            },
+            {
+                "lwr_lip_mov_l": {
+                    "ctrlNames": [
+                        "LwrLip_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u5634\u5507\u5f80\u5de6"
+                }
+            },
+            {
+                "lwr_lip_mov_r": {
+                    "ctrlNames": [
+                        "LwrLip_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        -1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u5634\u5507\u5f80\u53f3"
+                }
+            },
+            {
+                "mouth_mov_up": {
+                    "ctrlNames": [
+                        "Mouth_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u5507\u63a8\u52a8\u4e0a\u5507\u5f80\u4e0a\uff0c\u4e0b\u5507\u5fae\u5fae\u5f80\u524d,\u4f1a\u62c9\u52a8\u4e0b\u5df4"
+                }
+            },
+            {
+                "mouth_mov_up_2": {
+                    "ctrlNames": [
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u5df4\u7528\u529b\u63a8\u52a8\u5634\u5507\uff0c\u5634\u5507\u5f80\u91cc\u62bf"
+                }
+            },
+            {
+                "mouth_mov_up_3": {
+                    "ctrlNames": [
+                        "LwrLip_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u5507\u5f80\u4e0a\uff0c\u538b\u4e0a\u5507,\u4e0a\u5507\u5f80\u91cc,\u4f1a\u62c9\u52a8\u4e0b\u5df4"
+                }
+            },
+            {
+                "mouth_dn": {
+                    "ctrlNames": [
+                        "Mouth_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u5634\u5507\u6574\u4f53\u5f80\u4e0b"
+                }
+            },
+            {
+                "mouth_mov_l": {
+                    "ctrlNames": [
+                        "Mouth_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u5634\u5507\u5f80\u5de6\u7528\u529b"
+                }
+            },
+            {
+                "mouth_mov_r": {
+                    "ctrlNames": [
+                        "Mouth_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        -1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u5634\u5507\u5f80\u53f3"
+                }
+            }
+        ],
+        "lip4": [
+            {
+                "h": {
+                    "ctrlNames": [
+                        "UprLip_L_cntr",
+                        "UprLip_R_cntr",
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz",
+                        ".tz",
+                        ".tz",
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "h_l-h_r",
+                        "h_up_l-h_dn_l",
+                        "h_up_r-h_dn_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l_smooth_max",
+                        "mouth_up",
+                        "mouth_up"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "SH"
+                }
+            },
+            {
+                "h_wide": {
+                    "ctrlNames": [
+                        "UprLip_L_cntr",
+                        "UprLip_R_cntr",
+                        "LwrLip_L_cntr",
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr",
+                        "LwrLip_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz",
+                        ".tz",
+                        ".tx",
+                        ".tz",
+                        ".tx",
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "h_wide_l-h_wide_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l_smooth_max"
+                    ],
+                    "subFaces": [
+                        "h"
+                    ],
+                    "subFaceValues": [
+                        -1.0
+                    ],
+                    "doc": "SH\u53d8\u5927"
+                }
+            },
+            {
+                "h_close": {
+                    "ctrlNames": [
+                        "UprLip_L_cntr",
+                        "UprLip_R_cntr",
+                        "LwrLip_L_cntr",
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr",
+                        "LwrLip_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz",
+                        ".tz",
+                        ".tx",
+                        ".tz",
+                        ".tx",
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        -1.0,
+                        1.0,
+                        -1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "h_close_l-h_close_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l_smooth_max"
+                    ],
+                    "subFaces": [
+                        "h"
+                    ],
+                    "subFaceValues": [
+                        -1.0
+                    ],
+                    "doc": "\u6485\u5634: SH + \u95ed\u5408"
+                }
+            },
+            {
+                "o": {
+                    "ctrlNames": [
+                        "UprLip_L_cntr",
+                        "UprLip_R_cntr",
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr",
+                        "Mouth_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz",
+                        ".tz",
+                        ".tz",
+                        ".tz",
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "o_l-o_r",
+                        "o_up_l-o_dn_l",
+                        "o_up_r-o_dn_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l_smooth_max",
+                        "mouth_up",
+                        "mouth_up"
+                    ],
+                    "subFaces": [
+                        "h"
+                    ],
+                    "subFaceValues": [
+                        -1.0
+                    ],
+                    "doc": "O"
+                }
+            },
+            {
+                "o_wide": {
+                    "ctrlNames": [
+                        "UprLip_L_cntr",
+                        "UprLip_R_cntr",
+                        "LwrLip_L_cntr",
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr",
+                        "LwrLip_R_cntr",
+                        "Mouth_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz",
+                        ".tz",
+                        ".tx",
+                        ".tz",
+                        ".tx",
+                        ".tz",
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "o_wide_l-o_wide_r",
+                        "o_wide_up_l-o_wide_dn_l",
+                        "o_wide_up_r-o_wide_dn_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l_smooth_max",
+                        "mouth_up",
+                        "mouth_up"
+                    ],
+                    "subFaces": [
+                        "h",
+                        "o"
+                    ],
+                    "subFaceValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "doc": "O\u53d8\u5927"
+                }
+            },
+            {
+                "kiss": {
+                    "ctrlNames": [
+                        "UprLip_L_cntr",
+                        "UprLip_R_cntr",
+                        "LwrLip_L_cntr",
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr",
+                        "LwrLip_R_cntr",
+                        "Mouth_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz",
+                        ".tz",
+                        ".tx",
+                        ".tz",
+                        ".tx",
+                        ".tz",
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        -1.0,
+                        1.0,
+                        -1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "kiss_l-kiss_r",
+                        "kiss_up_l-kiss_dn_l",
+                        "kiss_up_r-kiss_dn_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l_smooth_max",
+                        "mouth_up",
+                        "mouth_up"
+                    ],
+                    "subFaces": [
+                        "h",
+                        "o"
+                    ],
+                    "subFaceValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "doc": "\u4eb2\u5634"
+                }
+            },
+            {
+                "h_drop": {
+                    "ctrlNames": [
+                        "UprLip_L_cntr",
+                        "UprLip_R_cntr",
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr",
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz",
+                        ".tz",
+                        ".tz",
+                        ".tz",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "h_drop_l-h_drop_r",
+                        "h_up_drop_l-h_dn_drop_l",
+                        "h_up_drop_r-h_dn_drop_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l_smooth_max",
+                        "mouth_up",
+                        "mouth_up"
+                    ],
+                    "subFaces": [
+                        "h",
+                        "jaw_drop"
+                    ],
+                    "subFaceValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "doc": "Sh + \u5f20\u5634 \u8054\u5408"
+                }
+            },
+            {
+                "upr_lip_in": {
+                    "ctrlNames": [
+                        "UprLip_L_cntr",
+                        "UprLip_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz",
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "upr_lip_in_l-upr_lip_in_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l_smooth_max"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u54ac\u4e0a\u5507\uff1a0.7\u7684\u6548\u679c\u4e3a\u4e0a\u5507\u62bf\u5634,\u7ed3\u5408\u5f20\u56340.2"
+                }
+            },
+            {
+                "lwr_lip_in": {
+                    "ctrlNames": [
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz",
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "lwr_lip_in_l-lwr_lip_in_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l_smooth_max"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u54ac\u4e0b\u5507\uff1a0.7\u7684\u6548\u679c\u4e3a\u4e0b\u5507\u62bf\u5634,\u7ed3\u5408\u5f20\u56340.2"
+                }
+            },
+            {
+                "lwr_lip_in_drop": {
+                    "ctrlNames": [
+                        "LwrLip_L_cntr",
+                        "LwrLip_R_cntr",
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz",
+                        ".tz",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "lwr_lip_in_drop_l-lwr_lip_in_drop_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l_smooth_max"
+                    ],
+                    "subFaces": [
+                        "lwr_lip_in",
+                        "jaw_drop"
+                    ],
+                    "subFaceValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "doc": "\u4e0b\u5507\u62bf\u5634 + \u5f20\u5634 \u8054\u5408  \u5f20\u5634\u63a7\u5236\u5668\u8c03\u62100.2\u770b\u6548\u679c"
+                }
+            }
+        ],
+        "lip5": [
+            {
+                "chin_up": {
+                    "ctrlNames": [
+                        "Chin_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u5df4\u5f80\u4e0a"
+                }
+            },
+            {
+                "chin_dn": {
+                    "ctrlNames": [
+                        "Chin_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u5df4\u5f80\u4e0b"
+                }
+            },
+            {
+                "jaw_clench": {
+                    "ctrlNames": [
+                        "Chin_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u54ac\u808c,C\u7c7b\u4e0d\u7528\u5236\u4f5c"
+                }
+            },
+            {
+                "lip_back": {
+                    "ctrlNames": [
+                        "UprLip_cntr",
+                        "LwrLip_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz",
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "upr_lip_back-lwr_lip_back"
+                    ],
+                    "SplitweightList": [
+                        "mouth_up_smooth_min"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u5634\u5507\u538b\u6241"
+                }
+            },
+            {
+                "lwr_lip_out": {
+                    "ctrlNames": [
+                        "LwrLip_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        -1.0
+                    ],
+                    "weightDataSplitList": [],
+                    "SplitweightList": [],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u5507\u5fae\u5fae\u5f80\u4e0b\u548c\u5916\u7ffb"
+                }
+            },
+            {
+                "lip_volume": {
+                    "ctrlNames": [
+                        "UprLip_2_cntr",
+                        "Chin_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz",
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "upr_lip_volume-lwr_lip_volume"
+                    ],
+                    "SplitweightList": [
+                        "mouth_up_smooth_min"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u5634\u5507\u5fae\u5fae\u5f80\u91cc\u5377"
+                }
+            }
+        ],
+        "neck": [
+            {
+                "neck_tension": {
+                    "ctrlNames": [
+                        "Chin_L_cntr",
+                        "Chin_R_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "neck_tension_l-neck_tension_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u8116\u5b50\u7528\u529b"
+                }
+            },
+            {
+                "neck_blow": {
+                    "ctrlNames": [
+                        "Neck_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx"
+                    ],
+                    "ctrlValues": [
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "neck_blow_l-neck_blow_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u4e0b\u5df4\u548c\u8116\u5b50\u8f6c\u6298\u5904\u81a8\u80c0"
+                }
+            },
+            {
+                "neck_slide": {
+                    "ctrlNames": [
+                        "Neck_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "neck_slide_l-neck_slide_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u5589\u7ed3\u533a\u57df\u76ae\u80a4\u5f80\u4e0a\u6ed1\u52a8"
+                }
+            },
+            {
+                "neck_muscle": {
+                    "ctrlNames": [
+                        "Neck_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tz"
+                    ],
+                    "ctrlValues": [
+                        1.0
+                    ],
+                    "weightDataSplitList": [
+                        "neck_muscle_l-neck_muscle_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [],
+                    "subFaceValues": [],
+                    "doc": "\u80f8\u9501\u4e73\u7a81\u808c\u81a8\u80c0\uff0c\u8116\u5b50\u7684\u4e24\u6761\u5927\u808c\u8089,C\u7c7b\u4e0d\u7528\u5236\u4f5c"
+                }
+            },
+            {
+                "tension_drop": {
+                    "ctrlNames": [
+                        "Chin_L_cntr",
+                        "Chin_R_cntr",
+                        "Jaw_cntr"
+                    ],
+                    "ctrlAttrs": [
+                        ".tx",
+                        ".tx",
+                        ".ty"
+                    ],
+                    "ctrlValues": [
+                        1.0,
+                        1.0,
+                        -1.0
+                    ],
+                    "weightDataSplitList": [
+                        "tension_drop_l-tension_drop_r"
+                    ],
+                    "SplitweightList": [
+                        "face_l"
+                    ],
+                    "subFaces": [
+                        "neck_tension",
+                        "jaw_drop"
+                    ],
+                    "subFaceValues": [
+                        -1.0,
+                        -1.0
+                    ],
+                    "doc": "\u5f20\u5634 + \u8116\u5b50\u53d1\u529b"
+                }
+            }
+        ]
+    },
+    "CombinFacePoseList": [
+        {
+            "brow_dn_eye_sqz": {
+                "ctrlNames": [
+                    "BrowIn_L_cntr",
+                    "BrowIn_R_cntr",
+                    "BrowOut_L_cntr",
+                    "BrowOut_R_cntr",
+                    "EyeSqz_L_cntr",
+                    "EyeSqz_R_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty"
+                ],
+                "ctrlValues": [
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u538b\u7709 + \u538b\u53cc\u773c\u76ae"
+            }
+        },
+        {
+            "wink": {
+                "ctrlNames": [
+                    "BrowIn_L_cntr",
+                    "BrowIn_L_cntr",
+                    "BrowIn_R_cntr",
+                    "BrowIn_R_cntr",
+                    "BrowOut_L_cntr",
+                    "BrowOut_R_cntr",
+                    "UprLid_L_cntr",
+                    "UprLid_R_cntr",
+                    "EyeSqz_L_cntr",
+                    "EyeSqz_R_cntr",
+                    "Cheek_L_cntr",
+                    "Cheek_R_cntr",
+                    "Nose_L_cntr",
+                    "Nose_R_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".tx",
+                    ".ty",
+                    ".tx",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".tx",
+                    ".tx",
+                    ".tx",
+                    ".tx",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty"
+                ],
+                "ctrlValues": [
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -0.6,
+                    -0.6,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u6324\u773c:\u538b\u7709 + \u76b1\u7709 + \u772f\u773c + \u98a7\u9aa8 + \u95ed\u773c0.6\u5de6\u53f3"
+            }
+        },
+        {
+            "brows_dn__brows_squez__sneer_only": {
+                "ctrlNames": [
+                    "BrowIn_L_cntr",
+                    "BrowIn_L_cntr",
+                    "BrowIn_R_cntr",
+                    "BrowIn_R_cntr",
+                    "Nose_L_cntr",
+                    "Nose_R_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".tx",
+                    ".ty",
+                    ".tx",
+                    ".ty",
+                    ".ty",
+                    ".ty"
+                ],
+                "ctrlValues": [
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    1.0
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u538b\u7709 + \u76b1\u7709 + \u76b1\u9f3b"
+            }
+        },
+        {
+            "brows_dn__brows_squez__sneer_only__disgust": {
+                "ctrlNames": [
+                    "BrowIn_L_cntr",
+                    "BrowIn_L_cntr",
+                    "BrowIn_R_cntr",
+                    "BrowIn_R_cntr",
+                    "Nose_L_cntr",
+                    "Nose_R_cntr",
+                    "UprLip_L_2_cntr",
+                    "UprLip_R_2_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".tx",
+                    ".ty",
+                    ".tx",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".tx",
+                    ".tx"
+                ],
+                "ctrlValues": [
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u538b\u7709 + \u76b1\u7709 + \u76b1\u9f3b + \u4e0a\u55071"
+            }
+        },
+        {
+            "brows_dn__brows_squez__sneer_only__upr_lip_up": {
+                "ctrlNames": [
+                    "BrowIn_L_cntr",
+                    "BrowIn_L_cntr",
+                    "BrowIn_R_cntr",
+                    "BrowIn_R_cntr",
+                    "Nose_L_cntr",
+                    "Nose_R_cntr",
+                    "UprLip_L_cntr",
+                    "UprLip_R_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".tx",
+                    ".ty",
+                    ".tx",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty"
+                ],
+                "ctrlValues": [
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u538b\u7709 + \u76b1\u7709 + \u76b1\u9f3b + \u4e0a\u55072"
+            }
+        },
+        {
+            "brows_dn__brows_squez__sneer_only__grin_pull": {
+                "ctrlNames": [
+                    "BrowIn_L_cntr",
+                    "BrowIn_L_cntr",
+                    "BrowIn_R_cntr",
+                    "BrowIn_R_cntr",
+                    "Nose_L_cntr",
+                    "Nose_R_cntr",
+                    "UprLip_L_2_cntr",
+                    "UprLip_R_2_cntr",
+                    "Chin_L_cntr",
+                    "Chin_R_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".tx",
+                    ".ty",
+                    ".tx",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty"
+                ],
+                "ctrlValues": [
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    -1.0,
+                    -1.0
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u538b\u7709 + \u76b1\u7709 + \u76b1\u9f3b + \u9f87\u7259"
+            }
+        },
+        {
+            "brows_dn__brows_squez__sneer_only__jaw__grin": {
+                "ctrlNames": [
+                    "BrowIn_L_cntr",
+                    "BrowIn_L_cntr",
+                    "BrowIn_R_cntr",
+                    "BrowIn_R_cntr",
+                    "Nose_L_cntr",
+                    "Nose_R_cntr",
+                    "UprLip_L_2_cntr",
+                    "UprLip_R_2_cntr",
+                    "Jaw_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".tx",
+                    ".ty",
+                    ".tx",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty"
+                ],
+                "ctrlValues": [
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    -0.7
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u538b\u7709\u5934 + \u76b1\u7709 + \u76b1\u9f3b + \u5f20\u5634 + \u4e0a\u9f87\u7259"
+            }
+        },
+        {
+            "brows_dn__brows_squez__sneer_only__jaw__pull": {
+                "ctrlNames": [
+                    "BrowIn_L_cntr",
+                    "BrowIn_L_cntr",
+                    "BrowIn_R_cntr",
+                    "BrowIn_R_cntr",
+                    "Nose_L_cntr",
+                    "Nose_R_cntr",
+                    "Chin_L_cntr",
+                    "Chin_R_cntr",
+                    "Jaw_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".tx",
+                    ".ty",
+                    ".tx",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty"
+                ],
+                "ctrlValues": [
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    -0.7
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u538b\u7709\u5934 + \u76b1\u7709 + \u76b1\u9f3b + \u5f20\u5634 + \u4e0b\u9f87\u7259"
+            }
+        },
+        {
+            "brows_dn__brows_squez__sneer_only__jaw__grin__pull": {
+                "ctrlNames": [
+                    "BrowIn_L_cntr",
+                    "BrowIn_L_cntr",
+                    "BrowIn_R_cntr",
+                    "BrowIn_R_cntr",
+                    "Nose_L_cntr",
+                    "Nose_R_cntr",
+                    "UprLip_L_2_cntr",
+                    "UprLip_R_2_cntr",
+                    "Chin_L_cntr",
+                    "Chin_R_cntr",
+                    "Jaw_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".tx",
+                    ".ty",
+                    ".tx",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty"
+                ],
+                "ctrlValues": [
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u538b\u7709\u5934 + \u76b1\u7709 + \u76b1\u9f3b + \u5636\u543c"
+            }
+        },
+        {
+            "jaw__stretch": {
+                "ctrlNames": [
+                    "Crnr_L_cntr",
+                    "Crnr_R_cntr",
+                    "Jaw_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".tx",
+                    ".tx",
+                    ".ty"
+                ],
+                "ctrlValues": [
+                    1.0,
+                    1.0,
+                    -1.0
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u5f20\u5634 + \u54a7\u5634"
+            }
+        },
+        {
+            "jaw__lwr_lip_dn": {
+                "ctrlNames": [
+                    "LwrLip_L_cntr",
+                    "LwrLip_R_cntr",
+                    "Jaw_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".ty",
+                    ".ty",
+                    ".ty"
+                ],
+                "ctrlValues": [
+                    -1.0,
+                    -1.0,
+                    -1.0
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u5f20\u5634 + \u4e0b\u5507\u5f80\u4e0b"
+            }
+        },
+        {
+            "upr_lip_in__lwr_lip_in__jaw": {
+                "ctrlNames": [
+                    "UprLip_L_cntr",
+                    "UprLip_R_cntr",
+                    "LwrLip_L_cntr",
+                    "LwrLip_R_cntr",
+                    "Jaw_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".tz",
+                    ".tz",
+                    ".tz",
+                    ".tz",
+                    ".ty"
+                ],
+                "ctrlValues": [
+                    -0.7,
+                    -0.7,
+                    -0.7,
+                    -0.7,
+                    -0.2
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u62bf\u5634:\u54ac\u4e0a\u55070.7 + \u54ac\u4e0b\u55070.7 + \u5f20\u56340.2"
+            }
+        },
+        {
+            "face1": {
+                "ctrlNames": [
+                    "Brow_cntr",
+                    "Crnr_L_2_cntr",
+                    "Crnr_R_2_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".ty",
+                    ".ty",
+                    ".ty"
+                ],
+                "ctrlValues": [
+                    1.0,
+                    -1.0,
+                    -1.0
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u6311\u7709 + \u538b\u7709\u5c3e + \u5634\u89d2\u5f80\u4e0b\u4f24\u5fc3"
+            }
+        },
+        {
+            "face2": {
+                "ctrlNames": [
+                    "BrowIn_L_cntr",
+                    "BrowIn_R_cntr",
+                    "BrowOut_L_cntr",
+                    "BrowOut_R_cntr",
+                    "Jaw_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".ty"
+                ],
+                "ctrlValues": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    -1.0
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u5f20\u5634+\u62ac\u7709"
+            }
+        },
+        {
+            "face3": {
+                "ctrlNames": [
+                    "Crnr_L_2_cntr",
+                    "Crnr_R_2_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".tx",
+                    ".tx"
+                ],
+                "ctrlValues": [
+                    1.0,
+                    1.0
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u5fae\u7b11"
+            }
+        },
+        {
+            "face4": {
+                "ctrlNames": [
+                    "BrowIn_L_cntr",
+                    "BrowIn_R_cntr",
+                    "UprLip_L_cntr",
+                    "UprLip_R_cntr",
+                    "LwrLip_L_cntr",
+                    "LwrLip_R_cntr",
+                    "Mouth_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".tx",
+                    ".tx",
+                    ".tz",
+                    ".tz",
+                    ".tz",
+                    ".tz",
+                    ".tz"
+                ],
+                "ctrlValues": [
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u76b1\u7709 + O"
+            }
+        },
+        {
+            "face5": {
+                "ctrlNames": [
+                    "UprLid_L_cntr",
+                    "UprLid_R_cntr",
+                    "UprLip_L_cntr",
+                    "UprLip_R_cntr",
+                    "LwrLip_L_cntr",
+                    "LwrLip_R_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".tx",
+                    ".tx",
+                    ".tz",
+                    ".tz",
+                    ".tz",
+                    ".tz"
+                ],
+                "ctrlValues": [
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u95ed\u773c + SH"
+            }
+        },
+        {
+            "face6": {
+                "ctrlNames": [
+                    "Chin_L_cntr",
+                    "Chin_L_cntr",
+                    "Chin_R_cntr",
+                    "Chin_R_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".tx",
+                    ".ty",
+                    ".tx",
+                    ".ty"
+                ],
+                "ctrlValues": [
+                    1.0,
+                    -1.0,
+                    1.0,
+                    -1.0
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u4e0b\u9f87\u7259+\u8116\u5b50\u53d1\u529b"
+            }
+        },
+        {
+            "face7": {
+                "ctrlNames": [
+                    "BrowIn_L_cntr",
+                    "BrowIn_L_cntr",
+                    "BrowIn_R_cntr",
+                    "BrowIn_R_cntr",
+                    "Nose_L_cntr",
+                    "Nose_R_cntr",
+                    "UprLip_L_2_cntr",
+                    "UprLip_R_2_cntr"
+                ],
+                "ctrlAttrs": [
+                    ".tx",
+                    ".ty",
+                    ".tx",
+                    ".ty",
+                    ".ty",
+                    ".ty",
+                    ".tx",
+                    ".tx"
+                ],
+                "ctrlValues": [
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "weightDataSplitList": [],
+                "SplitweightList": [],
+                "subFaces": [],
+                "subFaceValues": [],
+                "doc": "\u538b\u7709\u5934+\u76b1\u7709+\u76b1\u9f3b"
+            }
+        }
+    ]
+}

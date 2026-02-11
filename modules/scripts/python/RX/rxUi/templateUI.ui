@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TemplateUI</class>
+ <widget class="QWidget" name="TemplateUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>665</width>
+    <height>890</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Rig Build Template</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" rowstretch="0,1,0" columnstretch="0" rowminimumheight="0,0,0">
+   <item row="1" column="0">
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="handleWidth">
+      <number>8</number>
+     </property>
+     <property name="childrenCollapsible">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="addBtn">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Mirror selected parts.</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ 
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:1 #116776, stop:0 #116776);
+padding: 5px;
+border-radius: 2px;
+}
+
+QPushButton:hover
+{
+background-color: #1d8ba3;
+border-radius: 2px;
+}
+
+QPushButton:pressed
+{
+background-color: #1d1d1d;
+border-radius: 2px;
+}
+
+QPushButton:disabled
+{
+background-color: #4b4b4b;
+border-radius: 2px;
+}</string>
+         </property>
+         <property name="text">
+          <string>+ P a r t +</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListWidget" name="partsList">
+         <property name="styleSheet">
+          <string notr="true">QScrollBar{
+                    border: 1px solid grey;
+                    background:rgb(55,55,55);
+                    width: 8px;}</string>
+         </property>
+         <property name="dragDropMode">
+          <enum>QAbstractItemView::NoDragDrop</enum>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::ExtendedSelection</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_2">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string/>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0,1,0">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <property name="topMargin">
+           <number>6</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="text">
+             <string>Part Options</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget" native="true">
+            <layout class="QGridLayout" name="gridLayout_2">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>9</number>
+             </property>
+             <item row="0" column="0">
+              <layout class="QGridLayout" name="optionsGrid"/>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="buildBtn">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>37</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{ 
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:1 #116776, stop:0 #116776);
+padding: 5px;
+border-radius: 5px;
+}
+
+QPushButton:hover
+{
+background-color: #1d8ba3;
+border-radius: 5px;
+}
+
+QPushButton:pressed
+{
+background-color: #1d1d1d;
+border-radius: 5px;
+}
+
+QPushButton:disabled
+{
+background-color: #4b4b4b;
+border-radius: 5px;
+}</string>
+            </property>
+            <property name="text">
+             <string>* B u i l d *</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0">
+     <item>
+      <widget class="QPushButton" name="loadBtn">
+       <property name="contextMenuPolicy">
+        <enum>Qt::ActionsContextMenu</enum>
+       </property>
+       <property name="toolTip">
+        <string>Load existing rig layout.</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{ 
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:1 #116776, stop:0 #116776);
+padding: 5px;
+border-radius: 2px;
+}
+
+QPushButton:hover
+{
+background-color: #1d8ba3;
+border-radius: 2px;
+}
+
+QPushButton:pressed
+{
+background-color: #1d1d1d;
+border-radius: 2px;
+}
+
+QPushButton:disabled
+{
+background-color: #4b4b4b;
+border-radius: 2px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Load Template</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveBtn">
+       <property name="toolTip">
+        <string>Save current rig layout.</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{ 
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:1 #116776, stop:0 #116776);
+padding: 5px;
+border-radius: 2px;
+}
+
+QPushButton:hover
+{
+background-color: #1d8ba3;
+border-radius: 2px;
+}
+
+QPushButton:pressed
+{
+background-color: #1d1d1d;
+border-radius: 2px;
+}
+
+QPushButton:disabled
+{
+background-color: #4b4b4b;
+border-radius: 2px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Save Template</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

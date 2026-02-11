@@ -1,0 +1,7 @@
+# IntelliJ project files
+*.bak
+*.pyc
+.idea
+/.idea/
+/.venv/
+*.iml

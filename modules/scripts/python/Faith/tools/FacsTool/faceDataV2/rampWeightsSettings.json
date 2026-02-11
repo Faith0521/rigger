@@ -1,0 +1,74 @@
+{
+    "brows_out_l": {
+        "clamp": false,
+        "multiply": 1.0,
+        "useTransform": false,
+        "rangeEnd": 7.5,
+        "mirror": false,
+        "centered": false,
+        "rangeStart": -1.0,
+        "invert": false,
+        "offset": 0.0,
+        "axis": 0
+    },
+    "face_l": {
+        "clamp": false,
+        "multiply": 1.0,
+        "useTransform": false,
+        "rangeEnd": 1.0,
+        "mirror": false,
+        "centered": false,
+        "rangeStart": -1.0,
+        "invert": false,
+        "offset": 0.0,
+        "axis": 0
+    },
+    "face_l_smooth_max": {
+        "clamp": false,
+        "multiply": 1.0,
+        "useTransform": false,
+        "rangeEnd": 2.0,
+        "mirror": false,
+        "centered": false,
+        "rangeStart": -2.0,
+        "invert": false,
+        "offset": 0.0,
+        "axis": 0
+    },
+    "brows_out_r": {
+        "clamp": false,
+        "multiply": 1.0,
+        "useTransform": false,
+        "rangeEnd": 7.5,
+        "mirror": true,
+        "centered": false,
+        "rangeStart": -1.0,
+        "invert": false,
+        "offset": 0.0,
+        "axis": 0
+    },
+    "brows_l": {
+        "clamp": false,
+        "multiply": 1.0,
+        "useTransform": false,
+        "rangeEnd": 2.0,
+        "mirror": false,
+        "centered": false,
+        "rangeStart": -2.0,
+        "invert": false,
+        "offset": 0.0,
+        "axis": 0
+    },
+    "eye_lid_l": {
+        "clamp": false,
+        "multiply": 1.0,
+        "useTransform": false,
+        "rangeEnd": 1.0,
+        "mirror": false,
+        "centered": false,
+        "rangeStart": -0.5,
+        "invert": false,
+        "offset": 0.0,
+        "axis": 0
+    }
+}

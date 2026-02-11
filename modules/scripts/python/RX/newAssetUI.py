@@ -1,0 +1,96 @@
+# -*- coding: utf-8 -*-
+def get_pyside_module():
+    try:
+        from PySide2 import QtCore, QtGui, QtWidgets
+        return QtCore, QtGui, QtWidgets
+    except ImportError:
+        try:
+            from PySide6 import QtCore, QtGui, QtWidgets
+            return QtCore, QtGui, QtWidgets
+        except ImportError:
+            raise ImportError("Neither PySide2 module nor PySide6 module could be imported.")
+
+QtCore, QtGui, QtWidgets = get_pyside_module()
+
+class Ui_newAssetUI(object):
+    def setupUi(self, newAssetUI):
+        newAssetUI.setObjectName("newAssetUI")
+        newAssetUI.resize(310, 269)
+        newAssetUI.setMinimumSize(QtCore.QSize(310, 269))
+        newAssetUI.setMaximumSize(QtCore.QSize(310, 269))
+        self.gridLayout = QtWidgets.QGridLayout(newAssetUI)
+        self.gridLayout.setObjectName("gridLayout")
+        self.label = QtWidgets.QLabel(newAssetUI)
+        self.label.setMinimumSize(QtCore.QSize(0, 40))
+        self.label.setMaximumSize(QtCore.QSize(16777215, 40))
+        self.label.setSizeIncrement(QtCore.QSize(0, 50))
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        font.setWeight(50)
+        font.setItalic(True)
+        font.setBold(False)
+        self.label.setFont(font)
+        self.label.setStyleSheet("background-color:rgb(35,35,35)")
+        self.label.setMargin(3)
+        self.label.setIndent(5)
+        self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 2)
+        self.cancelBtn = QtWidgets.QPushButton(newAssetUI)
+        self.cancelBtn.setObjectName("cancelBtn")
+        self.gridLayout.addWidget(self.cancelBtn, 3, 1, 1, 1)
+        self.groupBox = QtWidgets.QGroupBox(newAssetUI)
+        self.groupBox.setObjectName("groupBox")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.groupBox)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.animChx = QtWidgets.QCheckBox(self.groupBox)
+        self.animChx.setChecked(True)
+        self.animChx.setObjectName("animChx")
+        self.verticalLayout.addWidget(self.animChx)
+        self.gameChx = QtWidgets.QCheckBox(self.groupBox)
+        self.gameChx.setChecked(False)
+        self.gameChx.setObjectName("gameChx")
+        self.verticalLayout.addWidget(self.gameChx)
+        self.mocapChx = QtWidgets.QCheckBox(self.groupBox)
+        self.mocapChx.setObjectName("mocapChx")
+        self.verticalLayout.addWidget(self.mocapChx)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.otherChx = QtWidgets.QCheckBox(self.groupBox)
+        self.otherChx.setObjectName("otherChx")
+        self.horizontalLayout.addWidget(self.otherChx)
+        self.otherLine = QtWidgets.QLineEdit(self.groupBox)
+        self.otherLine.setEnabled(False)
+        self.otherLine.setObjectName("otherLine")
+        self.horizontalLayout.addWidget(self.otherLine)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.gridLayout.addWidget(self.groupBox, 2, 0, 1, 2)
+        self.createBtn = QtWidgets.QPushButton(newAssetUI)
+        self.createBtn.setObjectName("createBtn")
+        self.gridLayout.addWidget(self.createBtn, 3, 0, 1, 1)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.label_2 = QtWidgets.QLabel(newAssetUI)
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout_2.addWidget(self.label_2)
+        self.nameLine = QtWidgets.QLineEdit(newAssetUI)
+        self.nameLine.setObjectName("nameLine")
+        self.horizontalLayout_2.addWidget(self.nameLine)
+        self.gridLayout.addLayout(self.horizontalLayout_2, 1, 0, 1, 2)
+
+        self.retranslateUi(newAssetUI)
+        QtCore.QObject.connect(self.otherChx, QtCore.SIGNAL("toggled(bool)"), self.otherLine.setDisabled)
+        QtCore.QObject.connect(self.otherChx, QtCore.SIGNAL("toggled(bool)"), self.otherLine.setEnabled)
+        QtCore.QMetaObject.connectSlotsByName(newAssetUI)
+
+    def retranslateUi(self, newAssetUI):
+        newAssetUI.setWindowTitle(QtWidgets.QApplication.translate("newAssetUI", "New Asset", None, QtWidgets.QApplication.UnicodeUTF8))
+        self.label.setText(QtWidgets.QApplication.translate("newAssetUI", "Create New Asset", None, QtWidgets.QApplication.UnicodeUTF8))
+        self.cancelBtn.setText(QtWidgets.QApplication.translate("newAssetUI", "Cancel", None, QtWidgets.QApplication.UnicodeUTF8))
+        self.groupBox.setTitle(QtWidgets.QApplication.translate("newAssetUI", "Rig Types", None, QtWidgets.QApplication.UnicodeUTF8))
+        self.animChx.setText(QtWidgets.QApplication.translate("newAssetUI", "Rig", None, QtWidgets.QApplication.UnicodeUTF8))
+        self.gameChx.setText(QtWidgets.QApplication.translate("newAssetUI", "Game Rig", None, QtWidgets.QApplication.UnicodeUTF8))
+        self.mocapChx.setText(QtWidgets.QApplication.translate("newAssetUI", "Mocap Rig", None, QtWidgets.QApplication.UnicodeUTF8))
+        self.otherChx.setText(QtWidgets.QApplication.translate("newAssetUI", "Other", None, QtWidgets.QApplication.UnicodeUTF8))
+        self.createBtn.setText(QtWidgets.QApplication.translate("newAssetUI", "Create", None, QtWidgets.QApplication.UnicodeUTF8))
+        self.label_2.setText(QtWidgets.QApplication.translate("newAssetUI", "Asset Name", None, QtWidgets.QApplication.UnicodeUTF8))
+

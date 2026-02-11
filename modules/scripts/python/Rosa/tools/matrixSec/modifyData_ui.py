@@ -1,0 +1,90 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file '.\modifyDataUI.ui'
+#
+# Created: Mon Nov  6 16:32:40 2023
+#      by: pyside2-uic  running on PySide2 2.0.0~alpha0
+#
+# WARNING! All changes made in this file will be lost!
+
+from PySide2 import QtCore, QtGui, QtWidgets
+
+class Ui_modifyDataUI(object):
+    def setupUi(self, modifyDataUI):
+        modifyDataUI.setObjectName("modifyDataUI")
+        modifyDataUI.resize(246, 388)
+        self.centralwidget = QtWidgets.QWidget(modifyDataUI)
+        self.centralwidget.setObjectName("centralwidget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.prefix_lb = QtWidgets.QLabel(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.prefix_lb.sizePolicy().hasHeightForWidth())
+        self.prefix_lb.setSizePolicy(sizePolicy)
+        self.prefix_lb.setObjectName("prefix_lb")
+        self.horizontalLayout.addWidget(self.prefix_lb)
+        self.prefix_line = QtWidgets.QLineEdit(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.prefix_line.sizePolicy().hasHeightForWidth())
+        self.prefix_line.setSizePolicy(sizePolicy)
+        self.prefix_line.setObjectName("prefix_line")
+        self.horizontalLayout.addWidget(self.prefix_line)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.initMesh_lb = QtWidgets.QLabel(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.initMesh_lb.sizePolicy().hasHeightForWidth())
+        self.initMesh_lb.setSizePolicy(sizePolicy)
+        self.initMesh_lb.setObjectName("initMesh_lb")
+        self.horizontalLayout_2.addWidget(self.initMesh_lb)
+        self.initMesh_line = QtWidgets.QLineEdit(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.initMesh_line.sizePolicy().hasHeightForWidth())
+        self.initMesh_line.setSizePolicy(sizePolicy)
+        self.initMesh_line.setObjectName("initMesh_line")
+        self.horizontalLayout_2.addWidget(self.initMesh_line)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
+        self.line = QtWidgets.QFrame(self.centralwidget)
+        self.line.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line.setObjectName("line")
+        self.verticalLayout.addWidget(self.line)
+        self.meshs_gb = QtWidgets.QWidget(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.meshs_gb.sizePolicy().hasHeightForWidth())
+        self.meshs_gb.setSizePolicy(sizePolicy)
+        self.meshs_gb.setObjectName("meshs_gb")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.meshs_gb)
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.meshs_grid = QtWidgets.QGridLayout()
+        self.meshs_grid.setObjectName("meshs_grid")
+        self.horizontalLayout_4.addLayout(self.meshs_grid)
+        self.verticalLayout.addWidget(self.meshs_gb)
+        self.genarate_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.genarate_btn.setObjectName("genarate_btn")
+        self.verticalLayout.addWidget(self.genarate_btn)
+        modifyDataUI.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(modifyDataUI)
+        QtCore.QMetaObject.connectSlotsByName(modifyDataUI)
+
+    def retranslateUi(self, modifyDataUI):
+        modifyDataUI.setWindowTitle(QtWidgets.QApplication.translate("modifyDataUI", "Modify Data", None, -1))
+        self.prefix_lb.setText(QtWidgets.QApplication.translate("modifyDataUI", "Prefix:", None, -1))
+        self.initMesh_lb.setText(QtWidgets.QApplication.translate("modifyDataUI", "InitMesh:", None, -1))
+        self.genarate_btn.setText(QtWidgets.QApplication.translate("modifyDataUI", "Genarate", None, -1))
+

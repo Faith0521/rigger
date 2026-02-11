@@ -1,0 +1,7 @@
+import sys
+sys.path.append(r'E:\JunCmds\tool\blendShapeManage')
+from blendShapeManage_new import *
+import blendShapeManage_new
+reload(blendShapeManage_new)
+#mel.eval('source "E:/JunCmds/tool/blendShapeManage/gg_BSpiritCorrectiveShape.mel"')
+blendShapeManage_new.blendShapeManage_UI()
