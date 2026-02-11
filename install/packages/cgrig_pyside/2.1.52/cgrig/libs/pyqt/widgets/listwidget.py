@@ -10,6 +10,8 @@ from cgrigvendor.Qt.QtGui import QPainter, QColor, QPixmap, QCursor
 from cgrig.libs.pyqt.widgets import elements
 import os
 
+from mgear.shifter_epic_components.EPIC_arm_01.settingsUI import QtWidgets
+
 
 class _ListViewWidget(QWidget):
     def paintEvent(self, event):
@@ -27,7 +29,7 @@ class _ListItemWidget(QWidget):
         self.function_table = function_table
 
         super(_ListItemWidget, self).__init__(parent)
-        self.main_layout = elements.vBoxLayout()
+        self.main_layout = QtWidgets.QHBoxLayout(self)
         self.main_layout.setContentsMargins(2, 2, 2, 2)
         self.main_layout.setSpacing(2)
         self.main_layout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
@@ -103,7 +105,7 @@ class ListWidget(QScrollArea):
         self.setWidgetResizable(True)
 
         self.main_widget = _ListViewWidget()
-        self.main_layout = elements.vBoxLayout(parent=self.main_widget)
+        self.main_layout = QtWidgets.QVBoxLayout(self.main_widget)
         self.main_layout.setAlignment(Qt.AlignTop)
         self.main_layout.setContentsMargins(2, 2, 2, 2)
         self.main_layout.setSpacing(2)
@@ -157,8 +159,89 @@ class ListWidget(QScrollArea):
                 i.setSelectState(False)
 
 
+class ListEditWidget(QWidget):
+    item_click = Signal(str)
+    plus_click = Signal()
+    trash_click = Signal(str)
 
+    def __init__(self, object_type_name, parent=None):
+        super(ListEditWidget, self).__init__(parent)
+        self.setWindowFlags(Qt.FramelessWindowHint)
+        # 设置背景透明：避免圆角外的区域显示白色底色
+        self.setAttribute(Qt.WA_TranslucentBackground)
 
+        self.main_layout = QtWidgets.QVBoxLayout(self)
+        self.main_layout.setContentsMargins(2, 2, 2, 2)
+        self.main_layout.setSpacing(2)
+        self.main_layout.setAlignment(Qt.AlignCenter)
+
+        h_layout = QtWidgets.QHBoxLayout()
+        h_layout.setContentsMargins(0, 0, 0, 0)
+        h_layout.setAlignment(Qt.AlignCenter)
+
+        h_layout.addWidget(elements.Label(text=object_type_name))
+        h_layout.addStretch(0)
+
+        self._refresh_button = elements.IconMenuButton(iconName="refresh", parent=self)
+        self._plus_button = elements.IconMenuButton(iconName="plus", parent=self)
+        self._trash_button = elements.IconMenuButton(iconName="deletePreset", parent=self)
+        self._plus_button.clicked.connect(self.plus_click.emit)
+        self._trash_button.clicked.connect(self._sendTrashClick)
+
+        h_layout.addWidget(self._refresh_button)
+        h_layout.addWidget(self._plus_button)
+        h_layout.addWidget(self._trash_button)
+
+        self.main_layout.addLayout(h_layout)
+        self.search_line_edit = elements.LineEdit(placeholder="search")
+        self.search_line_edit.setAlignment(Qt.AlignCenter)
+        self.search_line_edit.textModified.connect(self.refreshList)
+
+        self._now_item_key = None
+        self.list_widget = ListWidget()
+        self.list_widget.item_click.connect(self._setNowItemKey)
+        self.list_widget.item_click.connect(self.item_click.emit)
+
+        self.main_layout.addWidget(self.search_line_edit)
+        self.main_layout.addWidget(self.list_widget)
+
+        self._items = []
+
+    def _setNowItemKey(self, key):
+        self._now_item_key = key
+
+    def _sendTrashClick(self):
+        self.trash_click.emit(self._now_item_key)
+        self._now_item_key = None
+
+    def updateItems(self, items):
+        # type: (Iterator[Tuple[str, str, str|None, List[Tuple[str, Callable]]|None]]) -> None
+        self._items = list(items)
+        self.refreshList()
+
+    def refreshList(self):
+        print('refresh_list')
+        print('search_line_edit.text():', self.search_line_edit.text())
+        items = [
+            (key, name, icon_path, function_table)
+            for key, name, icon_path, function_table in self._items
+            if self.search_line_edit.text() in name
+        ]
+        self.list_widget.updateItems(items)
+
+    def setSelectItem(self, key):
+        if self.list_widget.findItem(key) is None:
+            self.search_line_edit.setText('')
+            self.refreshList()
+        self.list_widget.setSelectItem(key)
+
+    def paintEvent(self, event):
+        painter = QPainter(self)
+        painter.setRenderHint(QPainter.Antialiasing, True)
+        painter.setPen(Qt.NoPen)
+        painter.setBrush(QColor('#3D3D3D'))
+        painter.drawRoundedRect(self.rect(),10,10)
+        painter.end()
 
 
 

@@ -731,7 +731,7 @@ class TitleLabel(ClippedLabel):
 
 
 class _HeadWidget(QtWidgets.QWidget):
-    def __init__(self, custom_widget, icon_path, parent=None):
+    def __init__(self, custom_widget, icon_path=None, parent=None):
         super(_HeadWidget, self).__init__(parent)
         self.setFixedHeight(30)
 
@@ -739,12 +739,13 @@ class _HeadWidget(QtWidgets.QWidget):
         self.main_layout.setContentsMargins(5, 0, 0, 0)
         self.main_layout.setAlignment(QtCore.Qt.AlignCenter)
 
-        self.logo_label = QtWidgets.QLabel(self)
-        logo_pix = QtGui.QPixmap(icon_path)
-        logo_pix = logo_pix.scaled(20, 20)
-        self.logo_label.setPixmap(logo_pix)
+        if icon_path:
+            self.logo_label = QtWidgets.QLabel(self)
+            logo_pix = QtGui.QPixmap(icon_path)
+            logo_pix = logo_pix.scaled(20, 20)
+            self.logo_label.setPixmap(logo_pix)
 
-        self.main_layout.addWidget(self.logo_label)
+            self.main_layout.addWidget(self.logo_label)
         # self.main_layout.addStretch(0)
         self.main_layout.addWidget(custom_widget)
 
@@ -763,7 +764,7 @@ class FrameLessWindow(QtWidgets.QWidget):
         self.main_layout = QtWidgets.QVBoxLayout(self)
         self.main_layout.setContentsMargins(0, 0, 0, 0)
         if custom_head_widget is not None:
-            self.main_layout.addWidget(_HeadWidget(custom_head_widget, icon_path, self))
+            self.main_layout.addWidget(_HeadWidget(custom_head_widget, icon_path=icon_path, parent=self))
         if body_widget is not None:
             self.main_layout.addWidget(body_widget)
 
@@ -910,8 +911,8 @@ class DialogCustomHeadWidget(QtWidgets.QWidget):
 
 
 class Dialog(FrameLessWindow):
-    def __init__(self, body_widget, parent=None):
-        super(Dialog, self).__init__(DialogCustomHeadWidget(), body_widget, parent)
+    def __init__(self, body_widget, icon_path=None, parent=None):
+        super(Dialog, self).__init__(custom_head_widget=DialogCustomHeadWidget(), body_widget=body_widget, icon_path=icon_path, parent=parent)
         self.setWindowModality(QtCore.Qt.ApplicationModal)
 
     def exec_(self):

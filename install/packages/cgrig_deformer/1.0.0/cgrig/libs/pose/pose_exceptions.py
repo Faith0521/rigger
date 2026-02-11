@@ -2,7 +2,7 @@
 # API v2 Specific exceptions
 
 # Internal
-from cgrig.libs import exceptions
+from cgrig.libs.pose import exceptions
 
 
 class MessageConnectionError(exceptions.PoseWranglerException):

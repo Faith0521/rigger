@@ -7,7 +7,7 @@ import copy
 from maya import cmds
 from maya.api import OpenMaya as om
 
-from cgrig.libs import pose_exceptions as exceptions
+from cgrig.libs.pose import pose_exceptions as exceptions
 from cgrig.libs.pose import pose_util as utils
 
 

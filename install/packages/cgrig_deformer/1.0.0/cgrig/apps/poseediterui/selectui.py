@@ -18,10 +18,9 @@ class SelectDialogBodyWidget(QWidget):
 
         super(SelectDialogBodyWidget, self).__init__()
 
-        self.main_layout = elements.vBoxLayout()
+        self.main_layout = QtWidgets.QVBoxLayout(self)
         self.main_layout.setContentsMargins(0, 0, 0, 0)
         self.main_layout.setSpacing(2)
-
         if len(options) == 0:
             label = elements.Label(text='No Options')
             label.setAlignment(QtCore.Qt.AlignCenter)
@@ -34,7 +33,7 @@ class SelectDialogBodyWidget(QWidget):
 
         self.main_layout.addWidget(self.list_widget)
 
-        h_layout = elements.hBoxLayout()
+        h_layout = QtWidgets.QHBoxLayout(self)
         h_layout.setContentsMargins(5, 5, 5, 5)
         h_layout.setSpacing(2)
 
@@ -59,20 +58,19 @@ class SelectDialogBodyWidget(QWidget):
 
 
 class SelectDialog(Dialog):
-    def __init__(self, options, parent=None):
-        # type: (List[Tuple[str, str, str|None]], QWidget|None) -> None
+    def __init__(self, options, icon_path=None, parent=None):
         """
 
         :param options: [(key, name, icon_path)]
         :param parent:
         """
         self.body_widget = SelectDialogBodyWidget(options, self)
-        super(SelectDialog, self).__init__(self.body_widget, parent)
+        super(SelectDialog, self).__init__(self.body_widget, icon_path=icon_path, parent=parent)
         self.resize(375, 205)
 
     @staticmethod
-    def select(options, parent=None):
-        dialog = SelectDialog(options, parent)
+    def select(options, icon_path=None, parent=None):
+        dialog = SelectDialog(options, icon_path=icon_path, parent=parent)
         dialog.exec_()
         return dialog.body_widget.result
 

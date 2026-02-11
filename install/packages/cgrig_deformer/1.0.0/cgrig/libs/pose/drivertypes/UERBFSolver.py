@@ -15,6 +15,7 @@ import json
 from collections import OrderedDict
 from maya import OpenMaya
 from maya.api import OpenMaya as om
+from cgrig.libs import iconlib
 
 # Internal
 from .. import pose_exceptions as exceptions, pose_util as utils, pose_blender
@@ -24,7 +25,7 @@ from cgrig.libs.naming import naming
 @register_node_type
 class RBFNode(NodeProtocol):
     type_name = 'UERBFSolverNode'
-    icon_name = ""
+    icon_name = iconlib.iconPathForName("SwingIcon")
 
     def __init__(self, node):
         super(RBFNode, self).__init__(node)

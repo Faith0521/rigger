@@ -11,7 +11,7 @@ from maya import cmds
 from maya.api import OpenMaya as om
 
 # Internal
-from cgrig.libs import ue_rbf_api as api
+from cgrig.libs.pose.drivertypes import UERBFSolver as api
 from cgrig.libs.serializers import base_serializer
 from cgrig.libs.pose import pose_util as utils
 from cgrig.libs.maya.cmds.objutils import attributes

@@ -11,7 +11,7 @@ import re
 from functools import partial
 from cgrigvendor.Qt import QtWidgets, QtCore, QtGui
 from cgrig.apps.toolsetsui.widgets import toolsetwidget
-from cgrig.libs import sdk_io, ue_rbf_api, pose_exceptions
+from cgrig.libs import sdk_io
 from cgrig.libs.pose import pose_util, pose_driver_api
 from cgrig.libs.maya.cmds.objutils import attributes
 from cgrig.libs.maya.cmds.rig import blendshape
@@ -21,6 +21,9 @@ from cgrig.libs.iconlib import iconlib
 from cgrig.libs.pyqt.widgets import elements
 from cgrig.libs.pyqt.widgets.elements import hBoxLayout, vBoxLayout
 from maya import cmds
+from cgrig.libs.pose import drivertypes
+from cgrig.libs.pose.core import node_types
+from cgrig.apps.poseediterui.selectui import SelectDialog
 
 
 class SpacingDelegate(QtWidgets.QStyledItemDelegate):
@@ -160,242 +163,33 @@ class PoseEditorWindow(QtWidgets.QMainWindow):
         self.main_splitter = QtWidgets.QSplitter(QtCore.Qt.Horizontal)
 
         # 左侧面板
-        self.create_left_panel()
+        self.left_panel = elements.ListEditWidget('Pose 驱动')
 
         # 中间面板
-        self.create_center_panel()
-
-        # 右侧面板 - 使用垂直分割器实现上下可拉伸
-        # self.create_right_panel()
-
-        # self.create_bs_panel()
+        self.center_splitter = QtWidgets.QSplitter(QtCore.Qt.Vertical)
+        center_layout = QtWidgets.QVBoxLayout(self.center_splitter)
+        center_layout.addWidget(elements.ListEditWidget('Pose 名称'))
+        center_layout.addWidget(elements.ListEditWidget('Shape 列表'))
+        self.center_splitter.setSizes([100, 70])
 
         # 将三个面板添加到主分割器
         self.main_splitter.addWidget(self.left_panel)
-        self.main_splitter.addWidget(self.center_panel)
-        # self.main_splitter.addWidget(self.right_splitter)
-        # self.main_splitter.addWidget(self.bs_panel)
-
-        # self.right_splitter.setHidden(1)
+        self.main_splitter.addWidget(self.center_splitter)
 
         # 设置主分割器初始大小
-        self.main_splitter.setSizes([180, 180, 180, 180])
+        self.main_splitter.setSizes([180, 180])
 
         # 主布局
         self.main_layout = hBoxLayout(self.central_widget)
         self.main_layout.setContentsMargins(5, 5, 5, 5)
         self.main_layout.addWidget(self.main_splitter)
 
-        # self.additional_info_list.setContextMenuPolicy(QtCore.Qt.ActionsContextMenu)
-        # self.setKey_action = QtWidgets.QAction(self)
-        # self.setKey_action.setText("Set Key")
-        # self.deleteKey_action = QtWidgets.QAction(self)
-        #
-        # self.deleteKey_action.setText("Delete Key")
-        # self.additional_info_list.addAction(self.setKey_action)
-        # self.additional_info_list.addAction(self.deleteKey_action)
-
-        # self.bs_list.setContextMenuPolicy(QtCore.Qt.ActionsContextMenu)
-        # self.bs_mirror_action = QtWidgets.QAction(self)
-        # self.bs_mirror_action.setText("Mirror")
-        # self.bs_generate_action = QtWidgets.QAction(self)
-        # self.bs_generate_action.setText("Generate")
-        # self.bs_copy_action = QtWidgets.QAction(self)
-        # self.bs_copy_action.setText("Copy")
-        # self.bs_delete_action = QtWidgets.QAction(self)
-        # self.bs_delete_action.setText("Delete")
-        #
-        # # self.bs_list.addAction(self.bs_gain_action)
-        # self.bs_list.addAction(self.bs_mirror_action)
-        # self.bs_list.addAction(self.bs_generate_action)
-        # self.bs_list.addAction(self.bs_copy_action)
-        # self.bs_list.addAction(self.bs_delete_action)
-
-    def create_left_panel(self):
-        # 左侧 - Pose Interpolators 列表
-        self.left_panel = QtWidgets.QWidget()
-        self.left_layout = vBoxLayout(self.left_panel)
-        self.left_layout.setContentsMargins(0, 0, 0, 0)
-        self.left_layout.setSpacing(2)
-
-        # 标题栏
-        # self.left_title_widget = QtWidgets.QWidget()
-        self.left_title_layout = hBoxLayout()
-        self.left_title = QtWidgets.QLabel("Pose Interpolators")
-        self.left_title.setStyleSheet("font-weight: bold;")
-        self.left_title_layout.addWidget(self.left_title)
-
-        self.left_title_layout.addSpacerItem(
-            QtWidgets.QSpacerItem(40, 30, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        )
-
-        self.left_title_refresh_btn = elements.IconMenuButton(iconName="refresh", parent=self)
-        self.left_title_add_btn = elements.IconMenuButton(iconName="plus", parent=self)
-        self.left_title_delete_btn = elements.IconMenuButton(iconName="delete", parent=self)
-
-        self.left_title_layout.addWidget(self.left_title_refresh_btn)
-        self.left_title_layout.addWidget(self.left_title_add_btn)
-        self.left_title_layout.addWidget(self.left_title_delete_btn)
-
-        self.left_layout.addLayout(self.left_title_layout)
-
-        # 使用 QListView
-        self.interpolators_list = QtWidgets.QListView()
-        delegate = SpacingDelegate(spacing=12)
-        self.interpolators_list.setItemDelegate(delegate)
-        self.left_model = QtGui.QStandardItemModel()
-        self.interpolators_list.setModel(self.left_model)
-        self.interpolators_list.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.interpolators_list.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
-        event_filter = CtrlClickEventFilter(self.interpolators_list)
-        self.interpolators_list.viewport().installEventFilter(event_filter)
-        self.interpolators_list.selectionModel().select(self.left_model.index(0, 0), QtCore.QItemSelectionModel.Deselect)
-        self.left_layout.addWidget(self.interpolators_list)
-
-    def create_center_panel(self):
-        # 中间 - 姿势表格
-        self.center_panel = QtWidgets.QWidget()
-        self.center_layout = vBoxLayout(self.center_panel)
-        self.center_layout.setContentsMargins(0, 0, 0, 0)
-        self.center_layout.setSpacing(5)
-
-        # 标题栏
-        self.center_title_layout = hBoxLayout()
-        self.center_title = QtWidgets.QLabel("Poses")
-        self.center_title.setStyleSheet("font-weight: bold;")
-        self.center_title_layout.addWidget(self.center_title)
-
-        self.center_title_layout.addSpacerItem(
-            QtWidgets.QSpacerItem(40, 30, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        )
-
-        self.center_title_refresh_btn = elements.IconMenuButton(iconName="refresh", parent=self)
-        self.center_title_add_btn = elements.IconMenuButton(iconName="plus", parent=self)
-        self.center_title_delete_btn = elements.IconMenuButton(iconName="deletePreset", parent=self)
-        self.center_title_layout.addWidget(self.center_title_refresh_btn)
-        self.center_title_layout.addWidget(self.center_title_add_btn)
-        self.center_title_layout.addWidget(self.center_title_delete_btn)
-
-        self.center_layout.addLayout(self.center_title_layout)
-
-        self.pose_list = QtWidgets.QListView()
-        delegate = SpacingDelegate(spacing=8)
-        self.pose_list.setItemDelegate(delegate)
-        self.pose_model = QtGui.QStandardItemModel()
-        self.pose_list.setModel(self.pose_model)
-        self.pose_list.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.pose_list.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
-        event_filter = CtrlClickEventFilter(self.pose_list)
-        self.pose_list.viewport().installEventFilter(event_filter)
-        self.pose_list.selectionModel().select(self.pose_model.index(0, 0),
-                                                        QtCore.QItemSelectionModel.Deselect)
-        self.center_layout.addWidget(self.pose_list)
-
-    def create_right_panel(self):
-        # 右侧面板 - 使用垂直分割器
-        self.right_splitter = QtWidgets.QSplitter(QtCore.Qt.Vertical)
-
-        # 上部分 - Pose Details
-        self.right_top_panel = QtWidgets.QWidget()
-        self.right_top_layout = vBoxLayout(self.right_top_panel)
-        self.right_top_layout.setContentsMargins(0, 0, 0, 0)
-        self.right_top_layout.setSpacing(5)
-
-        # 标题栏
-        self.right_top_title_layout = hBoxLayout()
-        self.right_top_title = QtWidgets.QLabel("Driven Nodes")
-        self.right_top_title.setStyleSheet("font-weight: bold;")
-        self.right_top_title_layout.addWidget(self.right_top_title)
-
-        self.right_top_title_layout.addSpacerItem(
-            QtWidgets.QSpacerItem(40, 30, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        )
-
-        self.right_top_title_key_btn = QtWidgets.QPushButton("Key Default Attr")
-        self.right_top_title_apply_btn = QtWidgets.QPushButton("Load")
-        self.right_top_title_layout.addWidget(self.right_top_title_key_btn)
-        self.right_top_title_layout.addWidget(self.right_top_title_apply_btn)
-        self.right_top_layout.addLayout(self.right_top_title_layout)
-
-        # 使用 QListView
-        self.details_list = QtWidgets.QListView()
-        self.details_list_model = QtGui.QStandardItemModel()
-        self.details_list.setModel(self.details_list_model)
-        self.right_top_layout.addWidget(self.details_list)
-        self.details_list.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-
-        # 下部分 - Driven Attributes
-        self.right_bottom_panel = QtWidgets.QWidget()
-        self.right_bottom_layout = vBoxLayout(self.right_bottom_panel)
-        self.right_bottom_layout.setContentsMargins(0, 0, 0, 0)
-        self.right_bottom_layout.setSpacing(5)
-
-        # 标题栏
-        self.right_bottom_title_layout = hBoxLayout()
-        self.right_bottom_title = QtWidgets.QLabel("Driven Attributes")
-        self.right_bottom_title.setStyleSheet("font-weight: bold;")
-        self.right_bottom_title_layout.addWidget(self.right_bottom_title)
-
-        self.right_bottom_title_layout.addSpacerItem(
-            QtWidgets.QSpacerItem(40, 30, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        )
-
-        self.right_bottom_layout.addLayout(self.right_bottom_title_layout)
-
-        # 使用 QListView
-        self.additional_info_list = QtWidgets.QListView()
-        self.additional_info_model = QtGui.QStandardItemModel()
-        self.additional_info_list.setModel(self.additional_info_model)
-        self.right_bottom_layout.addWidget(self.additional_info_list)
-        self.additional_info_list.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.additional_info_list.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
-
-        # 将上下两部分添加到垂直分割器
-        self.right_splitter.addWidget(self.right_top_panel)
-        self.right_splitter.addWidget(self.right_bottom_panel)
-
-        # 设置初始分割比例
-        self.right_splitter.setSizes([100, 100])
-        self.right_splitter.setHidden(0)
-
-    def create_bs_panel(self):
-        # 中间 - 姿势表格
-        self.bs_panel = QtWidgets.QWidget()
-        self.bs_layout = vBoxLayout(self.bs_panel)
-        self.bs_layout.setContentsMargins(0, 0, 0, 0)
-        self.bs_layout.setSpacing(2)
-
-        # 标题栏
-        self.bs_title_layout = hBoxLayout()
-        self.bs_title = QtWidgets.QLabel("BlendShape Channel")
-        self.bs_title.setStyleSheet("font-weight: bold;")
-        self.bs_title_layout.addWidget(self.bs_title)
-
-        self.bs_title_layout.addSpacerItem(
-            QtWidgets.QSpacerItem(40, 30, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        )
-
-        self.bs_title_load_btn = QtWidgets.QPushButton("Load")
-        self.bs_title_layout.addWidget(self.bs_title_load_btn)
-
-        self.bs_title_sculpt_btn = QtWidgets.QPushButton("Sculpt/Finish")
-        self.bs_title_layout.addWidget(self.bs_title_sculpt_btn)
-
-        self.bs_layout.addLayout(self.bs_title_layout)
-
-        # 使用 QListView
-        self.bs_list = QtWidgets.QListView()
-        self.bs_model = QtGui.QStandardItemModel()
-        self.bs_list.setModel(self.bs_model)
-        self.bs_list.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
-        # self.bs_list.selectionModel().select(self.bs_model.index(0, 0), QtCore.QItemSelectionModel.Select)
-        self.bs_layout.addWidget(self.bs_list)
 
     def create_connections(self):
         # self.interpolators_list.clicked.connect(self.on_selection_changed)
         # self.details_list.clicked.connect(self.on_selection_show_attrs)
         #
-        self.left_title_add_btn.clicked.connect(self.addSetup)
+        self.left_panel.plus_click.connect(self.addSetup)
         # self.left_title_refresh_btn.clicked.connect(self.load)
         #
         # self.center_title_add_btn.clicked.connect(self.addPose)
@@ -644,14 +438,22 @@ class PoseEditorWindow(QtWidgets.QMainWindow):
         """
         选择骨骼在当前pose创建rbf node
         """
-        # pose_key = SelectDialog.select(
-        #     [
-        #         (i.type_name, i.type_name, i.icon_path)
-        #         for i in pose_types
-        #     ],
-        #     self
-        # )
-        pass
+        pose_key = SelectDialog.select(
+            options=[
+                (i.type_name, i.type_name, i.icon_name)
+                for i in node_types
+            ],
+            parent=self
+        )
+        if pose_key:
+            print("yes, ", pose_key)
+            # self.left_panel.updateItems()
+            # self.left_panel.updateItems(
+            #     [
+            #         (i.name(), i.name(), i.icon_path, i.function_table())
+            #         for i in get_pose_list()
+            #     ]
+            # )
         # selected = cmds.ls(sl=1)
         # if not selected: return
         # if self.is_pose_driver:

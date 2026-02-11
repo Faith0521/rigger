@@ -3,7 +3,7 @@ from cgrig.core.util import env
 from cgrig.libs import iconlib
 from cgrig.libs.pyqt.extended.imageview.thumbnail.virtualslider import VirtualSlider
 from cgrig.libs.pyqt.widgets import dialogs
-from cgrig.libs.pyqt.widgets.listwidget import ListWidget
+from cgrig.libs.pyqt.widgets.listwidget import ListWidget, ListEditWidget
 from cgrig.libs.pyqt.widgets.frame import CollapsableFrame, CollapsableFrameThin
 from cgrig.libs.pyqt.widgets.frameless.window import CgRigWindow, CgRigWindowThin
 from cgrig.libs.pyqt.widgets.joinedradio import JoinedRadioButton

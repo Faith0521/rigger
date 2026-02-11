@@ -9,7 +9,7 @@ from cgrig.libs.maya.cmds.rig import follicles
 from cgrig.libs.maya.cmds.mesh import mesh, shape
 from maya import OpenMaya, cmds
 import pymel.core as pm
-from cgrig.libs import pose_exceptions as exceptions
+from cgrig.libs.pose import pose_exceptions as exceptions
 from maya.api import OpenMaya as om2
 from maya.api import OpenMayaAnim as oma2
 
